@@ -1,57 +1,64 @@
-# AI Agent Learning Lab
+# Quantitative Investment Research Lab
 
-> A continuously evolving learning, research, and implementation workspace for AI agents.
+> A continuously evolving research and engineering workspace for AI-assisted quantitative investment research.
 
 ## Purpose
 
-This repository is the engineering-side knowledge base for the AI Agent learning program. It connects research, tutorials, experiments, implementation notes, and reusable engineering patterns into one version-controlled workspace.
+This repository is the durable research and engineering layer for the long-running system. It connects research, methods, experiments, implementation notes, and reusable engineering patterns into one version-controlled workspace.
 
-The goal is not to collect tutorials indefinitely. Resources are evaluated continuously: high-value and current material is promoted, obsolete or misleading material is deprecated, and practical experiments are kept alongside the theory they validate.
+The primary application focus is A-share research, including market-state analysis, sector and theme research, forecasting, verification, source-quality evaluation, and method evolution. AI Agent research remains a supporting engineering direction because the research system itself is built around agentic capabilities.
+
+The goal is not to collect resources indefinitely. Resources and methods are evaluated continuously: high-value and current material is promoted, obsolete or misleading material is deprecated, and practical experiments are kept alongside the theory they validate.
 
 ## Operating principles
 
-- **Learn → verify → build → evaluate → revise**
+- **Observe → Structure → Execute → Measure → Review → Improve**
 - Prefer primary sources, official documentation, papers, and working implementations.
-- Treat frameworks and tutorials as replaceable; keep concepts and engineering principles durable.
+- Treat frameworks, tutorials and individual methods as replaceable; keep durable concepts and engineering principles.
 - Record experiments and conclusions so future iterations can build on previous work.
-- Keep GitHub focused on versioned engineering artifacts; use Notion for higher-level planning, tracking, and knowledge organization.
+- Promote methods only after measurable validation on the target workload, with appropriate out-of-sample testing.
+- Downgrade or retire stale, unreliable, duplicated, or consistently inferior approaches.
+- Keep GitHub focused on versioned research and engineering artifacts; use Notion for higher-level planning, tracking, and operational state.
 
 ## Workspace structure
 
 ```text
-learnaiagent/
+Quantitative-Investment-Research-Lab/
 ├── README.md
 ├── docs/
 │   ├── ARCHITECTURE.md
-│   └── ROADMAP.md
-├── research/          # Papers, methods, evaluations, and research notes
-├── experiments/       # Reproducible experiments and findings
-├── projects/          # Practical agent projects and prototypes
-├── resources/         # Curated learning resources
-└── .github/           # Repository automation and contribution configuration
+│   ├── A_SHARE_RESEARCH_AGENT.md
+│   ├── PROJECT_CHARTER.md
+│   ├── ROADMAP.md
+│   ├── SYSTEM_MAP.md
+│   └── THREE_LONG_TERM_DIRECTIONS.md
+├── knowledge/          # Durable technical and research knowledge
+├── research/           # Methods, hypotheses, evaluations and research notes
+├── experiments/        # Reproducible experiments and findings
+├── templates/          # Standard research and experiment formats
+└── .github/            # Repository automation and contribution configuration
 ```
 
 ## Current focus
 
-1. Agent fundamentals and architectures
-2. Tool use and structured outputs
-3. Memory, retrieval, and context engineering
-4. Planning, reflection, and multi-step execution
-5. Agent evaluation and reliability
-6. MCP, APIs, integrations, and orchestration
-7. Production engineering, observability, and security
-8. Multi-agent systems and emerging agent protocols
+1. A-share market-state, sector and theme research
+2. Forecasting, verification and post-event scoring
+3. Data/source quality and provenance
+4. Quantitative methods, factors and robust ensembles
+5. Agent capabilities that improve the research workflow
+6. Evaluation, reliability, memory and context engineering
+7. Reproducible experiments and method lifecycle management
+8. Continuous frontier tracking and retirement of obsolete approaches
 
-## Relationship with the broader workspace
+## Relationship with the broader system
 
-- **GitHub:** implementation, version history, experiments, reusable artifacts.
-- **Notion:** roadmap, task management, research synthesis, decisions, and long-lived project context.
-- **GPT:** research, reasoning, synthesis, execution planning, and iterative improvement.
+- **GPT:** research, reasoning, synthesis, orchestration and execution planning.
+- **Notion:** roadmap, tasks, project state, research synthesis and decisions.
+- **GitHub / Quantitative-Investment-Research-Lab:** durable research, experiments, methods and versioned engineering knowledge.
+- **GitHub / gpt-workspace:** GPT-facing tools, connectors, automations, runtime and integration implementation.
 
-GitHub is therefore treated as the durable engineering source of truth, while Notion acts as the coordination and knowledge layer.
+The objective is one connected operating loop rather than three disconnected tools.
 
 ## Status
 
 **Active — continuously maintained.**
-
-The repository structure and learning priorities may change as better resources, tools, models, and engineering practices emerge.
