@@ -1,28 +1,30 @@
-# AI System Project Charter
+# Quantitative Investment Research Lab — Project Charter
 
 > Updated: 2026-08-21
 
 ## Purpose
 
-`ai-agent-lab` is the main research and engineering repository for the user's long-running AI system. It is not a generic tutorial collection.
+`Quantitative-Investment-Research-Lab` is the main durable research and engineering repository for the long-running system. It is not a generic tutorial collection.
 
 The repository serves three connected directions:
 
-1. AI Agent learning and research
-2. A-share AI / 基本盘 prediction research
-3. The GPT + Notion + GitHub operating system
+1. **Quantitative investment research**, with A-share research as the primary application domain.
+2. **AI Agent research and engineering**, focused on capabilities that improve the research system and broader agent work.
+3. **GPT + Notion + GitHub operating system**, where this repository is the research layer and `gpt-workspace` is the execution/integration layer.
 
 ## Operating model
 
 `Task → Skill → Agent`
 
-GPT is the coordinator. Notion is the operational control plane for plans, tasks, projects and state. GitHub is the versioned technical/research layer. The two repositories are implementation assets of the same system, not isolated projects.
+GPT is the coordinator. Notion is the operational control plane for plans, tasks, projects and state. GitHub is the versioned technical and research layer. The two GitHub repositories are complementary implementation assets of the same system, not isolated projects.
 
 ## Research loop
 
-`Data → Market State → Sector/Theme → Prediction → Verification → Review → Method Upgrade`
+For A-share research:
 
-The same closed-loop principle applies to Agent research:
+`Data → Market State → Sector/Theme → Signals/Methods → Prediction → Verification → Review → Method Upgrade`
+
+For Agent research:
 
 `Question → Research → Experiment → Evaluate → Record → Reuse → Retire`
 
