@@ -1,35 +1,47 @@
-# AI System Project Charter
+# Quantitative Research Project Charter
 
 > Updated: 2026-08-21
 
 ## Purpose
 
-`ai-agent-lab` is the main research and engineering repository for the user's long-running AI system. It is not a generic tutorial collection.
+`Quantitative-Investment-Research-Lab` is the quantitative investment research and experimentation repository for the broader GPT research system.
 
-The repository serves three connected directions:
+It is not a generic AI Agent learning repository. Agent engineering belongs in `gpt-workspace`.
 
-1. AI Agent learning and research
-2. A-share AI / 基本盘 prediction research
-3. The GPT + Notion + GitHub operating system
+## Primary scope
+
+1. A-share quantitative research
+2. Factor discovery and evaluation
+3. Model and strategy research
+4. Backtesting and portfolio construction
+5. Risk modelling
+6. Data quality and research infrastructure
+7. Walk-Forward / Out-of-Sample validation
+8. Champion / Challenger model management
+9. External quantitative project evaluation
 
 ## Operating model
 
-`Task → Skill → Agent`
+`Research question → Data → Prototype → Backtest → Walk-Forward → OOS → Robustness → Challenger / Champion`
 
-GPT is the coordinator. Notion is the operational control plane for plans, tasks, projects and state. GitHub is the versioned technical/research layer. The two repositories are implementation assets of the same system, not isolated projects.
+GPT coordinates research and reasoning. Notion records durable structured research history, evaluations, state and change logs. GitHub stores reproducible engineering and experimental artifacts.
 
-## Research loop
+## Model promotion
 
-`Data → Market State → Sector/Theme → Prediction → Verification → Review → Method Upgrade`
+A method becomes a candidate Champion only after it demonstrates robust improvement against an explicit benchmark without relying on leakage, unrealistic execution assumptions, or unstable parameter fitting.
 
-The same closed-loop principle applies to Agent research:
+## Research states
 
-`Question → Research → Experiment → Evaluate → Record → Reuse → Retire`
+`Research → Prototype → Challenger → Champion`
 
-## Decision authority
+Retirement states:
 
-Routine maintenance may be performed autonomously: improve structure, update resources, remove stale material, add better methods, and revise documentation. Major changes to goals, architecture, or core methodology should be versioned and surfaced explicitly.
+`Deprecated → Archived`
 
-## RAG policy
+## Mandatory validation concerns
 
-Do not introduce a dedicated RAG layer merely for appearance. Add retrieval infrastructure only when a concrete workload demonstrates that direct structured retrieval, GitHub search, Notion retrieval, or task-local context is insufficient.
+Point-in-Time correctness, look-ahead bias, future functions, survivorship bias, data leakage, transaction costs, slippage, liquidity, turnover, parameter overfitting, multiple testing, Walk-Forward evaluation, OOS performance, regime shift, robustness, and data quality.
+
+## Scope boundary
+
+Do not use this repository as a database for transient operational state. Do not duplicate large Notion datasets unless they are required as reproducible research inputs or fixtures.
