@@ -8,11 +8,17 @@
 YYYY-MM-DD
 
 ## Environment
-- Model/version:
+- Model / version:
 - Framework:
 - Tools:
-- Data:
-- Hardware/runtime:
+- Data / source:
+- Time window:
+- Hardware / runtime:
+
+## Baseline
+
+- Existing method or system:
+- Baseline metrics:
 
 ## Procedure
 
@@ -22,13 +28,26 @@ YYYY-MM-DD
 
 ## Metrics
 
+## In-sample / Out-of-sample
+
+- Evaluation type:
+- Split / holdout rule:
+
 ## Failure modes
 
 ## Reproducibility notes
 
 ## Conclusion
 
+## Evaluation
+
+- Evaluation record:
+- Decision: promote / keep testing / downgrade / retire
+
 ## Follow-up
 
+## Registry impact
+
 ## Status
+
 planned / running / validated / failed / superseded
