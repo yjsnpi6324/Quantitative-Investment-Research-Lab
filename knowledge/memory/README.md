@@ -1,23 +1,17 @@
-# Agent Memory
+# Agent Memory — Legacy Reference
 
-## Memory layers
+> Retained for historical continuity. General GPT memory architecture belongs in `gpt-workspace`.
 
-1. **Working memory** — the current context and immediate task state.
-2. **Session memory** — information useful during one workflow or conversation.
-3. **Long-term memory** — durable user preferences, project decisions, and validated knowledge.
-4. **External memory** — searchable documents, databases, Git repositories, and other stores.
+For the quantitative lab, memory concepts matter only where they affect research reproducibility or Research Agent state.
 
-## Design rule
+## Quantitative use cases
 
-Memory should be selective. Storing everything creates retrieval noise, stale information, and unnecessary context cost. A useful memory system needs retention criteria, provenance, freshness, retrieval strategy, and a way to correct or invalidate old records.
+- research-state persistence
+- experiment provenance
+- forecast history references
+- model/version lineage
+- invalidation of stale research conclusions
 
-## Evaluation dimensions
+Operational task state and long-term structured research history remain in Notion. GitHub stores reproducible artifacts and their version history.
 
-- retrieval precision
-- retrieval recall
-- freshness
-- conflict handling
-- provenance
-- latency
-- token/cost overhead
-- forgetting and deletion behavior
+Do not duplicate the broader GPT memory architecture here.
