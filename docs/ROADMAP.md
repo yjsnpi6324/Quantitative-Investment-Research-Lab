@@ -1,49 +1,48 @@
-# AI Agent Learning Roadmap
+# Research & Engineering Roadmap
 
 ## Phase 1 — Foundations
 
-- LLM fundamentals
-- Context windows and context engineering
+- Quantitative research fundamentals
+- A-share market structure and data foundations
+- LLM fundamentals and context engineering
 - Structured outputs and tool calling
-- Prompting as an engineering discipline
 - Basic agent loops
 
-## Phase 2 — Agent capabilities
+## Phase 2 — Research capabilities
 
-- Tool use
-- Memory
-- Retrieval and RAG
-- Planning and decomposition
-- Reflection and self-correction
-- Long-running tasks
+- Market-state identification
+- Sector and theme analysis
+- Factor and multi-signal research
+- Data/source quality and provenance
+- Forecast generation and uncertainty assessment
+- Tool use, memory and retrieval
 
-## Phase 3 — Agent engineering
+## Phase 3 — Research engineering
 
-- MCP and protocol-based tool integration
-- API orchestration
-- State management
-- Observability and tracing
+- Reproducible experiments
+- Historical and out-of-sample evaluation
 - Evaluation and regression testing
-- Reliability and failure recovery
-- Security and permission boundaries
+- Method registry and lifecycle management
+- MCP and protocol-based tool integration
+- API orchestration, state management and observability
+- Reliability, failure recovery and security
 
 ## Phase 4 — Advanced systems
 
-- Multi-agent architectures
-- Agent-to-agent communication
-- Workflow orchestration
-- Autonomous research systems
-- Coding agents
-- Computer-use agents
-- Agentic software engineering
+- Robust forecasting ensembles
+- Autonomous research workflows
+- Long-running research agents
+- Multi-agent architectures where justified by workload
+- Coding and computer-use agents where they provide measurable value
+- Production-grade research infrastructure
 
 ## Phase 5 — Continuous frontier tracking
 
-Continuously review new models, frameworks, protocols, benchmarks, papers, and production practices. Promote genuinely useful developments into the roadmap and retire material that has become technically obsolete or demonstrably inferior.
+Continuously review new models, frameworks, protocols, benchmarks, papers, quantitative methods and production practices. Promote genuinely useful developments into the roadmap and retire material that has become technically obsolete or demonstrably inferior.
 
 ## Completion criterion
 
-A topic is considered learned only when it has both:
+A topic or method is considered mature only when it has both:
 
 - a clear conceptual understanding; and
-- a practical implementation or reproducible experiment.
+- a practical implementation, reproducible experiment, or measurable validation appropriate to the topic.
