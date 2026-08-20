@@ -12,6 +12,12 @@ This registry is the durable index for forecasting and Agent methods. It is inte
 | Tool-use evaluation | Agent | Active | Agent research | Task-specific | Evaluate selection, success, recovery, latency and cost |
 | Memory retrieval evaluation | Agent | Testing | Agent research | Task-specific | Precision, recall, freshness and provenance matter |
 
+## Lifecycle
+
+`Active → Testing → Deprecated → Archived`
+
+A method may move between states as new evidence arrives. Evaluation records should provide the evidence for material status changes.
+
 ## Promotion rule
 
 No method becomes a core dependency merely because it is fashionable or well documented. Promotion requires measurable improvement on the target workload and reasonable robustness out of sample.
@@ -19,3 +25,7 @@ No method becomes a core dependency merely because it is fashionable or well doc
 ## Retirement rule
 
 Downgrade or archive methods when they are stale, unreliable, duplicated, data-dependent in a fragile way, or consistently inferior to a simpler alternative.
+
+## Evaluation link
+
+Use `templates/evaluation.md` for formal evaluation records and `evaluation/README.md` for the measurement rules.
