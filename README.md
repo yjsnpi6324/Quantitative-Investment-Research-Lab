@@ -1,57 +1,73 @@
-# AI Agent Learning Lab
+# Quantitative Investment Research Lab
 
-> A continuously evolving learning, research, and implementation workspace for AI agents.
+> A quantitative investment research laboratory for A-share research, model development, backtesting, validation, and ongoing Champion / Challenger evaluation.
 
-## Purpose
+## Project role
 
-This repository is the engineering-side knowledge base for the AI Agent learning program. It connects research, tutorials, experiments, implementation notes, and reusable engineering patterns into one version-controlled workspace.
+This repository is the **quantitative research and experimentation layer** of the broader GPT research system. It is a research laboratory, not a generic AI Agent learning repository and not a replacement for Notion.
 
-The goal is not to collect tutorials indefinitely. Resources are evaluated continuously: high-value and current material is promoted, obsolete or misleading material is deprecated, and practical experiments are kept alongside the theory they validate.
+It is intentionally separate from `gpt-workspace`:
 
-## Operating principles
+- `gpt-workspace` — how GPT and Research Agents work: prompts, skills, workflows, automation, integrations, and reusable engineering assets.
+- `Quantitative-Investment-Research-Lab` — what the investment models and research methods are: factors, models, strategies, experiments, backtests, risk, portfolio construction, and validation.
 
-- **Learn → verify → build → evaluate → revise**
-- Prefer primary sources, official documentation, papers, and working implementations.
-- Treat frameworks and tutorials as replaceable; keep concepts and engineering principles durable.
-- Record experiments and conclusions so future iterations can build on previous work.
-- Keep GitHub focused on versioned engineering artifacts; use Notion for higher-level planning, tracking, and knowledge organization.
+## Responsibilities
 
-## Workspace structure
+- A-share quantitative research
+- Alpha factor research and mining
+- Technical, fundamental, sentiment, and macro factors
+- Market regime / state identification
+- Machine-learning and time-series models
+- Backtesting and portfolio research
+- Risk modelling and portfolio optimization
+- Data quality and research infrastructure
+- Benchmarking and model evaluation
+- Champion / Challenger experimentation
+- External open-source quantitative project evaluation
 
-```text
-learnaiagent/
-├── README.md
-├── docs/
-│   ├── ARCHITECTURE.md
-│   └── ROADMAP.md
-├── research/          # Papers, methods, evaluations, and research notes
-├── experiments/       # Reproducible experiments and findings
-├── projects/          # Practical agent projects and prototypes
-├── resources/         # Curated learning resources
-└── .github/           # Repository automation and contribution configuration
-```
+## Validation discipline
 
-## Current focus
+A method is not promoted to the formal prediction system because it has a strong single backtest, a popular GitHub repository, or an attractive paper.
 
-1. Agent fundamentals and architectures
-2. Tool use and structured outputs
-3. Memory, retrieval, and context engineering
-4. Planning, reflection, and multi-step execution
-5. Agent evaluation and reliability
-6. MCP, APIs, integrations, and orchestration
-7. Production engineering, observability, and security
-8. Multi-agent systems and emerging agent protocols
+Research should explicitly consider:
+
+- Point-in-Time data
+- Look-ahead / future-function bias
+- Survivorship bias
+- Data leakage
+- Transaction costs and slippage
+- Liquidity and turnover
+- Parameter overfitting
+- Multiple testing
+- Walk-Forward evaluation
+- Out-of-Sample performance
+- Regime shifts
+- Robustness and cross-validation
+- Data quality
+
+## Research lifecycle
+
+`Research → Prototype → Backtest → Walk-Forward → OOS → Robustness → Challenger → Champion`
+
+Failed or superseded work remains useful when its scope and conclusion are documented:
+
+`Challenger → Deprecated → Archived`
+
+## External project intake
+
+External repositories, papers, and methods may be evaluated, but adoption requires checking applicability to A-shares, data requirements, market-structure assumptions, leakage risks, reproducibility, licensing, maintenance burden, and out-of-sample evidence.
 
 ## Relationship with the broader workspace
 
-- **GitHub:** implementation, version history, experiments, reusable artifacts.
-- **Notion:** roadmap, task management, research synthesis, decisions, and long-lived project context.
-- **GPT:** research, reasoning, synthesis, execution planning, and iterative improvement.
+- **GPT** — research, reasoning, decision-making, and orchestration.
+- **Project / Task** — current scope and execution triggers.
+- **Notion** — durable structured records, forecast history, model evaluation, state, and change logs.
+- **File Library** — research materials, rules, Skill definitions, and historical source files.
+- **gpt-workspace** — GPT / Research Agent engineering layer.
+- **Quantitative-Investment-Research-Lab** — quantitative research implementation and experiments.
 
-GitHub is therefore treated as the durable engineering source of truth, while Notion acts as the coordination and knowledge layer.
+## Current phase
 
-## Status
+**Phase 1 — laboratory baseline.**
 
-**Active — continuously maintained.**
-
-The repository structure and learning priorities may change as better resources, tools, models, and engineering practices emerge.
+The current priority is to establish a clean research boundary and reproducible validation discipline without prematurely creating a large framework or many empty directories.
