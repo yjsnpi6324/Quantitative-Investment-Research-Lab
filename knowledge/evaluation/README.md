@@ -1,35 +1,46 @@
-# Agent Evaluation
+# Evaluation Knowledge
 
-Agent evaluation should measure the system, not just the underlying model.
+This section contains evaluation principles that are shared by the broader research system but applied to different targets.
 
-## Evaluation layers
+## Evaluation domains
 
-- task success rate
+### Quantitative model evaluation
+
+Evaluate factors, models, strategies, and portfolio methods for:
+
+- predictive or investment value against an explicit baseline
+- Point-in-Time correctness
+- look-ahead / future-function risk
+- data leakage and survivorship bias
+- transaction costs, slippage, liquidity, and turnover
+- temporal validation, Walk-Forward, and Out-of-Sample performance
+- parameter sensitivity and multiple-testing risk
+- regime robustness and failure cases
+- reproducibility and data provenance
+
+Promotion is evidence-driven. A strong single backtest is not enough for Champion consideration.
+
+### Research Agent evaluation
+
+Evaluate the AI-assisted research system for:
+
+- task success
 - factual correctness
-- tool-selection accuracy
-- tool execution success
-- planning quality
-- recovery from failure
+- tool-selection and tool-execution success
 - instruction adherence
-- latency
-- token and monetary cost
+- planning and recovery quality
 - reproducibility
+- latency and cost
+- provenance and evidence quality
 
-## Benchmark rule
+Agent evaluation belongs here only when it is directly related to the quantitative research workflow. General GPT / Agent engineering evaluation belongs in `gpt-workspace`.
 
-External benchmarks are useful for comparison but are not sufficient for production decisions. Maintain a small private evaluation set representing the actual workflows the system must perform.
+## Shared principle
 
-## Required experiment record
+External benchmarks are useful for comparison, but production decisions should also use a small evaluation set that represents the actual workload.
 
-Every meaningful benchmark should record:
+Every meaningful evaluation should record the target, version, data or evaluation set, success criteria, sample size, results, failure modes, and date.
 
-- model/version
-- prompt or policy version
-- tools available
-- context sources
-- dataset/evaluation set
-- success criteria
-- sample size
-- results
-- known failure modes
-- date
+## Boundary
+
+This directory is not a replacement for Notion's durable evaluation history. GitHub stores reproducible evaluation definitions, fixtures, code, and methodological rules; Notion stores the operational history and longitudinal records.

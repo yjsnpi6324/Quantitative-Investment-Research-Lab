@@ -1,25 +1,21 @@
-# Agent Knowledge Base
+# Agent Knowledge — Legacy Reference
 
-This section tracks durable knowledge about AI Agents.
+> This directory is retained for historical continuity. It is **not** the primary AI Agent knowledge base.
 
-## Core topics
+General Agent architecture, prompting, memory, tool use, MCP, orchestration, and GPT engineering belong in `gpt-workspace`.
 
-- Agent architecture and control loops
-- Planning and decomposition
-- Tool use and function calling
-- Memory and state management
-- Retrieval and context engineering
-- Multi-agent coordination
-- Evaluation and observability
-- Reliability, safety, and human-in-the-loop design
+## Why this remains here
 
-## Current working model
+Some quantitative research workflows use Agent concepts. This file therefore preserves a compact reference to the system model without turning this repository back into a general Agent-learning repository.
 
-An agent is treated as a system that repeatedly performs:
+## Quantitative use
 
-`observe → reason → plan → act → verify → update state`
+Use Agent concepts here only when they directly affect the design or evaluation of the A-share Research Agent, such as:
 
-The model is only one component. Useful agent quality also depends on tools, context, memory, state transitions, verification, and evaluation.
+- research-task decomposition
+- tool/data-source selection
+- verification and failure recovery
+- research-state management
+- evaluation of research workflow quality
 
-## Evidence rule
-Claims in this knowledge base should be backed by primary documentation, papers, reproducible experiments, or multiple independent sources. Experimental claims must be marked as experimental rather than presented as settled knowledge.
+For reusable Agent engineering assets, link to the canonical material in `gpt-workspace` instead of duplicating it here.

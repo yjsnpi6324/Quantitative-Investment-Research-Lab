@@ -1,63 +1,52 @@
-# Workspace Architecture
+# Quantitative Research Architecture
 
-## Layer model
+## System boundary
 
 ```text
 GPT
-  │
-  ├── research / synthesis / decisions
-  │
+  │ research / reasoning / orchestration
+  ▼
+gpt-workspace
+  │ prompts / skills / workflows / automation / integrations
+  ▼
+Quantitative-Investment-Research-Lab
+  │ data / factors / models / strategies / backtests / risk / validation
   ▼
 Notion
-  │
-  ├── roadmap / tasks / knowledge / project state
-  │
+  │ structured research history / forecasts / evaluation / state / change log
   ▼
-GitHub
-  │
-  ├── code / experiments / documents / version history
-  │
-  ▼
-Execution & Evaluation
-  │
-  └── results feed back into GPT + Notion
+GPT Research Agent
 ```
 
 ## Responsibilities
 
 ### GPT
+- Investigate research questions.
+- Compare methods and evidence.
+- Orchestrate research and review.
+- Interpret experiment results.
 
-- Investigate new technologies and research.
-- Compare approaches and identify useful changes.
-- Turn research into implementation plans.
-- Review experiment results.
-- Propose updates when existing approaches become obsolete.
+### gpt-workspace
+- Define reusable Agent capabilities.
+- Run research workflows and automation.
+- Manage integrations and tool execution.
+
+### Quantitative-Investment-Research-Lab
+- Implement reproducible quantitative experiments.
+- Store factor/model/strategy research artifacts.
+- Run backtests and temporal validation.
+- Record Challenger and Champion evidence.
 
 ### Notion
+- Maintain durable structured records and operational state.
+- Store forecast history, model evaluation, decisions, and change logs.
 
-- Maintain the learning roadmap.
-- Track tasks and project status.
-- Store synthesized knowledge and decisions.
-- Link goals to concrete GitHub artifacts.
+## Research promotion
 
-### GitHub
+`Question → Research → Prototype → Backtest → Walk-Forward → OOS → Robustness → Challenger → Champion`
 
-- Store executable code and reproducible experiments.
-- Version important documentation and configurations.
-- Preserve implementation history.
-- Provide the engineering source of truth for completed work.
-
-## Promotion flow
-
-A resource or idea should move through these stages:
-
-1. **Discovered** — potentially useful material is found.
-2. **Evaluated** — credibility, freshness, applicability, and implementation quality are checked.
-3. **Selected** — useful material is added to the learning roadmap.
-4. **Implemented** — concepts are tested in a project or experiment.
-5. **Validated** — results are recorded with limitations.
-6. **Maintained** — outdated methods are downgraded, replaced, or archived.
+Retired work remains traceable through `Deprecated → Archived` rather than being silently deleted.
 
 ## Design rule
 
-Do not optimize for the number of resources collected. Optimize for the number of reliable capabilities that can actually be demonstrated, reproduced, and improved.
+Do not create framework layers, data stores, or abstractions without a demonstrated research workload that needs them. Prefer small reproducible components over premature platform engineering.

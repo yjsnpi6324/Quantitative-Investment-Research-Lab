@@ -1,21 +1,27 @@
 # Contributing
 
 ## Purpose
-This repository is the AI Agent research, learning, experimentation, and engineering hub.
+This repository is the quantitative investment research and experimentation lab. General GPT / Agent engineering belongs in `gpt-workspace`.
 
 ## Working rules
 - Prefer reproducible experiments over vague notes.
-- Record sources and validation status for important claims.
-- Separate stable knowledge from experiments and hypotheses.
-- Remove or downgrade obsolete resources when better evidence appears.
-- Keep changes focused and explain meaningful architectural decisions.
+- Record data sources, assumptions, validation status, and conclusions.
+- Separate stable research principles from hypotheses and experimental results.
+- Check Point-in-Time correctness and leakage risks before trusting results.
+- Treat external methods as candidates until independently validated.
+- Keep changes focused; avoid premature framework building.
+- Never commit secrets, credentials, personal data, or local datasets containing sensitive information.
 
-## Knowledge lifecycle
-`discover → evaluate → experiment → validate → document → maintain`
+## Research lifecycle
+`discover → evaluate → prototype → backtest → validate → challenger → champion`
+
+Retirement lifecycle:
+`deprecated → archived`
 
 ## Commit style
 Use concise, action-oriented commit messages, for example:
-- `docs: add agent memory architecture`
-- `feat: add tool evaluation harness`
-- `fix: correct workflow configuration`
-- `refactor: reorganize agent modules`
+- `docs: clarify validation protocol`
+- `research: add factor experiment`
+- `feat: add backtest component`
+- `fix: correct point-in-time handling`
+- `refactor: simplify research module`

@@ -1,49 +1,44 @@
-# AI Agent Learning Roadmap
+# Quantitative Research Roadmap
 
-## Phase 1 — Foundations
+## Phase 1 — Research foundation
 
-- LLM fundamentals
-- Context windows and context engineering
-- Structured outputs and tool calling
-- Prompting as an engineering discipline
-- Basic agent loops
+- Define A-share research scope and data boundaries.
+- Establish reproducible experiment records.
+- Establish validation gates and Champion / Challenger lifecycle.
+- Inventory existing research assets and classify legacy material.
 
-## Phase 2 — Agent capabilities
+## Phase 2 — Data and factor research
 
-- Tool use
-- Memory
-- Retrieval and RAG
-- Planning and decomposition
-- Reflection and self-correction
-- Long-running tasks
+- Point-in-Time data handling.
+- Data quality checks and provenance.
+- Technical factors.
+- Fundamental factors.
+- Sentiment and event factors.
+- Macro / market-state factors.
+- Factor neutralisation, stability, and turnover analysis.
 
-## Phase 3 — Agent engineering
+## Phase 3 — Model and strategy research
 
-- MCP and protocol-based tool integration
-- API orchestration
-- State management
-- Observability and tracing
-- Evaluation and regression testing
-- Reliability and failure recovery
-- Security and permission boundaries
+- Baseline statistical models.
+- Tree-based models such as LightGBM / XGBoost.
+- Time-series models.
+- Transformer-based candidates where justified.
+- Alpha mining and feature selection.
+- Portfolio construction and risk controls.
 
-## Phase 4 — Advanced systems
+## Phase 4 — Validation and production candidates
 
-- Multi-agent architectures
-- Agent-to-agent communication
-- Workflow orchestration
-- Autonomous research systems
-- Coding agents
-- Computer-use agents
-- Agentic software engineering
+- Walk-Forward evaluation.
+- Out-of-Sample evaluation.
+- Robustness and regime-shift analysis.
+- Transaction-cost and liquidity realism.
+- Champion / Challenger comparison.
+- Reproducible benchmark suite.
 
-## Phase 5 — Continuous frontier tracking
+## Phase 5 — Continuous research
 
-Continuously review new models, frameworks, protocols, benchmarks, papers, and production practices. Promote genuinely useful developments into the roadmap and retire material that has become technically obsolete or demonstrably inferior.
+Continuously evaluate external papers, open-source projects, datasets, methods, and market-structure changes. Promote useful evidence, downgrade stale methods, and archive failed experiments without losing their conclusions.
 
 ## Completion criterion
 
-A topic is considered learned only when it has both:
-
-- a clear conceptual understanding; and
-- a practical implementation or reproducible experiment.
+A research idea is not considered production-ready because it has a successful backtest. It must have a documented experiment, realistic assumptions, temporal validation, out-of-sample evidence, robustness analysis, and a clear promotion decision.
