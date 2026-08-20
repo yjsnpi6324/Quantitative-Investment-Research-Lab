@@ -1,22 +1,11 @@
-# LLM Foundations for Agents
+# LLM Foundations — Legacy Reference
 
-## Scope
+> Retained for historical continuity. General LLM / Agent engineering belongs in `gpt-workspace`.
 
-Model capabilities that materially affect agent behavior:
+This material is relevant to the quantitative lab only when an LLM is explicitly being evaluated as part of an investment-research workflow, such as research summarisation, signal extraction, event classification, or a model-comparison experiment.
 
-- reasoning and instruction following
-- tool calling
-- structured output
-- long-context processing
-- multimodal input/output
-- latency and cost trade-offs
-- context-window management
-- model routing and fallback
+## Evaluation rule
 
-## Engineering principle
+Model-specific claims must be versioned and dated. Any LLM-assisted research method must be evaluated against a defined baseline and checked for leakage, reproducibility, latency, cost, and stability.
 
-Do not evaluate an LLM only as a chatbot. Evaluate it inside the complete agent loop, including context construction, tools, state, verification, latency, cost, and failure recovery.
-
-## Data policy
-
-Keep model-specific claims versioned and dated. Model behavior, pricing, context limits, and tool APIs can change quickly and must not be treated as permanent facts.
+Do not duplicate general GPT engineering guidance here. Keep the canonical Agent engineering material in `gpt-workspace`.
