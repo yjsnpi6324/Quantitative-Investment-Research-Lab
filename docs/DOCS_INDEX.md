@@ -22,6 +22,8 @@ Use this page to avoid duplicate or conflicting project documentation.
 
 `research/` is the canonical home for experiments and reproducible research specifications.
 
+`research/NEW_QUANT_METHOD_DISCOVERY_PROMPT.md` is the canonical execution protocol for discovering, triaging, reproducing, validating and governing new quantitative methods found from global sources.
+
 ## Knowledge and templates
 
 `knowledge/` stores durable research knowledge; `templates/` stores reusable templates.
