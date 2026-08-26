@@ -1,20 +1,22 @@
 # Three Long-term Directions
 
+> Strategic reference only. Canonical operating rules live in `PROJECT_CHARTER.md`, `ARCHITECTURE.md`, and `A_SHARE_RESEARCH_AGENT.md`.
+
 ## 1. Quantitative investment research
 
-Continuously improve the research system for A-share market state, sectors, themes, signals, forecasting, verification, source quality, and method evolution. The system should learn from forecast errors rather than merely generate daily commentary.
+Continuously improve the A-share research system for market state, sectors, themes, signals, forecasting, verification, source quality, and method evolution. The system should learn from forecast errors rather than merely generate daily commentary.
 
-## 2. AI Agent learning / research
+## 2. GPT + Notion + GitHub operating system
 
-Continuously update the engineering route from fundamentals to agent architecture, context engineering, tools, memory, planning, evaluation, MCP, coding/browser agents, and production reliability. New high-value resources may replace obsolete material without waiting for manual approval.
+Use GPT as the reasoning/orchestration layer, Notion as the plan/task/project/state layer, `Quantitative-Investment-Research-Lab` as the research and durable engineering layer, and `gpt-workspace` as the GPT-facing integration/runtime layer. Keep the system organic rather than disconnected.
 
-## 3. GPT + Notion + GitHub operating system
+## Boundary with AI Agent learning
 
-Use GPT as the reasoning/orchestration layer, Notion as the plan/task/project/state layer, `Quantitative-Investment-Research-Lab` as the research and durable engineering layer, and `gpt-workspace` as the GPT-facing integration/runtime layer. The objective is an organic loop rather than disconnected tools.
+AI Agent learning/research is an independent long-term system. Its curriculum, learning progress, resources, experiments, and route evolution are maintained outside this repository's A-share project scope. Only validated, reusable capabilities that are intentionally adopted by the research system may flow into this lab through the normal Skill/Method/Challenger governance path.
 
 ## Shared principle
 
-All three directions use the same improvement cycle:
+The systems may exchange validated capabilities, but their tasks, records, evaluation, and long-term routes remain independent.
 
 `Observe → Structure → Execute → Measure → Review → Improve`
 
