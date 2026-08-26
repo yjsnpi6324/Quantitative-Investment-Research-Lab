@@ -12,7 +12,7 @@ Use this page to avoid duplicate or conflicting project documentation.
 6. `REPOSITORY_MAP.md` — repository ownership and directory responsibilities.
 7. `ROADMAP.md` — current research priorities and sequencing.
 8. `SYSTEM_MAP.md` — compact visual/system reference; use architecture docs for authoritative rules.
-9. `THREE_LONG_TERM_DIRECTIONS.md` — strategic direction reference; it must not override the Project Charter.
+9. `THREE_LONG_TERM_DIRECTIONS.md` — strategic reference for the research lab; AI Agent learning is maintained as a separate long-term system and does not override the lab scope.
 
 ## Evaluation
 
@@ -25,6 +25,10 @@ Use this page to avoid duplicate or conflicting project documentation.
 ## Knowledge and templates
 
 `knowledge/` stores durable research knowledge; `templates/` stores reusable templates.
+
+## Scope boundary
+
+`Quantitative-Investment-Research-Lab` owns A-share research, prediction evaluation, durable research engineering, and validated methods/skills adopted by that system. AI Agent learning curriculum, learning progress, resource selection, and learning experiments belong to the independent AI Agent learning system. `gpt-workspace` owns GPT-facing runtime and integration assets.
 
 ## Maintenance rule
 
