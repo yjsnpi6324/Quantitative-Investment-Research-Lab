@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A-share Prediction Evaluation Record",
+  "type": "object",
+  "required": ["prediction_id", "evaluated_at", "horizon", "actual_result", "status"],
+  "properties": {
+    "prediction_id": {"type": "string", "minLength": 1},
+    "evaluated_at": {"type": "string", "format": "date-time"},
+    "horizon": {"enum": ["T+1", "T+3", "T+5"]},
+    "actual_result": {},
+    "direction_hit": {"type": ["boolean", "null"]},
+    "brier_score": {"type": ["number", "null"], "minimum": 0},
+    "error_type": {"type": ["string", "null"]},
+    "status": {"enum": ["pending", "partial", "verified", "invalid"]}
+  },
+  "additionalProperties": true
+}
