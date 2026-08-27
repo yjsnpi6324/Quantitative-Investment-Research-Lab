@@ -1,9 +1,10 @@
-version: 1
+version: 2
 production_gate:
   required_fields:
     - trading_date
     - market_snapshot
     - source_status
+  max_age_days: 1
   statuses:
     PASS: proceed
     WARNING: proceed_with_warning_and_log
