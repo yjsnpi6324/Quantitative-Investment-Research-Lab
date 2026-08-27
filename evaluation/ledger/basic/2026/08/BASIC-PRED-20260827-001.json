@@ -1,0 +1,71 @@
+{
+  "prediction_id": "BASIC-PRED-20260827-001",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "champion_model_id": "BASIC-MSM",
+  "model_version": "v2026-08-26",
+  "data_snapshot_id": "DS-ASTOCK-20260827-CLOSE-01",
+  "generated_at": "2026-08-27T19:57:44+08:00",
+  "lock_status": "LOCKED_AFTER_PUBLICATION",
+  "data_quality": {
+    "status": "WARNING",
+    "grade": "B",
+    "notes": [
+      "Key index and turnover data cross-checked across multiple current-date sources.",
+      "Breadth source wording differs between 'over 3300 up' and an explicit 3394 up / 1944 down count; explicit count adopted and discrepancy disclosed.",
+      "No equally reliable same-day northbound net-flow figure was obtained; no estimate was fabricated."
+    ]
+  },
+  "market_snapshot": {
+    "date": "2026-08-27",
+    "sse_close": 3956.57,
+    "sse_change_pct": 1.13,
+    "szse_close": 14048.88,
+    "szse_change_pct": 1.5,
+    "chinext_close": 3473.35,
+    "chinext_change_pct": 1.71,
+    "star50_change_pct": 3.77,
+    "turnover_billion_cny": 21410,
+    "advancers": 3394,
+    "decliners": 1944,
+    "market_state": "S2 震荡上涨",
+    "core_regime": "偏多"
+  },
+  "forecasts": {
+    "t_plus_1": {
+      "target_trade_date": "2026-08-28",
+      "direction": "偏多",
+      "probability": 0.62,
+      "structure": "电子/半导体/存储、CPO/光通信与AI硬件延续；业绩线继续筛选",
+      "risk": "4000点附近获利回吐；成交回落或科技由扩散转为龙头独强"
+    },
+    "t_plus_3": {
+      "target_trade_date": "2026-09-01",
+      "direction": "震荡偏多",
+      "probability": 0.64,
+      "structure": "成长/科技相对占优，量能和宽度维持则S2延续",
+      "risk": "电子退潮且金融/资源不能承接，转为高频轮动"
+    },
+    "t_plus_5": {
+      "target_trade_date": "2026-09-03",
+      "direction": "偏多但高波动",
+      "probability": 0.60,
+      "structure": "需要从科技扩散到更多行业才能确认全面Risk-on",
+      "risk": "缩量、宽度收缩或指数强而个股分化"
+    }
+  },
+  "evaluation_fields": {
+    "actual": null,
+    "result": null,
+    "error_cause": null,
+    "score": null
+  },
+  "sources": [
+    "中新经纬/中国新闻网 2026-08-27 收评",
+    "界面新闻 ETF英雄汇 2026-08-27",
+    "中国证券报 2026-08-27 收评",
+    "中国经济网 2026-08-27 收评",
+    "证券时报/财联社 2026-08-27 市场复盘",
+    "21世纪经济报道 2026-08-27 英伟达业绩与CPO催化"
+  ]
+}
