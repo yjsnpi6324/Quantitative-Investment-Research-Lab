@@ -12,7 +12,8 @@ Use this page to avoid duplicate or conflicting project documentation.
 6. `REPOSITORY_MAP.md` — repository ownership and directory responsibilities.
 7. `ROADMAP.md` — current research priorities and sequencing.
 8. `SYSTEM_MAP.md` — compact visual/system reference; use architecture docs for authoritative rules.
-9. `THREE_LONG_TERM_DIRECTIONS.md` — strategic reference for the research lab; AI Agent learning is maintained as a separate long-term system and does not override the lab scope.
+9. `DROPBOX_ASSET_INDEX_CONTRACT.md` — canonical naming, indexing and verification rules for Dropbox large-file and archive assets.
+10. `THREE_LONG_TERM_DIRECTIONS.md` — strategic reference for the research lab; AI Agent learning is maintained as a separate long-term system and does not override the lab scope.
 
 ## Evaluation
 
