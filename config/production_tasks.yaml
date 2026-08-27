@@ -1,0 +1,18 @@
+# Production task bindings
+# Tasks call Production IDs, not model names.
+
+TASK-ASTOCK-DAILY:
+  production_id: BASIC-PROD-20260825-A
+  task: A股基本盘
+  horizon:
+    - T+1
+    - T+3
+    - T+5
+
+TASK-AI-DAILY:
+  production_id: AI-PROD-20260825-A
+  task: AI板块
+  horizon:
+    - T+1
+    - T+3
+    - T+5
