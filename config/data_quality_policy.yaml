@@ -1,0 +1,16 @@
+version: 1
+production_gate:
+  required_fields:
+    - trading_date
+    - market_snapshot
+    - source_status
+  statuses:
+    PASS: proceed
+    WARNING: proceed_with_warning_and_log
+    BLOCK: stop_prediction_and_open_incident
+checks:
+  missing_data: true
+  date_alignment: true
+  source_conflict: true
+  anomaly_flag: true
+  stale_data: true
