@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the permanent responsibility boundaries between GPT, Tasks/Automations, Notion, and GitHub. It is the governing map for cross-system reads and writes.
+This document defines the permanent responsibility boundaries between GPT, Tasks/Automations, Notion, GitHub and Dropbox. It is the governing map for cross-system reads and writes.
 
 ## 1. GPT / Orchestrator
 
@@ -62,11 +62,26 @@ Owns:
 
 GitHub is not the task scheduler and should not be used as a duplicate operational database.
 
-## 5. Canonical Report
+## 5. Dropbox / Asset Plane
+
+**Role:** durable storage for large files, binary assets, data snapshots and archive packages.
+
+Owns:
+- report PDFs and formal export packages;
+- raw large datasets and point-in-time snapshots;
+- model files, weights and large binaries;
+- workflows and large generated outputs;
+- large experiment artifacts and archive packages.
+
+Dropbox does not own research logic, model promotion decisions, operational decisions or scheduling.
+
+The canonical asset naming, indexing and verification rules are defined in `docs/DROPBOX_ASSET_INDEX_CONTRACT.md`.
+
+## 6. Canonical Report
 
 For each daily prediction run, one Canonical Report is created first. Chat, PDF and Notion presentation are delivery/operational representations of that report. They must not independently invent a second version of the daily research.
 
-## 6. Cross-system write rules
+## 7. Cross-system write rules
 
 | Information | System of Record | Other systems |
 |---|---|---|
@@ -79,9 +94,9 @@ For each daily prediction run, one Canonical Report is created first. Chat, PDF 
 | Model version | GitHub | Notion active-status record |
 | Governance decision | Notion | GitHub evidence/reference |
 | Research intake | GitHub | Notion status/reference |
-| Self-audit finding | Notion | GitHub methodology/evidence where applicable |
+| Self-audit finding | Notion | GitHub methodology/evidence where applicable |\n| Large/binary asset bytes | Dropbox | Notion registry/link; GitHub procedure/reference |\n| Asset metadata/index | Notion | Dropbox path/identity; GitHub reproducibility reference |
 
-## 7. Conflict resolution
+## 8. Conflict resolution
 
 1. Research implementation/evidence conflict → GitHub wins after verification.
 2. Operational status/decision conflict → Notion wins after verification.
@@ -89,7 +104,7 @@ For each daily prediction run, one Canonical Report is created first. Chat, PDF 
 4. Historical prediction conflict → immutable original prediction record wins; never rewrite it to match later analysis.
 5. If a conflict cannot be resolved, mark it explicitly as an audit issue rather than guessing.
 
-## 8. Integrity principles
+## 9. Integrity principles
 
 - One fact, one owner.
 - Cross-system copies are references or summaries, not competing sources of truth.
