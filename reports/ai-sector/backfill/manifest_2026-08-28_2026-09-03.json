@@ -1,0 +1,45 @@
+{
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "scope": "2026-08-28..2026-09-03",
+  "generated_at": "2026-09-04T16:00:00+08:00",
+  "records": [
+    {
+      "date": "2026-08-28",
+      "record_id": "RPT-AI-20260828-BF01",
+      "status": "HISTORICAL_BACKFILL"
+    },
+    {
+      "date": "2026-08-29",
+      "record_id": "RPT-AI-20260829-BF01",
+      "status": "HISTORICAL_BACKFILL"
+    },
+    {
+      "date": "2026-08-30",
+      "record_id": "RPT-AI-20260830-BF01",
+      "status": "HISTORICAL_BACKFILL"
+    },
+    {
+      "date": "2026-08-31",
+      "record_id": "RPT-AI-20260831-BF01",
+      "status": "HISTORICAL_BACKFILL"
+    },
+    {
+      "date": "2026-09-01",
+      "record_id": "RPT-AI-20260901-BF01",
+      "status": "HISTORICAL_BACKFILL"
+    },
+    {
+      "date": "2026-09-02",
+      "record_id": "RPT-AI-20260902-BF01",
+      "status": "HISTORICAL_BACKFILL"
+    },
+    {
+      "date": "2026-09-03",
+      "prediction_id": "PRED-AI-20260903-01",
+      "report_id": "RPT-AI-20260903-01",
+      "status": "FORMAL_LOCKED_EXISTING",
+      "action": "DEDUP_REUSE_EXISTING"
+    }
+  ]
+}
