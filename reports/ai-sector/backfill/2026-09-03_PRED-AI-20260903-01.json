@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "prediction_id": "PRED-AI-20260903-01",
+  "report_id": "RPT-AI-20260903-01",
+  "data_snapshot_id": "AI-SNAPSHOT-20260903-CLOSE-01",
+  "trading_date": "2026-09-03",
+  "record_status": "FORMAL_LOCKED_EXISTING",
+  "action": "DEDUP_REUSE_EXISTING"
+}

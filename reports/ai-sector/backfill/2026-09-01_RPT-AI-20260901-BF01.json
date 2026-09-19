@@ -1,0 +1,10 @@
+{
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "record_id": "RPT-AI-20260901-BF01",
+  "record_type": "TRADING_DAY_BACKFILL",
+  "trading_date": "2026-09-01",
+  "backfill_status": "HISTORICAL_BACKFILL",
+  "prediction_integrity": "NO_POST_HOC_FABRICATION",
+  "dedup_key": "TASK-AI-DAILY|2026-09-01|RPT-AI-20260901-BF01"
+}
