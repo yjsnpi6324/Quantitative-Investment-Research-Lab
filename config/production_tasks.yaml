@@ -1,9 +1,12 @@
 # Production task bindings
 # Tasks call Production IDs, not model names.
+# Horizons are strict A-share trading-day horizons.
 
 TASK-ASTOCK-DAILY:
   production_id: BASIC-PROD-20260825-A
   task: A股基本盘
+  trading_calendar: A_SHARE_OFFICIAL
+  evaluation_closure: ENABLED
   horizon:
     - T+1
     - T+3
@@ -12,6 +15,8 @@ TASK-ASTOCK-DAILY:
 TASK-AI-DAILY:
   production_id: AI-PROD-20260825-A
   task: AI板块
+  trading_calendar: A_SHARE_OFFICIAL
+  evaluation_closure: ENABLED
   horizon:
     - T+1
     - T+3
