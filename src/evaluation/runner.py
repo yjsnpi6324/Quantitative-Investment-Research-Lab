@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import date
 
+from src.evaluation.a_share_calendar import AShareTradingCalendar
 from src.evaluation.auto_scoring import evaluate_due
 from src.evaluation.immutable_ledger import verify_prediction
 from src.evaluation.trading_calendar import HORIZON_STEPS, add_trading_days
@@ -50,15 +51,21 @@ def _forecast_for_horizon(prediction: dict, label: str):
     forecasts = prediction.get("horizons")
     if isinstance(forecasts, dict) and label in forecasts:
         return forecasts[label]
+
+    canonical = prediction.get("prediction")
+    if isinstance(canonical, dict) and label in canonical:
+        return canonical[label]
+
     for key in _HORIZON_FORECAST_KEYS[label]:
         if key in prediction and prediction[key] not in (None, ""):
             return prediction[key]
+
     if prediction.get("horizon") in (
         label,
         HORIZON_STEPS[label],
         str(HORIZON_STEPS[label]),
     ):
-        return prediction.get("prediction")
+        return canonical
     return None
 
 
@@ -102,12 +109,19 @@ def _evaluation_exists(registry, candidate: dict) -> bool:
     return False
 
 
-def run_due_evaluations(as_of, registry, market, calendar):
+def _candidate_predictions(registry, as_of):
+    if hasattr(registry, "list_evaluation_candidates"):
+        return registry.list_evaluation_candidates(as_of)
+    return registry.list_due_predictions(as_of)
+
+
+def run_due_evaluations(as_of, registry, market, calendar=None):
     """Close every matured horizon idempotently and append-only."""
+    calendar = calendar or getattr(market, "calendar", None) or AShareTradingCalendar()
     today = date.fromisoformat(as_of) if isinstance(as_of, str) else as_of
     out = []
 
-    for prediction in registry.list_due_predictions(as_of):
+    for prediction in _candidate_predictions(registry, as_of):
         if not verify_prediction(prediction):
             out.append(
                 {
