@@ -12,6 +12,13 @@ class NotionRegistryAdapter:
     def list_due_predictions(self, as_of):
         return self.client.list_due_predictions(as_of, self.config)
 
+    def list_evaluation_candidates(self, as_of):
+        if hasattr(self.client, "list_predictions_for_evaluation"):
+            return self.client.list_predictions_for_evaluation(
+                as_of, self.config
+            )
+        return self.client.list_due_predictions(as_of, self.config)
+
     def append_evaluation(self, evaluation):
         return self.client.append_evaluation(evaluation, self.config)
 
