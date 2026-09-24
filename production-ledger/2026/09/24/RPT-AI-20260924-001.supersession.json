@@ -1,0 +1,14 @@
+{
+  "record_type": "ARTIFACT_SUPERSESSION",
+  "report_id": "RPT-AI-20260924-001",
+  "prediction_id": "PRED-AI-20260924-01",
+  "superseded_artifact": "2026-09-24_RPT-AI-20260924-001.json",
+  "canonical_artifact": "2026-09-24_RPT-AI-20260924-001.canonical.v2.json",
+  "reason": "The first manifest used a pre-write content hash and did not include the artifact builder's final trailing newline. Prediction Canonical JSON and Prediction Hash were unchanged.",
+  "superseded_content_hash": "22ab402163702d4a1da87af0ee9614b9e5a235a8f7292426e3688bd12458ab8d",
+  "corrected_content_hash": "ac80502dc58060826767e48af5c1f2c22686a43e0747a6c5bcf1c696bfce5ad8",
+  "prediction_hash": "23cf45c7ec696833362a52046c7716e4271bc03a88f34eea3bedaff8c12b8d81",
+  "hash_origin": "NATIVE",
+  "corrected_at": "2026-09-24T13:26:20Z",
+  "mutation_scope": "governance artifact only; locked FINAL unchanged"
+}
