@@ -1,0 +1,26 @@
+{
+  "report_id": "RPT-AI-20260924-001",
+  "prediction_id": "PRED-AI-20260924-01",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "prediction_hash": "23cf45c7ec696833362a52046c7716e4271bc03a88f34eea3bedaff8c12b8d81",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "content_hash": "ac80502dc58060826767e48af5c1f2c22686a43e0747a6c5bcf1c696bfce5ad8",
+  "body_alignment": "VERIFIED",
+  "target_dates": {
+    "t1": "2026-09-28",
+    "t3": "2026-09-30",
+    "t5": "2026-10-09"
+  },
+  "nodes": {
+    "notion_registry": "VERIFIED",
+    "supabase": "VERIFIED",
+    "github": "PR_PENDING",
+    "dropbox": "VERIFIED"
+  },
+  "retry_needed": [
+    "GITHUB_MAIN"
+  ]
+}
