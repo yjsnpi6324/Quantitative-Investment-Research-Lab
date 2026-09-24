@@ -1,0 +1,47 @@
+{
+  "record_type": "GITHUB_MAIN_VERIFICATION",
+  "report_id": "RPT-AI-20260924-001",
+  "prediction_id": "PRED-AI-20260924-01",
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "source_pr": 21,
+  "merge_commit_sha": "fd5a051fa1f2ca8d98cabe2f74eaa91d468cf24d",
+  "merged_at": "2026-09-24T13:39:04Z",
+  "main_readback": {
+    "markdown": {
+      "path": "production-ledger/2026/09/24/RPT-AI-20260924-001.md",
+      "blob_sha": "631f811a8a924d10a33cd2896a029e06436206d5"
+    },
+    "canonical_manifest": {
+      "path": "production-ledger/2026/09/24/RPT-AI-20260924-001.json",
+      "blob_sha": "3837ee9695f9c97391eb93fc4bde71396357f90e"
+    },
+    "governance": {
+      "path": "production-ledger/2026/09/24/RPT-AI-20260924-001.governance.json",
+      "blob_sha": "50707c63899416655fdbc332c12cf43cd0f079f1"
+    },
+    "supersession": {
+      "path": "production-ledger/2026/09/24/RPT-AI-20260924-001.supersession.json",
+      "blob_sha": "9cb6e695ec78202e9f187abc82716e160bf4daa7"
+    }
+  },
+  "prediction_hash": "23cf45c7ec696833362a52046c7716e4271bc03a88f34eea3bedaff8c12b8d81",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "content_hash": "ac80502dc58060826767e48af5c1f2c22686a43e0747a6c5bcf1c696bfce5ad8",
+  "target_dates": {
+    "t1": "2026-09-28",
+    "t3": "2026-09-30",
+    "t5": "2026-10-09"
+  },
+  "github_status": "MAIN_VERIFIED",
+  "four_core_status": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "governance_status": "PERSISTENCE_READY",
+  "supersedes_status": "PERSISTENCE_PARTIAL",
+  "mutation_scope": "append-only governance receipt; locked FINAL unchanged"
+}
