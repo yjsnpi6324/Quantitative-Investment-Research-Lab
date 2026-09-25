@@ -1,0 +1,23 @@
+{
+  "report_id": "RPT-AI-20260925-001",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "e39fc2dd099c84b174ce15cd4710b7a7dcabd3aed2ac9dd2fee7f94b0fbb2402",
+  "nodes": {
+    "notion_registry": "PENDING",
+    "supabase": "PENDING",
+    "github": "PENDING",
+    "dropbox": "PENDING"
+  },
+  "retry_needed": [
+    "SUPABASE",
+    "NOTION_REGISTRY",
+    "GITHUB_MAIN",
+    "DROPBOX"
+  ],
+  "unresolved": [
+    "RPT-BASIC-20260924-001 SOURCE_FINAL missing",
+    "RPT-BASIC-20260925-001 SOURCE_FINAL missing"
+  ]
+}
+
