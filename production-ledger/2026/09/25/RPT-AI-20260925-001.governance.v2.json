@@ -1,0 +1,45 @@
+{
+  "record_type": "GOVERNANCE_STATUS_RECEIPT",
+  "report_id": "RPT-AI-20260925-001",
+  "report_type": "REVIEW",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "e39fc2dd099c84b174ce15cd4710b7a7dcabd3aed2ac9dd2fee7f94b0fbb2402",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github": "PR_PENDING",
+    "dropbox": "VERIFIED"
+  },
+  "github": {
+    "pull_request": 23,
+    "head_sha": "ea677ebd278a39475c3c957d904225c06f3beae3",
+    "mergeable": true,
+    "vercel_check": "SUCCESS",
+    "main_verified": false
+  },
+  "dropbox": {
+    "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAAZw",
+    "canonical_file_id": "id:Kez2cKZha9IAAAAAAAAAaA",
+    "governance_file_id": "id:Kez2cKZha9IAAAAAAAAAaQ",
+    "markdown_sha256": "e39fc2dd099c84b174ce15cd4710b7a7dcabd3aed2ac9dd2fee7f94b0fbb2402"
+  },
+  "notion_registry": {
+    "page_id": "3e614471-bc1b-812f-ac55-c4b4c64c94d5",
+    "status": "VERIFIED"
+  },
+  "supabase": {
+    "run_id": "deb2c3a3-f562-47d2-8b7e-b4e5536dcded",
+    "status": "VERIFIED"
+  },
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "retry_needed": [
+    "GITHUB_MAIN"
+  ],
+  "unresolved": [
+    "RPT-BASIC-20260924-001 SOURCE_FINAL missing",
+    "RPT-BASIC-20260925-001 SOURCE_FINAL missing"
+  ],
+  "mutation_scope": "append-only governance receipt; locked FINAL unchanged",
+  "recorded_at": "2026-09-25T13:34:57.631Z"
+}
+
