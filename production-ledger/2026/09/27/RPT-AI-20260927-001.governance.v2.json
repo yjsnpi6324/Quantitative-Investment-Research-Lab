@@ -1,0 +1,26 @@
+{
+  "report_id": "RPT-AI-20260927-001",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "handoff_completeness": "HANDOFF_COMPLETE",
+  "content_hash": "a30b008437882588e11f012e44a2472e981855b93e9d7296c7041270bfa46ef9",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "PR_PENDING",
+    "dropbox": "VERIFIED"
+  },
+  "github_pr": 26,
+  "github_head_sha": "2769dd7f86dbee799fd23d5aba92390e4c24fd7b",
+  "vercel_preview": "READY",
+  "repair_action": "SUPABASE_NOTION_DROPBOX_VERIFIED_GITHUB_PR_OPENED",
+  "retry_needed": [
+    "GITHUB_MAIN"
+  ],
+  "unresolved": [
+    "PR_26_NOT_MERGED"
+  ],
+  "supersedes": "RPT-AI-20260927-001.governance.json",
+  "recorded_at": "2026-09-27T12:55:00Z"
+}
