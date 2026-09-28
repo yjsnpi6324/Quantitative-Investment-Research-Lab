@@ -1,0 +1,38 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-09-27",
+    "trading_date": null,
+    "prediction_id": null,
+    "report_id": "RPT-AI-20260927-001",
+    "report_type": "REVIEW",
+    "report_status": "FINAL",
+    "run_mode": "NON_TRADING_REVIEW",
+    "generated_at": "2026-09-27T19:00:05+08:00",
+    "data_snapshot_id": "AI-REVIEW-SNAPSHOT-20260927-1900-V35",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "NOTION_HANDOFF_MAILBOX",
+    "source_page_url": "https://app.notion.com/p/3e814471bc1b816797e6ee6eb43bcb03",
+    "record_type": "CANONICAL_FINAL",
+    "governance_mode": "REPAIR_FIRST",
+    "repair_reason": "NEW_FINAL_GOVERNANCE",
+    "repaired_at": "2026-09-27T12:51:12Z"
+  },
+  "content_hash": "a30b008437882588e11f012e44a2472e981855b93e9d7296c7041270bfa46ef9",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "prediction_canonical_json": null,
+  "prediction_hash": null,
+  "hash_algorithm": null,
+  "hash_schema_version": null,
+  "hash_origin": null,
+  "target_dates": {
+    "t1": null,
+    "t3": null,
+    "t5": null
+  },
+  "body_alignment": "NOT_APPLICABLE_REVIEW"
+}

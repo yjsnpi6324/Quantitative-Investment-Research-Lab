@@ -1,0 +1,23 @@
+{
+  "report_id": "RPT-AI-20260927-001",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "handoff_completeness": "HANDOFF_COMPLETE",
+  "content_hash": "a30b008437882588e11f012e44a2472e981855b93e9d7296c7041270bfa46ef9",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "nodes": {
+    "supabase": "PENDING",
+    "notion_registry": "PENDING",
+    "github_main": "PENDING",
+    "dropbox": "PENDING"
+  },
+  "repair_action": "CANONICAL_ARTIFACT_BUILT",
+  "retry_needed": [
+    "SUPABASE",
+    "NOTION_REGISTRY",
+    "GITHUB_MAIN",
+    "DROPBOX"
+  ],
+  "unresolved": [],
+  "recorded_at": "2026-09-27T12:51:12Z"
+}
