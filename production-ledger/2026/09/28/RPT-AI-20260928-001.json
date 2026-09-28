@@ -1,0 +1,47 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-09-28",
+    "trading_date": "2026-09-28",
+    "prediction_id": "PRED-AI-20260928-01",
+    "report_id": "RPT-AI-20260928-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-09-28T19:00:17+08:00",
+    "data_snapshot_id": "AI-SNAPSHOT-20260928-CLOSE-1900-V35",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3e914471bc1b813c9bf5ea664a1dff2a?pvs=204",
+    "record_type": "CANONICAL_ARTIFACT",
+    "governance_mode": "REPAIR_FIRST",
+    "repair_reason": "NEW_FINAL_DISTRIBUTION",
+    "repaired_at": "2026-09-28T20:40:20+08:00"
+  },
+  "content_hash": "77704bc708775475c715c4aaf0795cd3cf4fcb7129da07e839cab02d0c091016",
+  "content_hash_algorithm": "SHA-256",
+  "content_hash_scope": "exact UTF-8 bytes of companion Markdown artifact",
+  "prediction_canonical_json": "{\"champion_model_id\":\"AI-PLATE-MSM\",\"data_snapshot_id\":\"AI-SNAPSHOT-20260928-CLOSE-1900-V35\",\"forecasts\":{\"t1\":{\"assumptions\":\"成交维持1.5万亿元以上，银行、电力等防御方向稳定指数，机器人、低位AI应用或国产芯片至少一条支线提供承接，且没有新增已确认的重大外部限制\",\"direction\":\"震荡偏弱、超跌分化\",\"interval\":null,\"invalidation\":\"AI权重集体止跌，CPO与PCB同步放量修复，上涨家数回到3000家以上且成交重返1.8万亿元以上\",\"probability\":\"58%–63%\"},\"t3\":{\"assumptions\":\"9月29日至30日不再出现科技权重放量普跌，国庆休市期间海外AI资本开支、利率与地缘冲击可控，10月8日风险再定价有序\",\"direction\":\"中性偏弱、高波动\",\"interval\":null,\"invalidation\":\"9月29日至30日AI权重放量修复且节后宽度同步回升，或国庆期间外部冲击导致10月8日AI权重跳空破位\",\"probability\":\"54%–59%\"},\"t5\":{\"assumptions\":\"AI资本开支和国产全栈产业逻辑未被实质下修，外部光通信限制未形成影响订单的正式新增措施，节后市场在10月9日前完成初步止跌\",\"direction\":\"中性、低置信度\",\"interval\":null,\"invalidation\":\"CPO、PCB与半导体到10月9日仍无法止跌，成交和市场宽度持续恶化，或出现已确认的外部限制、客户削减订单与AI资本开支下修\",\"probability\":\"51%–56%\"}},\"generated_at\":\"2026-09-28T19:00:17+08:00\",\"hash_schema_version\":\"prediction-hash-schema-v1\",\"model_version\":\"v2026-08-26\",\"prediction_id\":\"PRED-AI-20260928-01\",\"production_id\":\"AI-PROD-20260825-A\",\"prompt_version\":\"PROD-PROMPT-V3.5\",\"report_id\":\"RPT-AI-20260928-001\",\"t1_target_date\":\"2026-09-29\",\"t3_target_date\":\"2026-10-08\",\"t5_target_date\":\"2026-10-12\",\"task_id\":\"TASK-AI-DAILY\",\"trading_date\":\"2026-09-28\"}",
+  "prediction_hash": "c3786e55784072adb6b0736a2617e792d59d155bd77d7aa4016b28546748ba27",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "target_dates": {
+    "t1": "2026-09-29",
+    "t3": "2026-10-08",
+    "t5": "2026-10-12"
+  },
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "node_status": {
+    "supabase": "PENDING",
+    "notion_registry": "PENDING",
+    "github_main": "PENDING",
+    "dropbox": "PENDING"
+  }
+}
