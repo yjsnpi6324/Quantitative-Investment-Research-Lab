@@ -1,0 +1,38 @@
+{
+  "record_type": "GOVERNANCE_STATUS_RECEIPT",
+  "report_id": "RPT-BASIC-20260926-001",
+  "report_type": "REVIEW",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "c611832270f313949cf70973533533389a3d3c877b419a456a9edc701f396039",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github": "PR_PENDING",
+    "dropbox": "VERIFIED"
+  },
+  "dropbox": {
+    "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAAbA",
+    "canonical_file_id": "id:Kez2cKZha9IAAAAAAAAAaw",
+    "markdown_sha256": "c611832270f313949cf70973533533389a3d3c877b419a456a9edc701f396039"
+  },
+  "notion_registry": {
+    "page_id": "3e714471-bc1b-81f3-a478-ebbf666f550d",
+    "status": "VERIFIED"
+  },
+  "supabase": {
+    "run_id": "a39cbdf4-d0b9-4be0-9320-9c9db8f5b48b",
+    "status": "VERIFIED"
+  },
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "retry_needed": [
+    "GITHUB_MAIN"
+  ],
+  "unresolved": [
+    "RPT-AI-20260926-001 SOURCE_FINAL missing",
+    "RPT-BASIC-20260924-001 SOURCE_FINAL missing",
+    "RPT-BASIC-20260925-001 SOURCE_FINAL missing"
+  ],
+  "mutation_scope": "append-only governance receipt; locked FINAL unchanged",
+  "recorded_at": "2026-09-26T13:18:00Z"
+}
+

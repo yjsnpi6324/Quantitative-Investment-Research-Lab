@@ -1,0 +1,24 @@
+{
+  "record_type": "GOVERNANCE_MAIN_VERIFICATION_RECEIPT",
+  "report_id": "RPT-AI-20260925-001",
+  "report_type": "REVIEW",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "e39fc2dd099c84b174ce15cd4710b7a7dcabd3aed2ac9dd2fee7f94b0fbb2402",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github": "MAIN_VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "github": {
+    "pull_request": 23,
+    "merged": true,
+    "merge_commit": "b433be2a1e24f109b4e1218a23333c8c3c53ecaf",
+    "main_readback": true
+  },
+  "governance_status": "PERSISTENCE_READY",
+  "retry_needed": [],
+  "mutation_scope": "append-only governance receipt; locked FINAL unchanged",
+  "recorded_at": "2026-09-26T13:20:00Z"
+}
+
