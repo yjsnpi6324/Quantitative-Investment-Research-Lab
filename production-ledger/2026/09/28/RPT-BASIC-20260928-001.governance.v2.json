@@ -1,0 +1,32 @@
+{
+  "report_id": "RPT-BASIC-20260928-001",
+  "verified_at": "2026-09-28T20:47:00+08:00",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "dropbox": "VERIFIED",
+    "github": "PR_PENDING"
+  },
+  "github": {
+    "pull_request": 28,
+    "head_sha": "2540e47e7afbb66779133ffab8536af8795a8176",
+    "mergeable": true,
+    "check": "Vercel SUCCESS",
+    "main_verified": false
+  },
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "repair_action": [
+    "SUPABASE_WRITTEN_AND_READ_BACK",
+    "NOTION_REGISTRY_CREATED_AND_READ_BACK",
+    "DROPBOX_ARTIFACTS_UPLOADED_AND_READ_BACK",
+    "GITHUB_PR_CREATED_AND_CHECKED"
+  ],
+  "retry_needed": [
+    "GITHUB_MAIN"
+  ],
+  "unresolved": [
+    "PR_PENDING"
+  ]
+}
