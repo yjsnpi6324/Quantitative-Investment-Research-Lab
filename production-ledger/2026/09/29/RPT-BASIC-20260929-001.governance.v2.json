@@ -1,0 +1,50 @@
+{
+  "report_id": "RPT-BASIC-20260929-001",
+  "prediction_id": "PRED-BASIC-20260929-001",
+  "verified_at": "2026-09-29T21:07:34+08:00",
+  "handoff_completeness": "HANDOFF_COMPLETE",
+  "content_hash": "dbcf0fc32d7171eedb0f95a71bdccd0ace780971567f9800b707eb82c1a1d36e",
+  "prediction_hash": "6a324011fe187672d0aee2f4b6a2c1264ed4747d8dba7456726bb49528c3fd63",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "target_dates": {
+    "t1": "2026-09-30",
+    "t3": "2026-10-09",
+    "t5": "2026-10-13"
+  },
+  "node_status": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github": "PR_PENDING",
+    "dropbox": "VERIFIED"
+  },
+  "github_pr": {
+    "number": 29,
+    "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/pull/29",
+    "mergeable": true,
+    "vercel_check": "SUCCESS"
+  },
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "repair_action": [
+    "SOURCE_FINAL_VERIFIED",
+    "NATIVE_HASH_VERIFIED",
+    "BODY_ALIGNMENT_VERIFIED",
+    "SUPABASE_WRITTEN_AND_READ_BACK",
+    "NOTION_REGISTRY_WRITTEN_AND_READ_BACK",
+    "DROPBOX_ARTIFACTS_UPLOADED_AND_READ_BACK",
+    "GITHUB_PR_OPENED_AND_CHECKED"
+  ],
+  "retry_needed": [
+    "GITHUB_MAIN"
+  ],
+  "unresolved": [
+    "PR_27_PENDING",
+    "PR_28_PENDING",
+    "PR_29_PENDING",
+    "AI_2026-09-29_FINAL_PENDING",
+    "BASIC_2026-09-24_SOURCE_FINAL_MISSING"
+  ]
+}
