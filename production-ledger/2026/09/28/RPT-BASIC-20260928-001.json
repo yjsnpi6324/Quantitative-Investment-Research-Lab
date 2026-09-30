@@ -1,0 +1,47 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-09-28",
+    "trading_date": "2026-09-28",
+    "prediction_id": "PRED-BASIC-20260928-001",
+    "report_id": "RPT-BASIC-20260928-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-09-28T19:03:52+08:00",
+    "data_snapshot_id": "BASIC-SNAPSHOT-20260928-CLOSE-1903-V35",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3e914471bc1b815b9819e88d94b27679?pvs=204",
+    "record_type": "CANONICAL_ARTIFACT",
+    "governance_mode": "REPAIR_FIRST",
+    "repair_reason": "NEW_FINAL_DISTRIBUTION",
+    "repaired_at": "2026-09-28T20:40:20+08:00"
+  },
+  "content_hash": "5e5a47530bedab53e658684b404b8c97525494485d7c1ee8f5c988a9c5fd19a4",
+  "content_hash_algorithm": "SHA-256",
+  "content_hash_scope": "exact UTF-8 bytes of companion Markdown artifact",
+  "prediction_canonical_json": "{\"champion_model_id\":\"BASIC-MSM\",\"data_snapshot_id\":\"BASIC-SNAPSHOT-20260928-CLOSE-1903-V35\",\"forecasts\":{\"t1\":{\"assumptions\":\"成交维持1.5万亿元以上，汽车、食品或银行至少一条防御与低位方向提供承接，科技权重不再加速下跌，且没有新增重大外部冲击\",\"direction\":\"震荡偏弱、超跌分化\",\"interval\":null,\"invalidation\":\"上涨家数回到3000家以上，成交重返1.8万亿元以上，科技权重止跌且汽车、消费或银行至少一条低位线持续走强\",\"probability\":\"59%–64%\"},\"t3\":{\"assumptions\":\"9月29日至30日不再出现放量普跌，国庆休市期间外部利率、油价、地缘与中美事件可控，10月8日银行与内需方向能够稳定市场\",\"direction\":\"中性偏弱、高波动\",\"interval\":null,\"invalidation\":\"节前市场宽度与成长权重同步强修复并延续至10月8日，或假期外部冲击导致10月8日主要指数与低位承接线同步跳空走弱\",\"probability\":\"55%–60%\"},\"t5\":{\"assumptions\":\"中秋与国庆消费出行数据保持韧性，汽车、食品或服务消费至少一条基本盘方向维持承接，科技止跌且外部风险可控\",\"direction\":\"中性略偏多、低置信度\",\"interval\":null,\"invalidation\":\"上涨家数连续低于2000且成交持续低于1.4万亿元，汽车、消费、地产与银行同步转弱，或外部风险和企业盈利预期明显恶化\",\"probability\":\"52%–57%\"}},\"generated_at\":\"2026-09-28T19:03:52+08:00\",\"hash_schema_version\":\"prediction-hash-schema-v1\",\"model_version\":\"v2026-08-26\",\"prediction_id\":\"PRED-BASIC-20260928-001\",\"production_id\":\"BASIC-PROD-20260825-A\",\"prompt_version\":\"PROD-PROMPT-V3.5\",\"report_id\":\"RPT-BASIC-20260928-001\",\"t1_target_date\":\"2026-09-29\",\"t3_target_date\":\"2026-10-08\",\"t5_target_date\":\"2026-10-12\",\"task_id\":\"TASK-ASTOCK-DAILY\",\"trading_date\":\"2026-09-28\"}",
+  "prediction_hash": "8d1e40ad194cf519e6a8b2f4d9a13bfcaaf012dd9d9ee862e90c8e197a637cf7",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "target_dates": {
+    "t1": "2026-09-29",
+    "t3": "2026-10-08",
+    "t5": "2026-10-12"
+  },
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "node_status": {
+    "supabase": "PENDING",
+    "notion_registry": "PENDING",
+    "github_main": "PENDING",
+    "dropbox": "PENDING"
+  }
+}
