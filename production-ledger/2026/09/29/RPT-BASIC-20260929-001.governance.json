@@ -1,0 +1,29 @@
+{
+  "report_id": "RPT-BASIC-20260929-001",
+  "prediction_id": "PRED-BASIC-20260929-001",
+  "verified_at": "2026-09-29T21:02:29+08:00",
+  "handoff_completeness": "HANDOFF_COMPLETE",
+  "content_hash": "dbcf0fc32d7171eedb0f95a71bdccd0ace780971567f9800b707eb82c1a1d36e",
+  "prediction_hash": "6a324011fe187672d0aee2f4b6a2c1264ed4747d8dba7456726bb49528c3fd63",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "target_dates": {
+    "t1": "2026-09-30",
+    "t3": "2026-10-09",
+    "t5": "2026-10-13"
+  },
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "repair_action": [
+    "SOURCE_FINAL_VERIFIED",
+    "CANONICAL_ARTIFACT_BUILT"
+  ],
+  "retry_needed": [
+    "SUPABASE",
+    "NOTION_REGISTRY",
+    "GITHUB_MAIN",
+    "DROPBOX"
+  ],
+  "unresolved": [
+    "FOUR_CORE_PERSISTENCE"
+  ]
+}
