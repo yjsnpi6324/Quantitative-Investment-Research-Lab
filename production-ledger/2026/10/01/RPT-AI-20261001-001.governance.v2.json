@@ -1,0 +1,24 @@
+{
+  "record_type": "GOVERNANCE_STATUS_RECEIPT",
+  "report_id": "RPT-AI-20261001-001",
+  "report_type": "REVIEW",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "2f22b8aa1362277fd1d4d9cc299cb3aa848d7775e7fcae1ecd3375050ce5a3d4",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github": "MAIN_VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "notion_registry_url": "https://app.notion.com/p/3ec14471bc1b81f4a578dd65c9b66fd8?pvs=204",
+  "dropbox_file_ids": {
+    "md": "id:Kez2cKZha9IAAAAAAAAAhQ",
+    "json": "id:Kez2cKZha9IAAAAAAAAAhA"
+  },
+  "github_pr": 32,
+  "github_head_sha": "a37e3edf045aaab4cb4c742b50864d658baf904f",
+  "github_merge_commit": "d1fa5be9292a6b9a5a2f727c6ae6749f68b45a93",
+  "governance_status": "PERSISTENCE_READY",
+  "verified_at": "2026-10-01T13:00:02.032Z"
+}
