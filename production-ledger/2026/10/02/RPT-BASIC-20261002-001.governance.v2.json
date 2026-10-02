@@ -1,0 +1,31 @@
+{
+  "record_type": "GOVERNANCE_RECEIPT",
+  "report_id": "RPT-BASIC-20261002-001",
+  "governance_status": "PERSISTENCE_READY",
+  "handoff_status": "HANDOFF_COMPLETE",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "6d6a23766844f6ce317c48c40257d7949dd8594c06114a9ff1adacd4dac29fab",
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "run_key": "governance:RPT-BASIC-20261002-001"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "page_id": "3ed14471-bc1b-81eb-aa27-d8a90df4ff14",
+      "url": "https://app.notion.com/p/3ed14471bc1b81ebaa27d8a90df4ff14?pvs=204"
+    },
+    "github_main": {
+      "status": "VERIFIED",
+      "merge_commit": "86360a1517951c88ff34cdc284520cdbb5a59902",
+      "pr_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/pull/34"
+    },
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown_path": "ns:3601403601//A股基本盘日报预测/2026/2026-10-02_RPT-BASIC-20261002-001.md",
+      "json_path": "ns:3601403601//A股基本盘日报预测/2026/2026-10-02_RPT-BASIC-20261002-001.canonical.json"
+    }
+  },
+  "verified_at": "2026-10-02T21:34:00+08:00"
+}
