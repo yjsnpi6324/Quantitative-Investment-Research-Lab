@@ -1,0 +1,31 @@
+{
+  "record_type": "GOVERNANCE_RECEIPT",
+  "report_id": "RPT-AI-20261002-001",
+  "governance_status": "PERSISTENCE_READY",
+  "handoff_status": "HANDOFF_COMPLETE",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "f027c07a20ab59449aef4e7f556617ffcede5a6b846bfc5771eef4bb4e00bf42",
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "run_key": "governance:RPT-AI-20261002-001"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "page_id": "3ed14471-bc1b-8198-95b3-f9ef2a386bab",
+      "url": "https://app.notion.com/p/3ed14471bc1b819895b3f9ef2a386bab?pvs=204"
+    },
+    "github_main": {
+      "status": "VERIFIED",
+      "merge_commit": "86360a1517951c88ff34cdc284520cdbb5a59902",
+      "pr_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/pull/34"
+    },
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown_path": "ns:3601403601//03_Reports/Daily/AI_Sector/2026-10-02_RPT-AI-20261002-001.md",
+      "json_path": "ns:3601403601//03_Reports/Daily/AI_Sector/2026-10-02_RPT-AI-20261002-001.json"
+    }
+  },
+  "verified_at": "2026-10-02T21:34:00+08:00"
+}
