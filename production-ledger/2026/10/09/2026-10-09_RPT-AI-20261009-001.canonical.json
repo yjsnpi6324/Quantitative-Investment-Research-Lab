@@ -1,0 +1,82 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-10-09",
+    "trading_date": "2026-10-09",
+    "prediction_id": "PRED-AI-20261009-01",
+    "report_id": "RPT-AI-20261009-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-09T18:57:47+08:00",
+    "data_snapshot_id": "AI-DAILY-SNAPSHOT-20261009-185747-CN",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "WARNING",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3f414471bc1b8146ad09e0c04d445de0?pvs=204",
+    "record_type": "FORMAL_PREDICTION",
+    "governance_mode": "REPAIR",
+    "repair_reason": "PERSISTENCE_PENDING; canonical fanout",
+    "repaired_at": "2026-10-09T21:16:33+08:00",
+    "content_hash": "68a8fe860eaf48d77e03f2fcfb7e16d0d2b7c23e4998baf7c416c78d39f922cb",
+    "prediction_canonical_json": "{\"champion_model_id\":\"AI-PLATE-MSM\",\"data_snapshot_id\":\"AI-DAILY-SNAPSHOT-20261009-185747-CN\",\"forecasts\":{\"t1\":{\"assumptions\":\"10月9日午后宽基资金承接延续，10月12日全市场成交维持1.7万亿元以上，CPO、PCB与存储不再同步扩散下跌，AI应用或软件至少一条分支保持承接\",\"direction\":\"震荡修复、AI内部强分化\",\"interval\":null,\"invalidation\":\"AI硬件权重再度集体放量破位，科创50下跌超过3%，全市场成交跌破1.5万亿元且下跌家数超过4000只\",\"probability\":\"56%–61%\"},\"t3\":{\"assumptions\":\"10月12日至13日市场宽度不再恶化，CPO、PCB或半导体至少一条硬件方向止跌，AI应用出现持续中军，海外油价与长端利率未同步上行\",\"direction\":\"中性、高波动\",\"interval\":null,\"invalidation\":\"AI硬件与应用同步退潮，CPO、PCB和存储放量创出阶段新低，市场成交与上涨家数连续下降\",\"probability\":\"53%–58%\"},\"t5\":{\"assumptions\":\"台积电10月15日业绩与指引继续确认AI及先进制程需求且未出现明显利润率或资本开支负面变化，A股AI中军成交修复，海外利率与油价冲击可控\",\"direction\":\"中性略偏多、低置信度\",\"interval\":null,\"invalidation\":\"台积电业绩或指引显著低于预期，AI资本开支融资压力继续恶化，且10月15日后A股AI权重放量破位\",\"probability\":\"51%–56%\"}},\"generated_at\":\"2026-10-09T18:57:47+08:00\",\"hash_schema_version\":\"prediction-hash-schema-v1\",\"model_version\":\"v2026-08-26\",\"prediction_id\":\"PRED-AI-20261009-01\",\"production_id\":\"AI-PROD-20260825-A\",\"prompt_version\":\"PROD-PROMPT-V3.5\",\"report_id\":\"RPT-AI-20261009-001\",\"t1_target_date\":\"2026-10-12\",\"t3_target_date\":\"2026-10-14\",\"t5_target_date\":\"2026-10-16\",\"task_id\":\"TASK-AI-DAILY\",\"trading_date\":\"2026-10-09\"}",
+    "prediction_hash": "8efece812d971e68897b0fb4bf426aea1f0edec946722e765a9cc21db81fab54",
+    "hash_algorithm": "SHA-256",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "hash_origin": "NATIVE",
+    "t1_target_date": "2026-10-12",
+    "t3_target_date": "2026-10-14",
+    "t5_target_date": "2026-10-16",
+    "hash_status": "NATIVE_HASH_VERIFIED",
+    "body_alignment": "VERIFIED",
+    "governance_status": "PERSISTENCE_PARTIAL"
+  },
+  "prediction_canonical_json": {
+    "champion_model_id": "AI-PLATE-MSM",
+    "data_snapshot_id": "AI-DAILY-SNAPSHOT-20261009-185747-CN",
+    "forecasts": {
+      "t1": {
+        "assumptions": "10月9日午后宽基资金承接延续，10月12日全市场成交维持1.7万亿元以上，CPO、PCB与存储不再同步扩散下跌，AI应用或软件至少一条分支保持承接",
+        "direction": "震荡修复、AI内部强分化",
+        "interval": null,
+        "invalidation": "AI硬件权重再度集体放量破位，科创50下跌超过3%，全市场成交跌破1.5万亿元且下跌家数超过4000只",
+        "probability": "56%–61%"
+      },
+      "t3": {
+        "assumptions": "10月12日至13日市场宽度不再恶化，CPO、PCB或半导体至少一条硬件方向止跌，AI应用出现持续中军，海外油价与长端利率未同步上行",
+        "direction": "中性、高波动",
+        "interval": null,
+        "invalidation": "AI硬件与应用同步退潮，CPO、PCB和存储放量创出阶段新低，市场成交与上涨家数连续下降",
+        "probability": "53%–58%"
+      },
+      "t5": {
+        "assumptions": "台积电10月15日业绩与指引继续确认AI及先进制程需求且未出现明显利润率或资本开支负面变化，A股AI中军成交修复，海外利率与油价冲击可控",
+        "direction": "中性略偏多、低置信度",
+        "interval": null,
+        "invalidation": "台积电业绩或指引显著低于预期，AI资本开支融资压力继续恶化，且10月15日后A股AI权重放量破位",
+        "probability": "51%–56%"
+      }
+    },
+    "generated_at": "2026-10-09T18:57:47+08:00",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "model_version": "v2026-08-26",
+    "prediction_id": "PRED-AI-20261009-01",
+    "production_id": "AI-PROD-20260825-A",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "report_id": "RPT-AI-20261009-001",
+    "t1_target_date": "2026-10-12",
+    "t3_target_date": "2026-10-14",
+    "t5_target_date": "2026-10-16",
+    "task_id": "TASK-AI-DAILY",
+    "trading_date": "2026-10-09"
+  },
+  "artifact": {
+    "markdown_sha256": "c9ff48b31d3bbd8ba57436a263097de2c6fdb48c15905ce73dd49e43918da8e9",
+    "encoding": "UTF-8",
+    "normalization": "Unicode NFC"
+  }
+}
+
