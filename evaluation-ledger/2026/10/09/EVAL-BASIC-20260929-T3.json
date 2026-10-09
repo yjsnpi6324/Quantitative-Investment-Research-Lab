@@ -1,0 +1,32 @@
+{
+  "evaluation_id": "EVAL-BASIC-20260929-T3",
+  "prediction_id": "PRED-BASIC-20260929-001",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "horizon": "T+3",
+  "trading_date": "2026-09-29",
+  "target_date": "2026-10-09",
+  "status": "FORMAL_CLOSED",
+  "result": "PARTIAL",
+  "score": 0.5,
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "prediction_hash": "6a324011fe187672d0aee2f4b6a2c1264ed4747d8dba7456726bb49528c3fd63",
+  "actual": {
+    "sse_close": 3813.79,
+    "sse_pct": 0.05,
+    "szse_pct": 0.17,
+    "chinext_pct": 0.22,
+    "breadth": "over 3200 stocks up",
+    "turnover_cny": "about 1.90 trillion"
+  },
+  "error_cause": "High volatility and neutral close matched; Oct 8 risk release was stronger than baseline and basic-economy sectors lacked consistent multi-day confirmation.",
+  "sources": [
+    "https://news.sina.com.cn/zx/2026-10-09/doc-iniurmnm7898704.shtml",
+    "https://m.21jingji.com/article/20261009/herald/3720684b7744c762e29f38eb96d9ee02.html"
+  ],
+  "evaluated_at": "2026-10-09T21:16:33+08:00",
+  "record_type": "EVALUATION",
+  "append_only": true
+}
+
