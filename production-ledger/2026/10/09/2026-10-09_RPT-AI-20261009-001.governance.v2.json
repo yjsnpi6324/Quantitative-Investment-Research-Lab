@@ -1,0 +1,17 @@
+{
+  "governance_status": "PERSISTENCE_READY",
+  "report_id": "RPT-AI-20261009-001",
+  "prediction_id": "PRED-AI-20261009-01",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "content_hash": "68a8fe860eaf48d77e03f2fcfb7e16d0d2b7c23e4998baf7c416c78d39f922cb",
+  "prediction_hash": "8efece812d971e68897b0fb4bf426aea1f0edec946722e765a9cc21db81fab54",
+  "target_dates": {"t1": "2026-10-12", "t3": "2026-10-14", "t5": "2026-10-16"},
+  "nodes": {
+    "supabase": {"status": "VERIFIED", "run_id": "37c4734c-dd83-4d45-bea7-5dec5250fb26"},
+    "notion_registry": {"status": "VERIFIED", "page_id": "3f414471-bc1b-8194-ab14-d7066330d737"},
+    "github_main": {"status": "VERIFIED", "merge_sha": "ce4f7a95e189995eaa1055e519d3816aed1e299e"},
+    "dropbox": {"status": "VERIFIED", "markdown": "/03_Reports/Daily/AI_Sector/2026-10-09_RPT-AI-20261009-001.md", "canonical_json": "/03_Reports/Daily/AI_Sector/2026-10-09_RPT-AI-20261009-001.canonical.json"}
+  },
+  "verified_at": "2026-10-09T21:25:42+08:00"
+}

@@ -1,0 +1,17 @@
+{
+  "governance_status": "PERSISTENCE_READY",
+  "report_id": "RPT-BASIC-20261009-001",
+  "prediction_id": "PRED-BASIC-20261009-001",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "content_hash": "7622f4154f5a98bddf58719ae521c67a3edd45d1a935f6fe11f1c4cdb6db160c",
+  "prediction_hash": "bd34f9d787b7e178735b90f378125396d2d6e9e278aa3a45704d5675414a0ac4",
+  "target_dates": {"t1": "2026-10-12", "t3": "2026-10-14", "t5": "2026-10-16"},
+  "nodes": {
+    "supabase": {"status": "VERIFIED", "run_id": "a882cd5a-5a02-4e3c-ad2a-40bb4a8e7c92"},
+    "notion_registry": {"status": "VERIFIED", "page_id": "3f414471-bc1b-816b-9c72-d95ff13e6a33"},
+    "github_main": {"status": "VERIFIED", "merge_sha": "ce4f7a95e189995eaa1055e519d3816aed1e299e"},
+    "dropbox": {"status": "VERIFIED", "markdown": "/A股基本盘日报预测/2026/2026-10-09_RPT-BASIC-20261009-001.md", "canonical_json": "/A股基本盘日报预测/2026/2026-10-09_RPT-BASIC-20261009-001.canonical.json"}
+  },
+  "verified_at": "2026-10-09T21:25:42+08:00"
+}
