@@ -1,0 +1,32 @@
+{
+  "evaluation_id": "EVAL-AI-20260928-T3",
+  "prediction_id": "PRED-AI-20260928-01",
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "horizon": "T+3",
+  "trading_date": "2026-09-28",
+  "target_date": "2026-10-08",
+  "status": "FORMAL_CLOSED",
+  "result": "PARTIAL",
+  "score": 0.5,
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "prediction_hash": "c3786e55784072adb6b0736a2617e792d59d155bd77d7aa4016b28546748ba27",
+  "actual": {
+    "sse_pct": -0.79,
+    "szse_pct": -2.07,
+    "chinext_pct": -3.15,
+    "star50_pct": -4.82,
+    "breadth": "about 3800 stocks down",
+    "turnover_cny": "about 1.68 trillion"
+  },
+  "error_cause": "Weak direction and high-volatility regime matched, but the AI hardware selloff magnitude and breadth were underestimated.",
+  "sources": [
+    "https://www.sse.com.cn/market/sseindex/daily/",
+    "https://www.szse.cn/market/trend/index.html",
+    "https://app.notion.com/p/3f514471bc1b810fae25ee35923c0a29"
+  ],
+  "evaluated_at": "2026-10-10T10:30:00+08:00",
+  "record_type": "EVALUATION",
+  "append_only": true
+}

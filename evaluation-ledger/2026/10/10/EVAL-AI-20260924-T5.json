@@ -1,0 +1,33 @@
+{
+  "evaluation_id": "EVAL-AI-20260924-T5",
+  "prediction_id": "PRED-AI-20260924-01",
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "horizon": "T+5",
+  "trading_date": "2026-09-24",
+  "target_date": "2026-10-09",
+  "status": "FORMAL_CLOSED",
+  "result": "PARTIAL",
+  "score": 0.5,
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "prediction_hash": "23cf45c7ec696833362a52046c7716e4271bc03a88f34eea3bedaff8c12b8d81",
+  "actual": {
+    "sse_pct": 0.05,
+    "szse_pct": 0.17,
+    "chinext_pct": 0.22,
+    "star50_pct": 0.07,
+    "breadth": "over 3200 stocks up",
+    "turnover_cny": "about 1.92 trillion",
+    "ai_structure": "AI video/software/media stronger; PCB/CPO/advanced packaging/storage weaker"
+  },
+  "error_cause": "A mild rebound partially materialized, but AI internal structure remained fragmented and the hardware chain did not confirm.",
+  "sources": [
+    "https://news.sina.com.cn/zx/2026-10-09/doc-iniurmnm7898704.shtml",
+    "https://m.21jingji.com/article/20261009/herald/3720684b7744c762e29f38eb96d9ee02.html",
+    "https://app.notion.com/p/3f514471bc1b8181b0b1cf28b7e05e9d"
+  ],
+  "evaluated_at": "2026-10-10T10:30:00+08:00",
+  "record_type": "EVALUATION",
+  "append_only": true
+}

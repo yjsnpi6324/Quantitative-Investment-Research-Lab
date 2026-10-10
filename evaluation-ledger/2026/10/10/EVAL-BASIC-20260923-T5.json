@@ -1,0 +1,32 @@
+{
+  "evaluation_id": "EVAL-BASIC-20260923-T5",
+  "prediction_id": "PRED-BASIC-20260923-001",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "horizon": "T+5",
+  "trading_date": "2026-09-23",
+  "target_date": "2026-10-08",
+  "status": "FORMAL_CLOSED",
+  "result": "MISS",
+  "score": 0,
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "prediction_hash": "fc0d3d72ca945aca3578331d35c98dc72f021403052a735e07b7e894a939384e",
+  "actual": {
+    "sse_pct": -0.79,
+    "szse_pct": -2.07,
+    "chinext_pct": -3.15,
+    "star50_pct": -4.82,
+    "breadth": "about 3800 stocks down",
+    "turnover_cny": "about 1.68 trillion"
+  },
+  "error_cause": "The mildly bullish direction failed; post-holiday repricing, growth de-crowding, downside magnitude and breadth were underestimated.",
+  "sources": [
+    "https://www.sse.com.cn/market/sseindex/daily/",
+    "https://www.szse.cn/market/trend/index.html",
+    "https://app.notion.com/p/3f514471bc1b81e3b3aee475b4774ded"
+  ],
+  "evaluated_at": "2026-10-10T10:30:00+08:00",
+  "record_type": "EVALUATION",
+  "append_only": true
+}
