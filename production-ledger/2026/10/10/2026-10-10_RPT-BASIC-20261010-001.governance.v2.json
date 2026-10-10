@@ -1,0 +1,19 @@
+{
+  "governance_status": "PERSISTENCE_READY",
+  "report_id": "RPT-BASIC-20261010-001",
+  "prediction_id": null,
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "content_hash": "e8b87de4ae419575ab719e4fda6fdeddccb50ebc04e820d302c1bf5225683c5e",
+  "nodes": {
+    "supabase": {"status": "VERIFIED", "run_id": "aac8af57-4b13-4d50-8353-a9d6745c34c9"},
+    "notion_registry": {"status": "VERIFIED", "page_id": "3f514471-bc1b-81f8-ab3b-ddc60f7d2569"},
+    "github_main": {"status": "VERIFIED", "merge_sha": "c9c748ec5eecdbd5591cb9aa0cff45a23f96c99b"},
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown": "/A股基本盘日报预测/2026/2026-10-10_RPT-BASIC-20261010-001.md",
+      "canonical_json": "/A股基本盘日报预测/2026/2026-10-10_RPT-BASIC-20261010-001.canonical.json"
+    }
+  },
+  "verified_at": "2026-10-10T21:32:00+08:00"
+}
