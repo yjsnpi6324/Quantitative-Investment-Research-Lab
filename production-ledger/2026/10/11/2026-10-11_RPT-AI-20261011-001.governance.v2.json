@@ -1,0 +1,23 @@
+{
+  "governance_receipt_version": "v2",
+  "report_id": "RPT-AI-20261011-001",
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "report_date": "2026-10-11",
+  "report_type": "REVIEW",
+  "report_status": "FINAL",
+  "content_hash": "51da76f16fc3749de7dab7acbfa5be221667a69695db7e9bb536942395f2e0b3",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "source_page_url": "https://app.notion.com/p/3f614471bc1b81f5b9f5cfea0cbf3390?pvs=204",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "notion_registry_url": "https://app.notion.com/p/3f614471bc1b8172b502d6828209a98a?pvs=204",
+  "github_archive_merge_sha": "e2e4de2c6d986aec3b1e68dfc6c65476fdc513fe",
+  "governance_status": "PERSISTENCE_READY",
+  "verified_at": "2026-10-11T20:52:00+08:00"
+}
