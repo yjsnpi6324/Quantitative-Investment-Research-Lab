@@ -1,0 +1,40 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-10-12",
+    "trading_date": "2026-10-12",
+    "prediction_id": "PRED-AI-20261012-01",
+    "report_id": "RPT-AI-20261012-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-12T18:59:38+08:00",
+    "data_snapshot_id": "AI-DAILY-SNAPSHOT-20261012-185938-CN",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "WARNING",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3f714471bc1b8149864fe4225244b9d8?pvs=204",
+    "record_type": "CANONICAL_FINAL_ARTIFACT",
+    "governance_mode": "REPAIR_FIRST_V2.6",
+    "repair_reason": "PERSISTENCE_PENDING",
+    "repaired_at": "2026-10-12T21:00:00+08:00",
+    "content_hash": "4205e3dbc49feb024a188d40c43d59de9460b26f677813ed0b55b94cc6cb128f"
+  },
+  "content_hash": "4205e3dbc49feb024a188d40c43d59de9460b26f677813ed0b55b94cc6cb128f",
+  "prediction_canonical_json": "{\"champion_model_id\":\"AI-PLATE-MSM\",\"data_snapshot_id\":\"AI-DAILY-SNAPSHOT-20261012-185938-CN\",\"forecasts\":{\"t1\":{\"assumptions\":\"全市场成交维持1.4万亿元以上，短剧、传媒或AI应用保持板块宽度，CPO、PCB与半导体不再扩散放量下跌，科创50不再单日下跌超过2%\",\"direction\":\"偏弱震荡、应用相对占优\",\"interval\":null,\"invalidation\":\"科创50再跌超过2%、CPO与PCB和半导体同步放量破位且成交跌破1.3万亿元，或硬件中军集体反包并带动上涨家数超过3000只、成交重返1.7万亿元\",\"probability\":\"60%–65%\"},\"t3\":{\"assumptions\":\"10月13日至14日AI应用保持连续性，CPO、PCB或半导体至少一条硬件方向止跌，市场成交稳定在1.4万亿元以上，台积电业绩前未出现新增产业负面冲击\",\"direction\":\"中性偏弱、软硬分化修复\",\"interval\":null,\"invalidation\":\"AI应用与硬件同步退潮，CPO、PCB和存储放量创阶段新低，或台积电业绩与资本开支指引显著低于预期\",\"probability\":\"55%–60%\"},\"t5\":{\"assumptions\":\"台积电业绩、利润率和资本开支继续验证AI及先进制程需求，A股AI三季报线索未出现广泛下修，海外融资、电力和利率约束未引发大范围资本开支削减\",\"direction\":\"中性、高波动业绩验证\",\"interval\":null,\"invalidation\":\"A股AI硬件权重集体破位且应用侧仅一日游，台积电或国内三季报线索显著低于预期，或数据中心融资、电力、油价与长端利率风险共振恶化\",\"probability\":\"52%–57%\"}},\"generated_at\":\"2026-10-12T18:59:38+08:00\",\"hash_schema_version\":\"prediction-hash-schema-v1\",\"model_version\":\"v2026-08-26\",\"prediction_id\":\"PRED-AI-20261012-01\",\"production_id\":\"AI-PROD-20260825-A\",\"prompt_version\":\"PROD-PROMPT-V3.5\",\"report_id\":\"RPT-AI-20261012-001\",\"t1_target_date\":\"2026-10-13\",\"t3_target_date\":\"2026-10-15\",\"t5_target_date\":\"2026-10-19\",\"task_id\":\"TASK-AI-DAILY\",\"trading_date\":\"2026-10-12\"}",
+  "prediction_hash": "5028d0cd4db6078d10a59555248cc838e27bd882d63173284c112fccf7a41aa2",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "target_dates": {
+    "t1": "2026-10-13",
+    "t3": "2026-10-15",
+    "t5": "2026-10-19"
+  },
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PARTIAL"
+}
