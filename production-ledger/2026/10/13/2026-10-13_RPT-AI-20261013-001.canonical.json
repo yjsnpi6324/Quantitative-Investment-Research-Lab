@@ -1,0 +1,83 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-10-13",
+    "trading_date": "2026-10-13",
+    "prediction_id": "PRED-AI-20261013-01",
+    "report_id": "RPT-AI-20261013-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-13T19:04:02+08:00",
+    "data_snapshot_id": "AI-DAILY-SNAPSHOT-20261013-190402-CN",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3f814471bc1b8103a10af05da2ef3304?pvs=204",
+    "record_type": "GOVERNED_FINAL",
+    "governance_mode": "REPAIR_FIRST",
+    "repair_reason": "PERSISTENCE_PENDING",
+    "repaired_at": "2026-10-13T21:05:48+08:00"
+  },
+  "content_hash": "73aa902b5700c15050449ad60b1863db672256b9900f7737caffc6b5f6066b0e",
+  "prediction_canonical_json": {
+    "champion_model_id": "AI-PLATE-MSM",
+    "data_snapshot_id": "AI-DAILY-SNAPSHOT-20261013-190402-CN",
+    "forecasts": {
+      "t1": {
+        "assumptions": "全市场成交维持1.5万亿元以上，CPO、PCB或半导体至少一条硬件方向保持板块宽度，科创50不再明显补跌，AI应用与传媒不出现全面退潮",
+        "direction": "震荡偏强、硬件修复分化",
+        "interval": null,
+        "invalidation": "成交跌破1.4万亿元、科创50下跌超过1.5%且CPO与PCB同步放量回落并伴随下跌家数超过4000只，或硬件与应用共振放量上涨、成交超过1.8万亿元且上涨家数超过3500只",
+        "probability": "58%–63%"
+      },
+      "t3": {
+        "assumptions": "10月14日至15日CPO、PCB或半导体至少一条主线维持承接，市场成交稳定在1.5万亿元以上，台积电三季度业绩与资本开支未显著低于预期",
+        "direction": "中性偏强、业绩驱动分化",
+        "interval": null,
+        "invalidation": "硬件反弹仅维持一日且应用同步退潮，科创50与AI中军再次放量破位，或台积电业绩、利润率及资本开支指引显著低于预期",
+        "probability": "55%–60%"
+      },
+      "t5": {
+        "assumptions": "台积电及A股三季报线索继续验证AI算力需求，CPO、PCB与国产算力未出现广泛盈利下修，海外利率、油价、融资与电力约束未共振恶化",
+        "direction": "中性、高波动结构行情",
+        "interval": null,
+        "invalidation": "AI硬件权重集体破位且应用侧缺少持续中军，国内外产业链盈利预期广泛下修，或海外利率、油价、融资与电力风险共同压缩资本开支与估值",
+        "probability": "52%–57%"
+      }
+    },
+    "generated_at": "2026-10-13T19:04:02+08:00",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "model_version": "v2026-08-26",
+    "prediction_id": "PRED-AI-20261013-01",
+    "production_id": "AI-PROD-20260825-A",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "report_id": "RPT-AI-20261013-001",
+    "t1_target_date": "2026-10-14",
+    "t3_target_date": "2026-10-16",
+    "t5_target_date": "2026-10-20",
+    "task_id": "TASK-AI-DAILY",
+    "trading_date": "2026-10-13"
+  },
+  "prediction_hash": "d7a78642a721b57181314bacdab51907d9bf621eb17b399d9c9e3573585665ff",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "target_dates": {
+    "t1": "2026-10-14",
+    "t3": "2026-10-16",
+    "t5": "2026-10-20"
+  },
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github": "PR_PENDING",
+    "dropbox": "PENDING"
+  }
+}
