@@ -1,0 +1,13 @@
+{
+  "report_id": "RPT-AI-20261014-001",
+  "prediction_id": "PRED-AI-20261014-01",
+  "governance_version": "V2.6",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "content_hash": "ddc513ff79360b7b57a67cd034183db428d5f7d728b4a25bd5af2f450b0e81d8",
+  "prediction_hash": "be2383189745cb1d70bb8d304b8a165b3f0151dad5169171e360aa08f0a95349",
+  "repair_action": "NEW_FINAL_FANOUT",
+  "retry_needed": ["SUPABASE", "NOTION_REGISTRY", "GITHUB_MAIN", "DROPBOX"],
+  "recorded_at": "2026-10-14T21:22:18+08:00"
+}
