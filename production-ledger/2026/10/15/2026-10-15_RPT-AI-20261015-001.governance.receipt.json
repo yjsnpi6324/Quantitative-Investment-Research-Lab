@@ -1,0 +1,28 @@
+{
+  "report_id": "RPT-AI-20261015-001",
+  "prediction_id": "PRED-AI-20261015-01",
+  "governance_version": "V2.6",
+  "governance_status": "PERSISTENCE_READY",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "prediction_hash": "e9896dc94f54ee0be4292e112e957906c7b00849ea9d18f5f8c20e3251d7e4b5",
+  "content_hash": "c4f74ae2d721baff21187f2f2732e7426dbb086c89341d67f4b2d35e778a3659",
+  "target_dates": {
+    "t1": "2026-10-16",
+    "t3": "2026-10-20",
+    "t5": "2026-10-22"
+  },
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "github_merge_commit": "790615dac6f767c3b2eb71facd9be77090ab6a12",
+  "dropbox_file_ids": [
+    "id:Kez2cKZha9IAAAAAAAAAuA",
+    "id:Kez2cKZha9IAAAAAAAAAuw"
+  ],
+  "verified_at": "2026-10-15T21:19:30+08:00",
+  "note": "Append-only receipt; supersedes pending status without rewriting source FINAL or earlier governance record."
+}
