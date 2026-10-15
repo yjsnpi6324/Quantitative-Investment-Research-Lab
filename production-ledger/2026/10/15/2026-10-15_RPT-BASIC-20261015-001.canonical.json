@@ -1,0 +1,79 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-10-15",
+    "trading_date": "2026-10-15",
+    "prediction_id": "PRED-BASIC-20261015-001",
+    "report_id": "RPT-BASIC-20261015-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-15T18:56:44+08:00",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261015-185644-CN",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3fa14471bc1b81f3beedf3bdb4e9735e?pvs=204",
+    "record_type": "GOVERNED_FINAL",
+    "governance_mode": "REPAIR_FIRST",
+    "repair_reason": "PERSISTENCE_PENDING",
+    "repaired_at": "2026-10-15T21:10:16+08:00"
+  },
+  "content_hash": "5d2b820749452d094b716ce1cba68673afbe2bfae4f516c8cb8bba09b6b7b898",
+  "prediction_canonical_json": {
+    "champion_model_id": "BASIC-MSM",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261015-185644-CN",
+    "forecasts": {
+      "t1": {
+        "assumptions": "沪深京成交额维持1.5万亿元以上，宽基ETF与大型银行继续提供指数承接，上涨家数回升至1000只以上且白酒、证券或科技至少一条方向保持修复",
+        "direction": "弱势震荡、超跌修复分化",
+        "interval": null,
+        "invalidation": "成交跌破1.3万亿元且大型银行与宽基ETF承接失效、下跌家数再次超过5000只，或成交放大至1.9万亿元以上并伴随上涨家数超过3500只、成长与消费共振反包",
+        "probability": "60%–65%"
+      },
+      "t3": {
+        "assumptions": "外部股市波动未继续升级，国内宽基ETF资金保持净流入，三季报未出现广泛下修，消费、地产、汽车或科技至少两条方向形成连续承接",
+        "direction": "中性偏弱、政策与业绩驱动修复",
+        "interval": null,
+        "invalidation": "上涨家数连续低于1000只、创业板与深证成指放量创阶段新低且银行补跌，或市场连续两日放量普涨并收复10月15日主要跌幅",
+        "probability": "56%–61%"
+      },
+      "t5": {
+        "assumptions": "三季报盈利预期总体稳定，杭州等地产支持政策未引发信用风险再定价，海外利率、油价与地缘风险不再共振恶化，成交额稳定在1.5万亿元以上",
+        "direction": "中性、高波动业绩验证",
+        "interval": null,
+        "invalidation": "盈利预期广泛下修、地产与信用风险恶化且银行失去防御作用，或消费、制造与成长形成持续放量共振并推动市场宽度连续两日超过3500只上涨",
+        "probability": "53%–58%"
+      }
+    },
+    "generated_at": "2026-10-15T18:56:44+08:00",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "model_version": "v2026-08-26",
+    "prediction_id": "PRED-BASIC-20261015-001",
+    "production_id": "BASIC-PROD-20260825-A",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "report_id": "RPT-BASIC-20261015-001",
+    "t1_target_date": "2026-10-16",
+    "t3_target_date": "2026-10-20",
+    "t5_target_date": "2026-10-22",
+    "task_id": "TASK-ASTOCK-DAILY",
+    "trading_date": "2026-10-15"
+  },
+  "prediction_hash": "9c48577d1af0ecbf9b0a5c7a3bf186987d51e2055da091d3b5e7f8d8b6b22caf",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "target_dates": {
+    "t1": "2026-10-16",
+    "t3": "2026-10-20",
+    "t5": "2026-10-22"
+  },
+  "body_alignment": "VERIFIED",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "source_page_url": "https://app.notion.com/p/3fa14471bc1b81f3beedf3bdb4e9735e?pvs=204",
+  "notion_registry_url": "https://app.notion.com/p/3fa14471bc1b811ba381cad69a7f3c39?pvs=204",
+  "governance_status": "PERSISTENCE_PARTIAL"
+}
