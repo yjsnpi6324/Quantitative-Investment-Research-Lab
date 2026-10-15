@@ -1,0 +1,19 @@
+{
+  "report_id": "RPT-AI-20261015-001",
+  "prediction_id": "PRED-AI-20261015-01",
+  "governance_version": "V2.6",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "PR_PENDING",
+    "dropbox": "PENDING"
+  },
+  "repair_action": "fan-out verified source FINAL; source FINAL unchanged",
+  "retry_needed": [
+    "GITHUB_MAIN_READBACK",
+    "DROPBOX_UPLOAD_READBACK"
+  ]
+}
