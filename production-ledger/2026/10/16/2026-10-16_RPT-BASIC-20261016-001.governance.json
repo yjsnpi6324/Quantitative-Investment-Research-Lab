@@ -1,0 +1,22 @@
+{
+  "report_id": "RPT-BASIC-20261016-001",
+  "prediction_id": "PRED-BASIC-20261016-001",
+  "governance_version": "V2.6",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "body_alignment": "VERIFIED",
+  "prediction_hash": "c79d5b08fd6b90168eb700f1028640d49be131217c5a6b494567044d687015a1",
+  "content_hash": "35afcfaaae33b12e783b9eda7fa081033a23dd260d67e9cc77ead65225ac71fc",
+  "target_dates": {
+    "t1": "2026-10-19",
+    "t3": "2026-10-21",
+    "t5": "2026-10-23"
+  },
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "PR_PENDING",
+    "dropbox": "PENDING"
+  },
+  "note": "Pending fan-out receipt; source FINAL is immutable."
+}

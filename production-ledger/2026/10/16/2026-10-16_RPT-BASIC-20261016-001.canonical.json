@@ -1,0 +1,78 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-10-16",
+    "trading_date": "2026-10-16",
+    "prediction_id": "PRED-BASIC-20261016-001",
+    "report_id": "RPT-BASIC-20261016-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-16T18:59:31+08:00",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261016-185931-CN",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/3fb14471bc1b81c88456c0b395ee2a55?pvs=204",
+    "record_type": "GOVERNED_FINAL",
+    "governance_mode": "REPAIR_FIRST",
+    "repair_reason": "PERSISTENCE_PENDING",
+    "repaired_at": "2026-10-16T21:18:03+08:00"
+  },
+  "content_hash": "35afcfaaae33b12e783b9eda7fa081033a23dd260d67e9cc77ead65225ac71fc",
+  "prediction_canonical_json": {
+    "champion_model_id": "BASIC-MSM",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261016-185931-CN",
+    "forecasts": {
+      "t1": {
+        "assumptions": "沪深京成交额维持1.45万亿元以上，宽基ETF继续承接，上涨家数保持2500只以上，汽车、地产、军工至少两个方向维持强度且银行稳定",
+        "direction": "震荡修复、结构分化",
+        "interval": null,
+        "invalidation": "成交额跌破1.3万亿元且宽基ETF与银行承接失效并伴随下跌家数超过4000只，或成交额超过1.8万亿元且上涨家数超过4000只并形成成长与消费共振普涨",
+        "probability": "60%–65%"
+      },
+      "t3": {
+        "assumptions": "宽基ETF资金延续流入，三季报未出现广泛下修，地产支持政策保持连续性，消费、地产、汽车或科技至少两个方向形成连续承接",
+        "direction": "中性偏强、政策与业绩轮动",
+        "interval": null,
+        "invalidation": "上涨家数连续两日低于1500只、创业板与深证成指放量创阶段新低且银行补跌，或市场连续两日放量普涨并收复10月15日主要跌幅",
+        "probability": "57%–62%"
+      },
+      "t5": {
+        "assumptions": "三季报盈利预期总体稳定，地产与信用环境未再恶化，海外利率与油价未共振上行，市场成交额稳定在1.5万亿元以上",
+        "direction": "中性、高波动业绩验证",
+        "interval": null,
+        "invalidation": "盈利预期广泛下修、地产与信用风险恶化且银行失去防御作用，或消费、制造与成长形成持续放量共振并推动市场宽度连续两日超过4000只上涨",
+        "probability": "54%–59%"
+      }
+    },
+    "generated_at": "2026-10-16T18:59:31+08:00",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "model_version": "v2026-08-26",
+    "prediction_id": "PRED-BASIC-20261016-001",
+    "production_id": "BASIC-PROD-20260825-A",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "report_id": "RPT-BASIC-20261016-001",
+    "t1_target_date": "2026-10-19",
+    "t3_target_date": "2026-10-21",
+    "t5_target_date": "2026-10-23",
+    "task_id": "TASK-ASTOCK-DAILY",
+    "trading_date": "2026-10-16"
+  },
+  "prediction_hash": "c79d5b08fd6b90168eb700f1028640d49be131217c5a6b494567044d687015a1",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "target_dates": {
+    "t1": "2026-10-19",
+    "t3": "2026-10-21",
+    "t5": "2026-10-23"
+  },
+  "body_alignment": "VERIFIED",
+  "source_page_url": "https://app.notion.com/p/3fb14471bc1b81c88456c0b395ee2a55?pvs=204",
+  "governance_status": "PERSISTENCE_PARTIAL"
+}
