@@ -1,0 +1,67 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-10-17",
+    "trading_date": null,
+    "prediction_id": null,
+    "report_id": "RPT-AI-20261017-001",
+    "report_type": "REVIEW",
+    "report_status": "FINAL",
+    "run_mode": "NON_TRADING_REVIEW",
+    "generated_at": "2026-10-17T18:59:50+08:00",
+    "data_snapshot_id": "AI-DAILY-SNAPSHOT-20261017-185950-CN",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "NOTION_HANDOFF_MAILBOX",
+    "source_page_url": "https://app.notion.com/p/3fc14471bc1b81b0a7dceab8409ec469?pvs=204",
+    "record_type": "CANONICAL_REPORT_ARTIFACT",
+    "governance_mode": "INITIAL_FANOUT",
+    "repair_reason": null,
+    "repaired_at": "2026-10-17T21:22:01+08:00",
+    "content_hash": "bacec8debeca7189cb88720d0fdc51aa7f3b7c7e160f2627ecac1655179c4ae7",
+    "prediction_canonical_json": null,
+    "prediction_hash": null,
+    "hash_algorithm": null,
+    "hash_schema_version": null,
+    "hash_origin": null,
+    "t1_target_date": null,
+    "t3_target_date": null,
+    "t5_target_date": null,
+    "hash_status": "NOT_APPLICABLE_REVIEW",
+    "body_alignment": "NOT_APPLICABLE_REVIEW",
+    "governance_status": "PERSISTENCE_PARTIAL"
+  },
+  "plugin_capability_observations": [
+    {
+      "plugin": "GitHub",
+      "stage": "GOVERNANCE_REFERENCE",
+      "status": "CONNECTIVITY_VERIFIED",
+      "result_digest": "sha256:b4f3653f1b959239b34d9bcde7907c080590208ec4057835654b1442ea393823",
+      "corroboration_status": "MAIN_READBACK_VERIFIED"
+    },
+    {
+      "plugin": "Bigdata.com",
+      "stage": "EVIDENCE_CANDIDATE",
+      "status": "CONNECTIVITY_VERIFIED",
+      "result_digest": "sha256:e34fe175bba4b74adb0492bb1540d9833e52ae65d085696785d9ce64b348ec32",
+      "corroboration_status": "PARTIAL_CORROBORATED"
+    },
+    {
+      "plugin": "Exa",
+      "stage": "DISCOVERY_CANDIDATE",
+      "status": "CONNECTIVITY_VERIFIED",
+      "result_digest": "sha256:7e66507a78d42e5e79fd2973a08fe87167f624f82b1d092d5432cd096252b626",
+      "corroboration_status": "SOURCE_DISCOVERY_ONLY"
+    },
+    {
+      "plugin": "Firecrawl",
+      "stage": "RECOVERY_CANDIDATE",
+      "status": "CONNECTIVITY_VERIFIED",
+      "result_digest": "sha256:0dec93146e71c86e68701fe66a16abfb53515343c47c9285db73669062163ad3",
+      "corroboration_status": "OFFICIAL_SOURCE_READBACK"
+    }
+  ]
+}
