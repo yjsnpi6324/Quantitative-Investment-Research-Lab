@@ -1,0 +1,34 @@
+{
+  "governance_receipt_version": "v2.6-plugin-registry-sync",
+  "report_id": "RPT-BASIC-20261017-001",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "report_date": "2026-10-17",
+  "report_type": "REVIEW",
+  "report_status": "FINAL",
+  "content_hash": "c96cd02eccd3a4b88dfb90c903679f40124e239b60e2b8c5c1633ae4499d616d",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "source_page_url": "https://app.notion.com/p/3fc14471bc1b8100becec3d84369c8f0?pvs=204",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "notion_registry_url": "https://app.notion.com/p/3fc14471bc1b811b9584df10203874d5?pvs=204",
+  "github_archive_merge_sha": "92a7df45d9f9fd5d70b5d8741b5e2baba6c6e6cb",
+  "dropbox_file_ids": [
+    "id:Kez2cKZha9IAAAAAAAAAvg",
+    "id:Kez2cKZha9IAAAAAAAAAvw"
+  ],
+  "plugin_observations": {
+    "Bigdata.com": "CONNECTIVITY_VERIFIED",
+    "Exa": "CONNECTIVITY_VERIFIED",
+    "Firecrawl": "DEGRADED",
+    "Vercel": "NOT_INVOKED",
+    "Context7": "NOT_INVOKED"
+  },
+  "governance_status": "PERSISTENCE_READY",
+  "verified_at": "2026-10-17T21:30:00+08:00"
+}
