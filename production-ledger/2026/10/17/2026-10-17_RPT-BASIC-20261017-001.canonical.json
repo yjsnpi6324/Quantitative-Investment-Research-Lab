@@ -1,0 +1,61 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-10-17",
+    "trading_date": null,
+    "prediction_id": null,
+    "report_id": "RPT-BASIC-20261017-001",
+    "report_type": "REVIEW",
+    "report_status": "FINAL",
+    "run_mode": "NON_TRADING_REVIEW",
+    "generated_at": "2026-10-17T18:57:06+08:00",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261017-185706-CN",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "NOTION_HANDOFF_MAILBOX",
+    "source_page_url": "https://app.notion.com/p/3fc14471bc1b8100becec3d84369c8f0?pvs=204",
+    "record_type": "CANONICAL_REPORT_ARTIFACT",
+    "governance_mode": "INITIAL_FANOUT",
+    "repair_reason": null,
+    "repaired_at": "2026-10-17T21:22:01+08:00",
+    "content_hash": "c96cd02eccd3a4b88dfb90c903679f40124e239b60e2b8c5c1633ae4499d616d",
+    "prediction_canonical_json": null,
+    "prediction_hash": null,
+    "hash_algorithm": null,
+    "hash_schema_version": null,
+    "hash_origin": null,
+    "t1_target_date": null,
+    "t3_target_date": null,
+    "t5_target_date": null,
+    "hash_status": "NOT_APPLICABLE_REVIEW",
+    "body_alignment": "NOT_APPLICABLE_REVIEW",
+    "governance_status": "PERSISTENCE_PARTIAL"
+  },
+  "plugin_capability_observations": [
+    {
+      "plugin": "Bigdata.com",
+      "stage": "EVIDENCE_CANDIDATE",
+      "status": "CONNECTIVITY_VERIFIED",
+      "result_digest": "sha256:3d4990b9bcc564b044ea5ce8010f2258aae08ac34fa20f2c28291f0a51e1e7a1",
+      "corroboration_status": "PARTIAL_CORROBORATED"
+    },
+    {
+      "plugin": "Exa",
+      "stage": "DISCOVERY_CANDIDATE",
+      "status": "CONNECTIVITY_VERIFIED",
+      "result_digest": "sha256:891603ece013b7b71a62f9fe3f949f33a3bb7750cf969fa87af18f2081d8d186",
+      "corroboration_status": "PARTIAL_CORROBORATED"
+    },
+    {
+      "plugin": "Firecrawl",
+      "stage": "RECOVERY_CANDIDATE",
+      "status": "DEGRADED",
+      "result_digest": "sha256:b4589b1525e623c9f349d928ce78a268dd7c8e5be33d6369548696ccd1b0bb6b",
+      "corroboration_status": "EXCLUDED",
+      "degraded_reason": "中文官方定向检索失配"
+    }
+  ]
+}
