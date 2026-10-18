@@ -1,0 +1,43 @@
+{
+  "manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-10-18",
+    "trading_date": null,
+    "prediction_id": null,
+    "report_id": "RPT-BASIC-20261018-001",
+    "report_type": "REVIEW",
+    "report_status": "FINAL",
+    "run_mode": "NON_TRADING_REVIEW",
+    "generated_at": "2026-10-18T19:04:33+08:00",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261018-190433-CN",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.5",
+    "model_version": "v2026-08-26",
+    "data_quality": "PASS",
+    "source": "NOTION_HANDOFF_MAILBOX",
+    "source_page_url": "https://app.notion.com/p/3fd14471bc1b814ab8d3c4192b264f9c?pvs=204",
+    "record_type": "CANONICAL_REPORT_ARTIFACT",
+    "governance_mode": "INITIAL_FANOUT",
+    "repair_reason": null,
+    "repaired_at": "2026-10-18T21:17:15+08:00"
+  },
+  "content_hash": "6c997ed17f0340be5ca014dcf010065c5af7af58f24e292bd0fc9a5358182a1b",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "prediction_canonical_json": null,
+  "prediction_hash": null,
+  "hash_algorithm": null,
+  "hash_schema_version": null,
+  "hash_origin": null,
+  "t1_target_date": null,
+  "t3_target_date": null,
+  "t5_target_date": null,
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "node_status": {
+    "supabase": "PENDING",
+    "notion_registry": "PENDING",
+    "github_main": "PENDING",
+    "dropbox": "PENDING"
+  }
+}
