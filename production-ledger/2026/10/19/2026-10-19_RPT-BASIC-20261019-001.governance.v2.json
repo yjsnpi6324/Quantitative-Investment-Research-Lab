@@ -1,0 +1,54 @@
+{
+  "record_type": "GOVERNANCE_RECEIPT_V2",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "report_id": "RPT-BASIC-20261019-001",
+  "prediction_id": "PRED-BASIC-20261019-001",
+  "report_date": "2026-10-19",
+  "governance_status": "PERSISTENCE_READY",
+  "handoff_status": "VERIFIED",
+  "content_hash": "daf362a1fc7738a5b6b57da5bf6156b4e0a31d9b7a25f4e40f9387441490ba96",
+  "prediction_hash": "e12f6e5de90e1bb65339c1d15a076bf42d16055bd76d4553b2097d8a2a859d78",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "target_dates": {
+    "t1": "2026-10-20",
+    "t3": "2026-10-22",
+    "t5": "2026-10-26",
+    "status": "OFFICIAL_CALENDAR_VERIFIED"
+  },
+  "body_alignment": "VERIFIED",
+  "source": {
+    "notion_handoff_url": "https://app.notion.com/p/3fe14471bc1b81eb81eef7f945bd629f?pvs=204",
+    "notion_registry_url": "https://app.notion.com/p/3fe14471bc1b81028636cb96205120cf?pvs=204"
+  },
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "task_run_id": "fbf5e3dc-8fa8-4b29-aae8-48dd3459fb37",
+      "task_result_id": "580e979a-401a-41cf-bc41-f208b43c46e8"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "page_id": "3fe14471-bc1b-8102-8636-cb96205120cf",
+      "canonical_json_storage": "PAGE_BODY_VERBATIM"
+    },
+    "github_main": {
+      "status": "VERIFIED",
+      "pull_request": 63,
+      "merge_commit": "4f003b3cdb5fa1be8f8c7161f9afbf7d075bbf0c"
+    },
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAAyg",
+      "canonical_file_id": "id:Kez2cKZha9IAAAAAAAAAyw",
+      "readback_note": "Full text matches source; Dropbox text extraction adds one terminal newline only."
+    }
+  },
+  "repair_action": "INITIAL_IDEMPOTENT_FANOUT_AND_READBACK",
+  "retry_needed": false,
+  "unresolved": [],
+  "repaired_at": "2026-10-19T21:12:00+08:00"
+}
