@@ -1,0 +1,54 @@
+{
+  "record_type": "GOVERNANCE_RECEIPT_V2",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "report_id": "RPT-BASIC-20261020-001",
+  "prediction_id": "PRED-BASIC-20261020-001",
+  "report_date": "2026-10-20",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "handoff_status": "VERIFIED",
+  "content_hash": "189faefca7f7bda795d881e7651270c94405bd9202bc4311d0144b0831446511",
+  "prediction_hash": "9e0c420b6c1969925222788fac81bdd5d6807d9e5d1af551bce852960c14cc2d",
+  "hash_algorithm": "SHA-256",
+  "hash_schema_version": "prediction-hash-schema-v1",
+  "hash_origin": "NATIVE",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "target_dates": {
+    "t1": "2026-10-21",
+    "t3": "2026-10-23",
+    "t5": "2026-10-27",
+    "status": "OFFICIAL_CALENDAR_VERIFIED"
+  },
+  "body_alignment": "VERIFIED",
+  "source": {
+    "notion_handoff_url": "https://app.notion.com/p/3ff14471bc1b815796b2f524df652e22?pvs=204",
+    "notion_registry_url": "https://app.notion.com/p/3ff14471bc1b81d3a499ccf05c678daf?pvs=204"
+  },
+  "plugin_policy": {
+    "policy_revision": "PLUGIN-POLICY-20261020-R2",
+    "commit": "6a0cccccf9ccc3f949f6a23edd05becdd055c773",
+    "blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f"
+  },
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED"
+    },
+    "notion_registry": {
+      "status": "VERIFIED"
+    },
+    "github_main": {
+      "status": "PENDING"
+    },
+    "dropbox": {
+      "status": "PENDING"
+    }
+  },
+  "repair_action": "INITIAL_IDEMPOTENT_FANOUT_IN_PROGRESS",
+  "retry_needed": true,
+  "unresolved": [
+    "GITHUB_MAIN_PENDING",
+    "DROPBOX_PENDING"
+  ],
+  "repaired_at": null
+}
+
