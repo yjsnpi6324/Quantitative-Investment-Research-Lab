@@ -44,7 +44,7 @@
       "status": "VERIFIED",
       "artifact_pr": 66,
       "artifact_merge_commit": "c44d5270d4f332e16fb4a351e1f3a4b71f9bdf29",
-      "receipt_pr": null
+      "receipt_pr": 67
     },
     "dropbox": {
       "status": "VERIFIED",
