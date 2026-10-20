@@ -31,3 +31,11 @@ Activation states: REGISTERED (catalogued), CONNECTIVITY_VERIFIED (authenticated
 2. Check one real read-only representative operation per plugin and store minimal provenance; only then mark CONNECTIVITY_VERIFIED.
 3. Compare independent source agreement and failure handling on at least three separate scheduled runs; only then consider SHADOW_VERIFIED.
 4. Promote to PRODUCTION_EVIDENCE_ENABLED only with Task prompt/runtime readback and explicit provenance. Roll back to REGISTERED/DEGRADED on disagreement, access drift or missing audit.
+
+## Execution routing addendum — 2026-10-20 R2
+
+[PLUGIN_EXECUTION_POLICY_20261020.md](PLUGIN_EXECUTION_POLICY_20261020.md) defines the current problem-driven dispatch, paper/model-card/search-interest fallback routes, endpoint-level entitlement circuit breakers, evidence adoption receipts, exact source-identity checks, and the no-new-subscription constraint.
+
+This addendum supplements the capability table and preserves its activation, independent corroboration, measured baseline comparison and failure-handling gates. Management-session probes do not count as scheduled runs. Ahrefs, Scite and the tested Similarweb endpoints remain entitlement/quota constrained; public model-card retrieval is distinct from the unavailable Hugging Face search endpoint. Search interest is not website traffic or app activity.
+
+Runtime targets are the two A-share production Tasks, their existing governance Task and the independent cross-market observation Task. Task prompt updates require separate exact readback; merging these docs alone does not prove scheduler wiring, successful production execution, or forecast improvement. No locked FINAL, model weights, Native Hash schema, database schema, schedule or additional external write permission is changed.
