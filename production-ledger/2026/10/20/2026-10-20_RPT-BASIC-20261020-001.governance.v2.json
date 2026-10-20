@@ -5,7 +5,7 @@
   "report_id": "RPT-BASIC-20261020-001",
   "prediction_id": "PRED-BASIC-20261020-001",
   "report_date": "2026-10-20",
-  "governance_status": "PERSISTENCE_PARTIAL",
+  "governance_status": "PERSISTENCE_READY",
   "handoff_status": "VERIFIED",
   "content_hash": "189faefca7f7bda795d881e7651270c94405bd9202bc4311d0144b0831446511",
   "prediction_hash": "9e0c420b6c1969925222788fac81bdd5d6807d9e5d1af551bce852960c14cc2d",
@@ -31,24 +31,39 @@
   },
   "nodes": {
     "supabase": {
-      "status": "VERIFIED"
+      "status": "VERIFIED",
+      "task_run_id": "86abe745-2611-457f-a4f3-791b367d2b4d",
+      "task_result_id": "3152bc45-6e65-4815-9525-b1b7e7519cc5"
     },
     "notion_registry": {
-      "status": "VERIFIED"
+      "status": "VERIFIED",
+      "page_id": "3ff14471-bc1b-81d3-a499-ccf05c678daf",
+      "canonical_json_storage": "PAGE_BODY_VERBATIM"
     },
     "github_main": {
-      "status": "PENDING"
+      "status": "VERIFIED",
+      "artifact_pr": 66,
+      "artifact_merge_commit": "c44d5270d4f332e16fb4a351e1f3a4b71f9bdf29",
+      "receipt_pr": null
     },
     "dropbox": {
-      "status": "PENDING"
+      "status": "VERIFIED",
+      "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAAzQ",
+      "canonical_file_id": "id:Kez2cKZha9IAAAAAAAAA0A",
+      "readback_note": "Full text matches source; Dropbox text extraction adds one terminal newline only."
     }
   },
-  "repair_action": "INITIAL_IDEMPOTENT_FANOUT_IN_PROGRESS",
-  "retry_needed": true,
-  "unresolved": [
-    "GITHUB_MAIN_PENDING",
-    "DROPBOX_PENDING"
+  "ai_2026_10_19_source_status": "NOT_FOUND_IN_CHECKED_SCOPE",
+  "ai_2026_10_19_checked_scope": [
+    "existing Supabase governance receipt",
+    "Notion exact Report ID search",
+    "AI formal directory scoped search",
+    "AI formal directory full child-page readback",
+    "Prediction Registry exact identity query"
   ],
-  "repaired_at": null
+  "repair_action": "INITIAL_IDEMPOTENT_FANOUT_AND_READBACK",
+  "retry_needed": false,
+  "unresolved": [],
+  "repaired_at": "2026-10-20T21:37:00+08:00"
 }
 
