@@ -5,7 +5,7 @@
   "report_id": "RPT-AI-20261020-001",
   "prediction_id": "PRED-AI-20261020-001",
   "report_date": "2026-10-20",
-  "governance_status": "PERSISTENCE_PARTIAL",
+  "governance_status": "PERSISTENCE_READY",
   "handoff_status": "VERIFIED",
   "content_hash": "c4f7de5a15f1967427e59e496305b4bbd09e11642a4cafbd555aa2a571ff1f6f",
   "prediction_hash": "cabc90226a48e95636e87217997461423043bb86465c3c3060630b9f19044530",
@@ -31,24 +31,39 @@
   },
   "nodes": {
     "supabase": {
-      "status": "VERIFIED"
+      "status": "VERIFIED",
+      "task_run_id": "5aba7037-5b54-4eff-96b6-406ef584d2f3",
+      "task_result_id": "e51fd14f-1069-48c3-8a5f-747e42722828"
     },
     "notion_registry": {
-      "status": "VERIFIED"
+      "status": "VERIFIED",
+      "page_id": "3ff14471-bc1b-81f7-b8f0-de46e9ec8437",
+      "canonical_json_storage": "PAGE_BODY_VERBATIM"
     },
     "github_main": {
-      "status": "PENDING"
+      "status": "VERIFIED",
+      "artifact_pr": 66,
+      "artifact_merge_commit": "c44d5270d4f332e16fb4a351e1f3a4b71f9bdf29",
+      "receipt_pr": null
     },
     "dropbox": {
-      "status": "PENDING"
+      "status": "VERIFIED",
+      "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAAzg",
+      "canonical_file_id": "id:Kez2cKZha9IAAAAAAAAAzw",
+      "readback_note": "Full text matches source; Dropbox text extraction adds one terminal newline only."
     }
   },
-  "repair_action": "INITIAL_IDEMPOTENT_FANOUT_IN_PROGRESS",
-  "retry_needed": true,
-  "unresolved": [
-    "GITHUB_MAIN_PENDING",
-    "DROPBOX_PENDING"
+  "ai_2026_10_19_source_status": "NOT_FOUND_IN_CHECKED_SCOPE",
+  "ai_2026_10_19_checked_scope": [
+    "existing Supabase governance receipt",
+    "Notion exact Report ID search",
+    "AI formal directory scoped search",
+    "AI formal directory full child-page readback",
+    "Prediction Registry exact identity query"
   ],
-  "repaired_at": null
+  "repair_action": "INITIAL_IDEMPOTENT_FANOUT_AND_READBACK",
+  "retry_needed": false,
+  "unresolved": [],
+  "repaired_at": "2026-10-20T21:37:00+08:00"
 }
 
