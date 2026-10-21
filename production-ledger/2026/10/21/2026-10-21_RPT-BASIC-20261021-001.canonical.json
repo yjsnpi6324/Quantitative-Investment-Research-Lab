@@ -1,0 +1,88 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-10-21",
+    "trading_date": "2026-10-21",
+    "prediction_id": "PRED-BASIC-20261021-001",
+    "report_id": "RPT-BASIC-20261021-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-21T19:02:08+08:00",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261021-CLOSE-1900",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.6",
+    "model_version": "v2026-08-26",
+    "data_quality": "WARNING",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/40014471bc1b818c8d97c9d602694038?pvs=204",
+    "record_type": "PREDICTION_GOVERNANCE_ARTIFACT",
+    "governance_mode": "V2.7_REPAIR_FIRST",
+    "repair_reason": "PERSISTENCE_PENDING",
+    "repaired_at": "2026-10-21T20:36:54+08:00"
+  },
+  "content_hash": {
+    "algorithm": "SHA-256",
+    "value": "358b950b8e0bc98b43592a00cb1171f881b2e2130e03b46d1959b1cf455e0af5",
+    "scope": "complete_markdown_artifact"
+  },
+  "prediction_canonical_json": {
+    "champion_model_id": "BASIC-MSM",
+    "data_snapshot_id": "BASIC-DAILY-SNAPSHOT-20261021-CLOSE-1900",
+    "forecasts": {
+      "t1": {
+        "assumptions": "全市场成交额不低于1.30万亿元，银行与宽基ETF维持稳定，猪肉、传媒、数据要素至少一条事件主题延续承接，白酒与汽车弱势不进一步扩散",
+        "direction": "震荡偏弱，防御与事件主题相对占优",
+        "interval": "上证指数日涨跌幅-0.8%至+0.5%",
+        "invalidation": "若全市场成交额低于1.20万亿元且银行转弱、下跌家数超过4000只，则基准失效；若成交额超过1.65万亿元、上涨家数超过3800只且消费、成长与周期共振，则偏弱判断失效",
+        "probability": "60%–65%"
+      },
+      "t3": {
+        "assumptions": "成交额维持1.30万亿元以上，金融条件稳定，三季报未出现广泛下修，银行、消费或制造至少两个方向形成轮动承接",
+        "direction": "弱修复，政策托底但消费与成长继续分化",
+        "interval": "上证指数较2026-10-21收盘-1.0%至+1.5%",
+        "invalidation": "若上证指数连续两个交易日收于3700点下方且银行、消费与制造同步走弱，或市场连续两日放量普涨并使创业板收复2026-10-21主要跌幅，则失效",
+        "probability": "57%–62%"
+      },
+      "t5": {
+        "assumptions": "政策预期稳定，房地产与信用环境未显著恶化，三季报盈利预期总体稳定，海外利率与风险资产冲击可控",
+        "direction": "区间震荡，中性偏弱，三季报筛选主导",
+        "interval": "上证指数较2026-10-21收盘-1.5%至+2.0%",
+        "invalidation": "若盈利预期广泛下修、房地产与信用风险恶化且银行失去防御作用，则基准失效；若消费、制造与成长连续三个交易日放量共振并推动上涨家数持续超过3800只，则中性偏弱判断失效",
+        "probability": "54%–59%"
+      }
+    },
+    "generated_at": "2026-10-21T19:02:08+08:00",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "model_version": "v2026-08-26",
+    "prediction_id": "PRED-BASIC-20261021-001",
+    "production_id": "BASIC-PROD-20260825-A",
+    "prompt_version": "PROD-PROMPT-V3.6",
+    "report_id": "RPT-BASIC-20261021-001",
+    "t1_target_date": "2026-10-22",
+    "t3_target_date": "2026-10-26",
+    "t5_target_date": "2026-10-28",
+    "task_id": "TASK-ASTOCK-DAILY",
+    "trading_date": "2026-10-21"
+  },
+  "prediction_hash": {
+    "algorithm": "SHA-256",
+    "schema_version": "prediction-hash-schema-v1",
+    "origin": "NATIVE",
+    "status": "NATIVE_HASH_VERIFIED",
+    "value": "15ea3ea1dc5e10b6ece6626773ab3a1ec14075322d0e4a4f162c55eb7d523785"
+  },
+  "target_dates": {
+    "t1": "2026-10-22",
+    "t3": "2026-10-26",
+    "t5": "2026-10-28"
+  },
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PENDING",
+  "artifact_files": {
+    "markdown": "RPT-BASIC-20261021-001.md",
+    "canonical_json": "RPT-BASIC-20261021-001.canonical.json"
+  }
+}
+
