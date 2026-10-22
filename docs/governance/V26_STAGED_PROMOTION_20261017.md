@@ -32,3 +32,14 @@
 - QIRL #47–#56 为多日真实治理归档/回执证据，须逐个核实 main 和四核心才可对单条报告声明 READY。
 - gpt-workspace #5 的 runtime contract 与离线 Agents SDK 测试成功；这不是生产 Agent 已上线的证据。
 - gpt-workspace #6 已合并，但 GitHub Actions run 38573363368 的 reset-and-grants 失败于 no_default_grants.sql 对 supabase_admin 的默认权限修改；完整 db reset 被跳过。此项保持 SHADOW_ONLY，修复并重新运行后复核。
+
+## 2026-10-22 增量验证：Supabase 本地 CI 解除旧阻断（append-only）
+
+本节追加最新证据，保留上文 2026-10-17 的历史失败描述作为当时快照；不追认任何旧预测、不更改生产数据库或四核心持久化判定。
+
+- `gpt-workspace` [PR #7](https://github.com/yjsnpi6324/gpt-workspace/pull/7) 已于 2026-10-22 合并至 `main`（merge commit `4ccc1dcdcacb81383840d0c583b43af605efce7b`）。变更仅限 `tests/supabase/no_default_grants.sql`：删除本地 Postgres 17 环境中导致 42501 的 `ALTER DEFAULT PRIVILEGES FOR ROLE supabase_admin` 测试夹具语句；未修改迁移或生产权限策略。
+- [Supabase explicit grants run 38988076494](https://github.com/yjsnpi6324/gpt-workspace/actions/runs/38988076494) 在 PR head `49a5751bad529a8c94f2eeedea27db5744dc4715` 上成功：一次受限迁移重放（含测试默认权限撤销）以及一次完整本地 `supabase db reset --local --no-seed --yes`，两段均实际执行 `tests/supabase/explicit_grants.sql` 并返回成功。该成功发生于 2026-10-17 的 PR CI，在 2026-10-22 合并前。
+- [runtime-contract run 38988076582](https://github.com/yjsnpi6324/gpt-workspace/actions/runs/38988076582) 的两项 job 均成功；PR head 的 Vercel status 为 success。此为工程测试证据，不替代生产运行或真实部署验收。
+- 当前可判定 `LOCAL_SUPABASE_CI_VERIFIED`：上述本地 Postgres 17 测试夹具原阻断已解除；但不能从本地 CI 推断真实托管项目权限完全相同，也不能据此声明 `SUPABASE_VERIFIED`、`PERSISTENCE_READY` 或四核心扇出已经成功。
+- 2026-10-22 连接器只读项目检查返回 `ACTIVE_HEALTHY`，`public` 下 8 张现有表均启用 RLS；这一检查仅证实项目/基础结构可见，不等于逐份报告和四节点内容回读。任何 hosted 权限漂移、真实写后回读、历史 Backfill、Agents 真实 adapter 仍按其各自门禁处理。
+- 治理第三批中的「本地 CLI reset/replay/显式权限检查」单项 CI 门禁已有上述成功证据，可记录为已通过本地测试；第三批其他功能及真实生产推广不得因为这次合并自动转正。生产 Task 保留既有 Prompt V3.6、治理 Task 保留 V2.7、插件策略保留 `PLUGIN-POLICY-20261020-R2`，不修改任何 schedule、FINAL、Prediction、Native Hash 或 Champion。
