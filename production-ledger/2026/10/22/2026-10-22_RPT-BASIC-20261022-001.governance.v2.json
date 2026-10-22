@@ -1,0 +1,93 @@
+{
+  "record_type": "GOVERNANCE_RECEIPT",
+  "governance_version": "V2.7",
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "report_id": "RPT-BASIC-20261022-001",
+  "prediction_id": "PRED-BASIC-20261022-001",
+  "report_date": "2026-10-22",
+  "trading_date": "2026-10-22",
+  "governance_status": "PERSISTENCE_READY",
+  "handoff_status": "HANDOFF_COMPLETE",
+  "content_hash": "e4e9040fb899e29e6cb8e75047081f959453e3cce4e9f1ef10cd93b3e9a89413",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "prediction_hash": {
+    "algorithm": "SHA-256",
+    "schema_version": "prediction-hash-schema-v1",
+    "origin": "NATIVE",
+    "value": "751525225d24f3ecb0a5edb333b8da7107eda5eb6ae47571e23535e54ce62d59"
+  },
+  "target_dates": {
+    "t1": "2026-10-23",
+    "t3": "2026-10-27",
+    "t5": "2026-10-29"
+  },
+  "target_date_status": "VERIFIED",
+  "body_alignment": "VERIFIED",
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "run_id": "4b565798-ad94-4d5e-9375-f603b1ed0729",
+      "result_id": "19cd52a3-faa7-48df-b3ff-750553fc42a8"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "url": "https://app.notion.com/p/40114471bc1b81d09e02fcbecd2aa40d?pvs=204"
+    },
+    "github_main": {
+      "status": "VERIFIED",
+      "commit": "26fa93a89e7455fba18c67067d9aa7e0258da934",
+      "pr": 71
+    },
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown": "/A股基本盘日报预测/2026/2026-10-22_RPT-BASIC-20261022-001.md",
+      "canonical_json": "/A股基本盘日报预测/2026/2026-10-22_RPT-BASIC-20261022-001.canonical.json"
+    }
+  },
+  "evaluation_backlog": {
+    "ACTUAL_UNAVAILABLE": 22,
+    "ALREADY_EVALUATED": 28,
+    "NOT_DUE": 16,
+    "BLOCKED_INVALID_HASH": 0,
+    "FORMAL_CLOSED_THIS_RUN": 2
+  },
+  "evaluation_closed": [
+    "EVAL-BASIC-20261021-T1"
+  ],
+  "policy": {
+    "id": "PLUGIN-POLICY-20261020-R2",
+    "blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f",
+    "main_observed_commit": "2511a79667b138a77735434de57597b5653b3d9a"
+  },
+  "plugin_observation": {
+    "governance_run": {
+      "Bigdata.com": "NOT_INVOKED",
+      "Exa": "NOT_INVOKED",
+      "Firecrawl": "NOT_INVOKED",
+      "Context7": "NOT_INVOKED"
+    },
+    "vercel": {
+      "status": "CONNECTIVITY_VERIFIED",
+      "deployment_state": "READY",
+      "deployment_id": "dpl_CPSe6b4DzeQRGF23euSML9mfKF8H",
+      "semantic_scope": "OBSERVABILITY_ONLY"
+    }
+  },
+  "repair_action": [
+    "persisted Supabase after schema read and idempotency check",
+    "created Prediction Registry record after ID de-duplication",
+    "merged minimal GitHub PR and read back main",
+    "uploaded complete Markdown and canonical JSON to Dropbox after filename conflict check",
+    "appended due T+1 Evaluation after Actual cross-verification"
+  ],
+  "retry_needed": [
+    "RPT-AI-20261019-001 source identity recheck remains scoped retry"
+  ],
+  "unresolved": [
+    "RPT-AI-20261019-001 NOT_FOUND_IN_CHECKED_SCOPE; absence is not asserted",
+    "Notion cross-database aggregate query unavailable without full MCP entitlement; backlog computed by separate read-only queries"
+  ],
+  "repaired_at": "2026-10-22T21:17:27+08:00"
+}
+
