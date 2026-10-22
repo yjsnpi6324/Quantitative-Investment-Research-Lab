@@ -1,0 +1,93 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-AI-DAILY",
+    "production_id": "AI-PROD-20260825-A",
+    "report_date": "2026-10-22",
+    "trading_date": "2026-10-22",
+    "prediction_id": "PRED-AI-20261022-001",
+    "report_id": "RPT-AI-20261022-001",
+    "report_type": "FORMAL_PREDICTION",
+    "report_status": "FINAL",
+    "run_mode": "PRODUCTION",
+    "generated_at": "2026-10-22T18:59:29+08:00",
+    "data_snapshot_id": "AI-SNAPSHOT-20261022-CLOSE-185929",
+    "champion_model_id": "AI-PLATE-MSM",
+    "prompt_version": "PROD-PROMPT-V3.6",
+    "model_version": "v2026-08-26",
+    "data_quality": "WARNING",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/40114471bc1b81dbb0dfc3cd39ab3e5d?pvs=204",
+    "record_type": "PREDICTION_GOVERNANCE_ARTIFACT",
+    "governance_mode": "V2.7_REPAIR_FIRST",
+    "repair_reason": "PERSISTENCE_PENDING",
+    "repaired_at": "2026-10-22T21:12:36+08:00"
+  },
+  "content_hash": {
+    "algorithm": "SHA-256",
+    "value": "9a1cc1f8034f15e1a1631189778d9ea2b9c14f70078fc2eadf8ec050a93131b4",
+    "scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_no_terminal_newline"
+  },
+  "prediction_canonical_json": {
+    "champion_model_id": "AI-PLATE-MSM",
+    "data_snapshot_id": "AI-SNAPSHOT-20261022-CLOSE-185929",
+    "forecasts": {
+      "t1": {
+        "assumptions": "全市场成交额不低于1.35万亿元，银行与宽基ETF维持稳定，CPO和算力硬件不再出现集体急跌，海外科技与AI资本开支预期无新增冲击",
+        "direction": "高波动震荡偏弱，超跌反抽难改算力风险重估",
+        "interval": null,
+        "invalidation": "若全市场成交额超过1.65万亿元、科创50与创业板同时上涨超过2%且CPO、半导体、AI应用与机器人共振走强，则偏弱判断失效；若成交额低于1.20万亿元且科创50继续下跌超过3%，则超跌反抽假设失效",
+        "probability": "61%-66%"
+      },
+      "t3": {
+        "assumptions": "三季报未引发AI核心公司盈利预期普遍下修，科创50不连续创出收盘新低，机器人、工业软件或半导体至少两条链条出现承接",
+        "direction": "弱修复，机器人与工业软件相对占优，算力链继续分化",
+        "interval": null,
+        "invalidation": "若科创50连续两个交易日收于2026-10-22低点下方且CPO、半导体、软件与机器人同步跑输沪深300，则弱修复判断失效；若AI全链连续两个交易日放量普涨，则分化判断失效",
+        "probability": "57%-62%"
+      },
+      "t5": {
+        "assumptions": "国内流动性和政策预期保持稳定，海外AI资本开支未进一步下修，AI产业链三季报正向与负向信号未形成系统性恶化",
+        "direction": "中性偏弱，三季报与海外AI资本开支验证主导",
+        "interval": null,
+        "invalidation": "若海外科技风险、国内流动性与AI核心公司盈利预期同步恶化，则基准失效；若AI硬件、软件和机器人连续三个交易日放量共振并收复2026-10-22主要跌幅，则中性偏弱判断失效",
+        "probability": "54%-59%"
+      }
+    },
+    "generated_at": "2026-10-22T18:59:29+08:00",
+    "hash_schema_version": "prediction-hash-schema-v1",
+    "model_version": "v2026-08-26",
+    "prediction_id": "PRED-AI-20261022-001",
+    "production_id": "AI-PROD-20260825-A",
+    "prompt_version": "PROD-PROMPT-V3.6",
+    "report_id": "RPT-AI-20261022-001",
+    "t1_target_date": "2026-10-23",
+    "t3_target_date": "2026-10-27",
+    "t5_target_date": "2026-10-29",
+    "task_id": "TASK-AI-DAILY",
+    "trading_date": "2026-10-22"
+  },
+  "prediction_hash": {
+    "algorithm": "SHA-256",
+    "schema_version": "prediction-hash-schema-v1",
+    "origin": "NATIVE",
+    "status": "NATIVE_HASH_VERIFIED",
+    "value": "df5846d0e110061518a743a35aff96787d8e7d21ba45bcf9acb8abc9ccc928c0"
+  },
+  "target_dates": {
+    "t1": "2026-10-23",
+    "t3": "2026-10-27",
+    "t5": "2026-10-29"
+  },
+  "target_date_verification": {
+    "status": "VERIFIED",
+    "calendar": "SSE 2026 annual market closure schedule",
+    "source_url": "https://www.sse.com.cn/disclosure/dealinstruc/closed/"
+  },
+  "body_alignment": "VERIFIED",
+  "governance_status": "PERSISTENCE_PENDING",
+  "artifact_files": {
+    "markdown": "2026-10-22_RPT-AI-20261022-001.md",
+    "canonical_json": "2026-10-22_RPT-AI-20261022-001.canonical.json"
+  }
+}
+
