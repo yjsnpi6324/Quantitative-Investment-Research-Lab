@@ -1,0 +1,93 @@
+{
+  "record_type": "GOVERNANCE_RECEIPT",
+  "governance_version": "V2.7",
+  "task_id": "TASK-AI-DAILY",
+  "production_id": "AI-PROD-20260825-A",
+  "report_id": "RPT-AI-20261022-001",
+  "prediction_id": "PRED-AI-20261022-001",
+  "report_date": "2026-10-22",
+  "trading_date": "2026-10-22",
+  "governance_status": "PERSISTENCE_READY",
+  "handoff_status": "HANDOFF_COMPLETE",
+  "content_hash": "9a1cc1f8034f15e1a1631189778d9ea2b9c14f70078fc2eadf8ec050a93131b4",
+  "hash_status": "NATIVE_HASH_VERIFIED",
+  "prediction_hash": {
+    "algorithm": "SHA-256",
+    "schema_version": "prediction-hash-schema-v1",
+    "origin": "NATIVE",
+    "value": "df5846d0e110061518a743a35aff96787d8e7d21ba45bcf9acb8abc9ccc928c0"
+  },
+  "target_dates": {
+    "t1": "2026-10-23",
+    "t3": "2026-10-27",
+    "t5": "2026-10-29"
+  },
+  "target_date_status": "VERIFIED",
+  "body_alignment": "VERIFIED",
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "run_id": "473e6d15-e2fa-4093-8323-0393426e38d9",
+      "result_id": "fa21e197-4b2f-4309-83fb-c885519baf5b"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "url": "https://app.notion.com/p/40114471bc1b81bd8a96c33a78139ab1?pvs=204"
+    },
+    "github_main": {
+      "status": "VERIFIED",
+      "commit": "26fa93a89e7455fba18c67067d9aa7e0258da934",
+      "pr": 71
+    },
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown": "/03_Reports/Daily/AI_Sector/2026-10-22_RPT-AI-20261022-001.md",
+      "canonical_json": "/03_Reports/Daily/AI_Sector/2026-10-22_RPT-AI-20261022-001.canonical.json"
+    }
+  },
+  "evaluation_backlog": {
+    "ACTUAL_UNAVAILABLE": 22,
+    "ALREADY_EVALUATED": 28,
+    "NOT_DUE": 16,
+    "BLOCKED_INVALID_HASH": 0,
+    "FORMAL_CLOSED_THIS_RUN": 2
+  },
+  "evaluation_closed": [
+    "EVAL-AI-20261021-T1"
+  ],
+  "policy": {
+    "id": "PLUGIN-POLICY-20261020-R2",
+    "blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f",
+    "main_observed_commit": "2511a79667b138a77735434de57597b5653b3d9a"
+  },
+  "plugin_observation": {
+    "governance_run": {
+      "Bigdata.com": "NOT_INVOKED",
+      "Exa": "NOT_INVOKED",
+      "Firecrawl": "NOT_INVOKED",
+      "Context7": "NOT_INVOKED"
+    },
+    "vercel": {
+      "status": "CONNECTIVITY_VERIFIED",
+      "deployment_state": "READY",
+      "deployment_id": "dpl_CPSe6b4DzeQRGF23euSML9mfKF8H",
+      "semantic_scope": "OBSERVABILITY_ONLY"
+    }
+  },
+  "repair_action": [
+    "persisted Supabase after schema read and idempotency check",
+    "created Prediction Registry record after ID de-duplication",
+    "merged minimal GitHub PR and read back main",
+    "uploaded complete Markdown and canonical JSON to Dropbox after filename conflict check",
+    "appended due T+1 Evaluation after Actual cross-verification"
+  ],
+  "retry_needed": [
+    "RPT-AI-20261019-001 source identity recheck remains scoped retry"
+  ],
+  "unresolved": [
+    "RPT-AI-20261019-001 NOT_FOUND_IN_CHECKED_SCOPE; absence is not asserted",
+    "Notion cross-database aggregate query unavailable without full MCP entitlement; backlog computed by separate read-only queries"
+  ],
+  "repaired_at": "2026-10-22T21:17:27+08:00"
+}
+
