@@ -1,0 +1,139 @@
+{
+  "schema_version": "governance-receipt-v2.7",
+  "policy_revision": "PLUGIN-POLICY-20261020-R2",
+  "policy": {
+    "source_path": "docs/governance/PLUGIN_EXECUTION_POLICY_20261020.md",
+    "main_commit_read": "55c36825f7449e0dc82e053cdaa60df9f9a70c46",
+    "blob_sha": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f"
+  },
+  "handoff_completeness": "COMPLETE",
+  "content_hash": {
+    "algorithm": "SHA-256",
+    "value": "5f5ca23723dc90ac59cc0e5e83dd588a2f6b01f722274ce1a059f83c2ef78e12",
+    "status": "VERIFIED"
+  },
+  "prediction_hash": {
+    "canonical_json": "{\"champion_model_id\":\"AI-PLATE-MSM\",\"data_snapshot_id\":\"AI-SNAPSHOT-20261023-CLOSE-190506\",\"forecasts\":{\"t1\":{\"assumptions\":\"全市场成交额不低于1.60万亿元，科创50保持相对强势，机器人、半导体、AI软件至少两条链条延续承接，海外科技风险无新增系统性冲击\",\"direction\":\"高波动震荡偏强，机器人、半导体与AI软件轮动，CPO冲高分化\",\"interval\":null,\"invalidation\":\"若全市场成交额低于1.35万亿元、科创50下跌超过2%且CPO、半导体、AI软件与机器人同步放量回落，则偏强判断失效；若科创50上涨超过4%且AI全链普涨，则冲高分化判断失效\",\"probability\":\"58%-63%\"},\"t3\":{\"assumptions\":\"AI产业链至少两个环节保持正收益宽度，科创50不连续收跌，三季报未引发核心公司盈利预期普遍下修\",\"direction\":\"震荡修复，AI硬件与具身智能轮动，三季报驱动分化\",\"interval\":null,\"invalidation\":\"若科创50连续两个交易日收于2026-10-23低点下方且CPO、半导体、软件与机器人同步跑输沪深300，则震荡修复判断失效；若成交额连续两个交易日低于1.30万亿元，则轮动假设失效\",\"probability\":\"56%-61%\"},\"t5\":{\"assumptions\":\"国内流动性和政策预期稳定，海外AI资本开支未进一步下修，AI产业链三季报正向与负向信号未形成系统性恶化\",\"direction\":\"中性偏强，高波动业绩验证与海外资本开支映射\",\"interval\":null,\"invalidation\":\"若AI核心公司三季报引发盈利预期系统性下修，或海外科技风险与国内流动性同时恶化并使科创50跌破2026-10-23低点，则中性偏强判断失效；若AI硬件、软件与机器人连续三个交易日放量普涨，则高波动分化判断失效\",\"probability\":\"53%-58%\"}},\"generated_at\":\"2026-10-23T19:05:06+08:00\",\"hash_schema_version\":\"prediction-hash-schema-v1\",\"model_version\":\"v2026-08-26\",\"prediction_id\":\"PRED-AI-20261023-001\",\"production_id\":\"AI-PROD-20260825-A\",\"prompt_version\":\"PROD-PROMPT-V3.6\",\"report_id\":\"RPT-AI-20261023-001\",\"t1_target_date\":\"2026-10-26\",\"t3_target_date\":\"2026-10-28\",\"t5_target_date\":\"2026-10-30\",\"task_id\":\"TASK-AI-DAILY\",\"trading_date\":\"2026-10-23\"}",
+    "hash": "721a513345c5419bad1de7c1bea091cf7ade0211a743910113accd6653242168",
+    "algorithm": "SHA-256",
+    "schema_version": "prediction-hash-schema-v1",
+    "origin": "NATIVE",
+    "status": "NATIVE_HASH_VERIFIED",
+    "target_dates": {
+      "t1": "2026-10-26",
+      "t3": "2026-10-28",
+      "t5": "2026-10-30"
+    },
+    "body_alignment": "VERIFIED"
+  },
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "project_id": "maxbwlhkgxnniclontig",
+      "task_run_id": "a60f93ea-6559-4557-9da5-10ef585639e9",
+      "task_result_id": "46e01db7-2ef4-4f69-9164-f418a6cc81b2"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "url": "https://app.notion.com/p/40214471bc1b81bf8a8ec6869d57e20e"
+    },
+    "github_main": {
+      "status": "VERIFIED",
+      "artifact_commit": "3e953285e786e64c4a55c1875fc16a91a3b85597",
+      "artifact_pr": 73
+    },
+    "dropbox": {
+      "status": "VERIFIED",
+      "markdown_url": "https://www.dropbox.com/scl/fi/7d2zlbplzwzzt2ruruboc",
+      "canonical_json_url": "https://www.dropbox.com/scl/fi/rpbnj2lvfdqunmx7h0j0e",
+      "readback": {
+        "markdown_sections_1_to_12": true,
+        "identity": true,
+        "handoff": true,
+        "canonical_object_equal": true
+      }
+    }
+  },
+  "evaluations_closed": [
+    {
+      "evaluation_id": "EVAL-AI-20261022-T1",
+      "horizon": "T+1",
+      "classification": "FORMAL_CLOSED",
+      "result": "MISS",
+      "score": 0,
+      "url": "https://app.notion.com/p/40214471bc1b816ba5a0cee8a6c4962d"
+    }
+  ],
+  "evaluation_backlog": {
+    "ALREADY_EVALUATED": 31,
+    "NOT_DUE": 17,
+    "ACTUAL_UNAVAILABLE": 24,
+    "BLOCKED_INVALID_HASH": 0,
+    "HASH_MISMATCH_BLOCKED": 0
+  },
+  "plugin_observation": {
+    "production_source_audit": {
+      "bigdata": {
+        "status": "PRODUCTION_EVIDENCE_ENABLED",
+        "adoption": "ACCEPTED_WITH_INDEPENDENT_CORROBORATION"
+      },
+      "exa": {
+        "status": "DISCOVERY_CANDIDATE",
+        "adoption": "ACCEPTED_AS_SOURCE_DISCOVERY"
+      }
+    },
+    "governance_run": {
+      "bigdata": "NOT_INVOKED",
+      "exa": "NOT_INVOKED",
+      "firecrawl": "NOT_INVOKED",
+      "context7": "NOT_INVOKED",
+      "vercel": {
+        "status": "CONNECTIVITY_VERIFIED",
+        "observation": "main deployment READY for artifact commit 3e953285e786e64c4a55c1875fc16a91a3b85597; READY is not prediction validation"
+      }
+    },
+    "endpoint_last_known": {
+      "scite": {
+        "status": "DEGRADED",
+        "this_run": "NOT_INVOKED",
+        "skip_reason": "PLAN_LOCKED"
+      },
+      "similarweb": {
+        "status": "DEGRADED",
+        "this_run": "NOT_INVOKED",
+        "skip_reason": "PLAN_LOCKED"
+      },
+      "ahrefs": {
+        "status": "DEGRADED",
+        "this_run": "NOT_INVOKED",
+        "skip_reason": "PLAN_LOCKED"
+      },
+      "hugging_face": {
+        "status": "DEGRADED",
+        "this_run": "NOT_INVOKED",
+        "skip_reason": "TOOL_UNAVAILABLE"
+      }
+    }
+  },
+  "staged_promotion": {
+    "manifest_hash_alignment": "PRODUCTION_GATED_VERIFIED",
+    "four_core_retry_evaluation": "CONTROLLED_PRODUCTION",
+    "fresh_replay_migration": "SHADOW_ONLY_NOT_RUN"
+  },
+  "governance_status": "PERSISTENCE_READY",
+  "repair_action": [
+    "created canonical artifacts from immutable source FINAL",
+    "persisted and read back four core nodes",
+    "closed only evidence-qualified evaluations",
+    "left evidence-insufficient backlog unscored"
+  ],
+  "retry_needed": [
+    "ACTUAL_UNAVAILABLE backlog remains append-only pending evidence",
+    "historical failed/missing source items remain blocked"
+  ],
+  "unresolved": [
+    "RPT-AI-20261019-001 remains NOT_FOUND_IN_CHECKED_SCOPE; no substitution or reconstruction performed"
+  ],
+  "repaired_at": "2026-10-23T20:58:11+08:00",
+  "source_final_unchanged": true
+}
