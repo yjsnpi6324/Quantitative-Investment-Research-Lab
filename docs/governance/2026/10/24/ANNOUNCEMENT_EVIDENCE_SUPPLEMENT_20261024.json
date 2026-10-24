@@ -1,0 +1,834 @@
+{
+  "schema_version": "announcement-evidence-supplement-v1",
+  "supplement_id": "ANNOUNCEMENT-EVIDENCE-20261024-001",
+  "artifact_type": "APPEND_ONLY_GOVERNANCE_EVIDENCE_SUPPLEMENT",
+  "created_at": "2026-10-24T07:20:16.274026+00:00",
+  "as_of_cutoff": "2026-10-23T19:00:00+08:00",
+  "retrieval_mode": "RETROSPECTIVE_VERIFICATION_NOT_NEW_PREDICTION",
+  "policy_revision": "PLUGIN-POLICY-20261020-R2",
+  "scope": "AI/BASIC locked Oct23 operating-announcement, order/capacity and concrete policy/product catalyst claims. Not a re-forecast, backtest, full price/earnings audit or production plugin acceptance.",
+  "originals": [
+    {
+      "report_id": "RPT-AI-20261023-001",
+      "prediction_id": "PRED-AI-20261023-001",
+      "task_id": "TASK-AI-DAILY",
+      "production_id": "AI-PROD-20260825-A",
+      "generated_at": "2026-10-23T19:05:06+08:00",
+      "original_data_quality": "WARNING",
+      "prediction_hash": "721a513345c5419bad1de7c1bea091cf7ade0211a743910113accd6653242168",
+      "content_hash": "5f5ca23723dc90ac59cc0e5e83dd588a2f6b01f722274ce1a059f83c2ef78e12",
+      "hash_verified": true,
+      "file_path": "production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md",
+      "canonical_path": "production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json",
+      "governance_path": "production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json",
+      "mutation_performed": false
+    },
+    {
+      "report_id": "RPT-BASIC-20261023-001",
+      "prediction_id": "PRED-BASIC-20261023-001",
+      "task_id": "TASK-ASTOCK-DAILY",
+      "production_id": "BASIC-PROD-20260825-A",
+      "generated_at": "2026-10-23T18:58:15+08:00",
+      "original_data_quality": "WARNING",
+      "prediction_hash": "2add602aea1a8642f25d17d357e9a68282a9ccb2c3eb779d36f93513d188c107",
+      "content_hash": "f6523e6fe8b14b2455bbd0d8ba3904603cd0d17f71c06fee6723765701821b0c",
+      "hash_verified": true,
+      "file_path": "production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md",
+      "canonical_path": "production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json",
+      "governance_path": "production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json",
+      "mutation_performed": false
+    }
+  ],
+  "official_announcement_count": 6,
+  "original_final_changed": false,
+  "canonical_changed": false,
+  "prediction_hash_changed": false,
+  "content_hash_changed": false,
+  "original_data_quality_changed": false,
+  "remote_writes_performed": false,
+  "sources": [
+    {
+      "source_id": "CPO-ZJXC-20261023",
+      "entity": "中际旭创股份有限公司",
+      "stock_code": "300308.SZ",
+      "document_title": "关于公司近期生产经营情况的公告",
+      "announcement_number": "2026-100",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-23/1225617691.pdf",
+      "published_at": "2026-10-23",
+      "publication_precision": "date_only",
+      "published_at_basis": "CNINFO URL date and company board signature date on PDF page 3",
+      "retrieved_at": null,
+      "retrieved_at_basis": "Exact client timestamp not captured; see separately labeled observation time.",
+      "original_read": true,
+      "method": "native web PDF full text 3 pages; Exa full-text reread",
+      "evidence_quote": "公司目前生产经营一切正常",
+      "locator": "PDF p1 lines 13-20; p2 lines 23-37; p3 lines 47-56",
+      "findings": "Company states stable supply chain, sufficient capacity utilization and strong orders. Major overseas customers have placed orders into 2027; certain key clients gave explicit 2028 demand guidance. This does not mean firm 2028 purchase orders. 1.6T/800G demand growth and NPO/XPO release are expectations. Some next-generation products are undergoing joint development/sampling. Changing repurchased shares to cancellation was to be considered at an Oct29 board meeting, not completed cancellation.",
+      "content_status": "supported",
+      "asof_status": "SOURCE_DATE_PRE_CUTOFF; time corroborated by MEDIA-PAPER-20261023; historical producer receipt unverified",
+      "observed_completed_at": "2026-10-24T07:14:19Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "CPO-XYS-20261023",
+      "entity": "成都新易盛通信技术股份有限公司",
+      "stock_code": "300502.SZ",
+      "document_title": "关于公司近期生产经营情况的公告",
+      "announcement_number": "2026-061",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-23/1225617676.pdf",
+      "published_at": "2026-10-23",
+      "publication_precision": "date_only",
+      "published_at_basis": "CNINFO URL date and board signature date on PDF page 2",
+      "retrieved_at": null,
+      "retrieved_at_basis": "Exact client timestamp not captured; see separately labeled observation time.",
+      "original_read": true,
+      "method": "native web PDF full text 2 pages; Exa full-text reread",
+      "evidence_quote": "在手订单充足",
+      "locator": "PDF p1 lines 11-19",
+      "findings": "Company states orderly operations, ample orders, 800G/1.6T as principal delivery products and expansion/delivery proceeding to demand. 1.6T had entered continuing volume ramp. Faster future shipments, higher deliveries and positive 2026/2027 business expectations are forward-looking management assessments, not a newly disclosed named customer contract or recognized revenue.",
+      "content_status": "supported",
+      "asof_status": "SOURCE_DATE_PRE_CUTOFF; time corroborated by MEDIA-PAPER-20261023; historical producer receipt unverified",
+      "observed_completed_at": "2026-10-24T07:14:27Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "CPO-TFC-20261023",
+      "entity": "苏州天孚光通信股份有限公司",
+      "stock_code": "300394.SZ",
+      "document_title": "关于公司近期生产经营情况的公告",
+      "announcement_number": "2026-057",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-23/1225617692.pdf",
+      "published_at": "2026-10-23",
+      "publication_precision": "date_only",
+      "published_at_basis": "CNINFO URL date and board signature date on PDF page 3",
+      "retrieved_at": null,
+      "retrieved_at_basis": "Exact client timestamp not captured; see separately labeled observation time.",
+      "original_read": true,
+      "method": "native web PDF full text 3 pages; Exa full-text reread",
+      "evidence_quote": "在手订单充足",
+      "locator": "PDF p2 lines 23-42",
+      "findings": "Company states normal operations, adequate orders and no major adverse internal/external operating change. CPO supporting FAU/ELS products had stable mass-production delivery. The 2027-2029 profit-growth figures are stock-incentive performance assessment thresholds relative to 2025, not earnings forecasts or assured results. CPO/NPO ramp timing and export-policy clarification are not present in this Oct23 announcement; they belong to Oct22 IR.",
+      "content_status": "supported",
+      "asof_status": "SOURCE_DATE_PRE_CUTOFF; time corroborated by MEDIA-PAPER-20261023; historical producer receipt unverified",
+      "observed_completed_at": "2026-10-24T07:14:27Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "CPO-TFC-IR-20261022",
+      "entity": "苏州天孚光通信股份有限公司",
+      "stock_code": "300394.SZ",
+      "document_title": "投资者关系活动记录表",
+      "announcement_number": "2026-011",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-22/1225617545.PDF",
+      "published_at": "2026-10-22",
+      "publication_precision": "date_only",
+      "event_time": "2026-10-22 13:30-13:50 Asia/Shanghai",
+      "published_at_basis": "PDF signature date; event time separately reported on page 1, not substituted for publication timestamp",
+      "retrieved_at": null,
+      "retrieved_at_basis": "Exact client timestamp not captured; see separately labeled observation time.",
+      "original_read": true,
+      "method": "native web PDF full text 3 pages",
+      "evidence_quote": "NPO 相关配套产品目前处于样品阶段",
+      "locator": "PDF p1 Q1; p2 Q2-3; p3 Q6",
+      "findings": "Management says CPO/NPO ramp pace had not materially changed; CPO FAU/ELS production would expand with demand while NPO supporting products were samples. Management says released import/export policies did not constrain optical-component products or its business, with Thai mass-production capacity supporting global customers. This is company-specific interpretation, not an independently verified legal/regulatory finding. Supply improvement effects on Q3/Q4 are expected; management says H2 margin cannot be accurately predicted.",
+      "content_status": "supported as company statement; policy-effect fact partially_supported absent regulator-level verification",
+      "asof_status": "SOURCE_DATE_BEFORE_CUTOFF; original producer receipt unverified",
+      "observed_completed_at": "2026-10-24T07:14:27Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "MEDIA-PAPER-20261023",
+      "entity": "澎湃新闻",
+      "stock_code": null,
+      "document_title": "创指午后翻红！“易中天”、光迅科技、源杰科技等午间集体公告：生产经营一切正常",
+      "official_url": null,
+      "url": "https://www.thepaper.cn/newsDetail_forward_34316643",
+      "published_at": "2026-10-23T13:16:00+08:00",
+      "publication_precision": "minute",
+      "published_at_basis": "source page displayed 2026-10-23 13:16",
+      "retrieved_at": null,
+      "retrieved_at_basis": "Exact client timestamp not captured; see separately labeled observation time.",
+      "original_read": true,
+      "source_type": "secondary_media_timing_only",
+      "evidence_quote": "10月23日的午间",
+      "locator": "page lines 14,24,28-33",
+      "findings": "Identifies the three companies and discusses the same operating announcements before the 19:00 cutoff. Provides a source-reported public-availability upper bound, not a verified exchange publication timestamp. This article is not a second independent source for underlying company operating claims.",
+      "content_status": "supports timing corroboration; not primary announcement evidence",
+      "observed_completed_at": "2026-10-24T07:15:00Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "ANN-002281-20261023-066",
+      "entity": "武汉光迅科技股份有限公司",
+      "security_name": "光迅科技",
+      "security_code": "002281.SZ",
+      "announcement_no": "（2026）066",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-23/1225617673.pdf",
+      "pages": 2,
+      "quote": "公司生产交付秩序正常",
+      "quote_location": "第1页，二、公司近期生产经营活动运行平稳正常",
+      "supported_facts": [
+        "公司表示生产经营按既定计划开展；生产交付、研发与客户合作正常。",
+        "公司表示主要光互联及光传输产品需求旺盛，在手订单储备充足。"
+      ],
+      "limits": [
+        "公司经营披露不是独立审计、具名客户订单或新增合同金额确认。",
+        "原PDF只载2026-10-23日期，无可核验发布时分。",
+        "公司的行业判断不等于全行业独立统计。"
+      ],
+      "title": "关于公司近期生产经营情况的公告",
+      "source_class": "issuer_original_on_cninfo",
+      "published_at": "2026-10-23",
+      "published_at_precision": "date",
+      "official_available_at": null,
+      "requested_at": "2026-10-24T07:16:29.945Z",
+      "retrieved_at": "2026-10-24T07:16:30.448Z",
+      "read_method": "native web PDF全文 + Exa web_fetch全文相互回读（相同源，只算一个证据）",
+      "claim_mapping": [
+        "AI-ANN-01",
+        "AI-ANN-02"
+      ],
+      "status": "supported",
+      "availability_assessment": "date_before_or_on_cutoff; exact official timestamp unverified; contemporaneous 12:56 media only secondary upper-bound evidence",
+      "pdf_sha256": null,
+      "pdf_digest_limitation": "未下载官方PDF二进制；不伪造原文件hash。"
+    },
+    {
+      "source_id": "ANN-688498-20261023-057",
+      "entity": "陕西源杰半导体科技股份有限公司",
+      "security_name": "源杰科技",
+      "security_code": "688498.SH",
+      "announcement_no": "2026-057",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-23/1225617693.PDF",
+      "pages": 2,
+      "quote": "订单交付及产能扩建等工作均正常开展",
+      "quote_location": "第1页，二、公司生产经营情况",
+      "supported_facts": [
+        "公司表示生产经营、订单交付和产能扩建正常。",
+        "二期项目土建及部分洁净室完成；首批设备预期进厂、调试，预计2026年底至2027年初开始形成产能。",
+        "所述第三季度收入6.5亿—7亿元、归母净利4.03亿—4.53亿元为预计值，而非已审计正式季报实际值。"
+      ],
+      "limits": [
+        "产能目标为未来安排，不是已投产或已取得确定新增订单。",
+        "不是所有六家公司都在该日明确声明同一强度的在手订单；源杰主述正常交付和客户需求旺盛。",
+        "原PDF仅日期，官方发布时分未知。"
+      ],
+      "title": "关于公司近期生产经营情况的公告",
+      "source_class": "issuer_original_on_cninfo",
+      "published_at": "2026-10-23",
+      "published_at_precision": "date",
+      "official_available_at": null,
+      "requested_at": "2026-10-24T07:16:29.945Z",
+      "retrieved_at": "2026-10-24T07:16:30.448Z",
+      "read_method": "native web PDF全文 + Exa web_fetch全文相互回读（相同源，只算一个证据）",
+      "claim_mapping": [
+        "AI-ANN-01",
+        "AI-ANN-02"
+      ],
+      "status": "supported",
+      "availability_assessment": "date_before_or_on_cutoff; exact official timestamp unverified; contemporaneous 12:56 media only secondary upper-bound evidence",
+      "pdf_sha256": null,
+      "pdf_digest_limitation": "未下载官方PDF二进制；不伪造原文件hash。"
+    },
+    {
+      "source_id": "ANN-688808-20261023-047",
+      "entity": "苏州联讯仪器股份有限公司",
+      "security_name": "联讯仪器",
+      "security_code": "688808.SH",
+      "announcement_no": "2026-047",
+      "official_url": "https://static.cninfo.com.cn/finalpage/2026-10-23/1225617694.PDF",
+      "pages": 3,
+      "quote": "在手订单储备较为充足",
+      "quote_location": "第2页，三、公司未来经营展望",
+      "supported_facts": [
+        "公司表示生产经营、订单交付及生产扩建正常，订单储备较为充足。",
+        "800G/1.6T核心测试仪器系2026年交付主力，2.4T/3.2T配套产品有2026下半年送样验证计划。",
+        "前三季度归母净利润19亿—21亿元是预计值，不能据此当作正式已披露实际盈利。"
+      ],
+      "limits": [
+        "测试仪器厂商不是光模块生产商；六家应称光通信产业链企业而非六家光模块厂。",
+        "未来送样不等于量产、客户验收或收入确认。",
+        "原PDF仅日期，官方发布时分未知。"
+      ],
+      "title": "关于公司近期生产经营情况的公告",
+      "source_class": "issuer_original_on_cninfo",
+      "published_at": "2026-10-23",
+      "published_at_precision": "date",
+      "official_available_at": null,
+      "requested_at": "2026-10-24T07:16:29.945Z",
+      "retrieved_at": "2026-10-24T07:16:30.448Z",
+      "read_method": "native web PDF全文 + Exa web_fetch全文相互回读（相同源，只算一个证据）",
+      "claim_mapping": [
+        "AI-ANN-01",
+        "AI-ANN-02"
+      ],
+      "status": "supported",
+      "availability_assessment": "date_before_or_on_cutoff; exact official timestamp unverified; contemporaneous 12:56 media only secondary upper-bound evidence",
+      "pdf_sha256": null,
+      "pdf_digest_limitation": "未下载官方PDF二进制；不伪造原文件hash。"
+    },
+    {
+      "source_id": "MEDIA-SIX-20261023-1256",
+      "entity": "大河财立方（东方财富转载）",
+      "source_class": "secondary_media_timing_only",
+      "official_url": null,
+      "url": "https://finance.eastmoney.com/a/202610233905914243.html",
+      "published_at": "2026-10-23T12:56:00+08:00",
+      "published_at_precision": "minute",
+      "retrieved_at": null,
+      "retrieved_at_basis": "Exact client timestamp not captured; see separately labeled observation time.",
+      "evidence_quote": "10月23日午间",
+      "locator": "原页面时间行及首段六公司名单",
+      "findings": "同一篇 contemporaneous 报道列出六家公司；只辅助午间/截止前可用性，不计作六项独立经营事实证据。",
+      "original_read": true,
+      "official_available_at": null,
+      "observed_completed_at": "2026-10-24T07:15:30Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "requested_at": null
+    },
+    {
+      "source_id": "SRC-AI-20261023-10-ROBOT-MASS-PRODUCTION",
+      "entity": "Tesla, Inc.",
+      "code": "NASDAQ:TSLA",
+      "finding": "Tesla first-party quarterly deck explicitly reports Optimus production beginning on Fremont high-volume lines; status is Early Ramp, not evidence of achieved full-volume production, third-party deliveries, orders or profitability. Broad narrative has primary support; inference that it caused the A-share rally is not established.",
+      "official_url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+      "document_title": "Q3 2026 Update",
+      "document_locator": "Printed page 6 (zero-based PDF page 5), Manufacturing & Hardware; printed page 9 Outlook",
+      "published_at": "2026-10-21",
+      "published_at_precision": "date, US corporate earnings release date; exact PDF publication minute unavailable",
+      "publication_basis": [
+        "https://ir.tesla.com/",
+        "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments"
+      ],
+      "retrieved_at": null,
+      "quote": "Optimus production began in Fremont on our high-volume lines.",
+      "additional_table_evidence": "Company classifies California Optimus manufacturing as initial ramping and the Texas site as under construction; installed capacity must not be interpreted as realized output.",
+      "acquisition_status": "PRIMARY_FULLTEXT_READ",
+      "cutoff_status": "PUBLISHED_BEFORE_CUTOFF; original-run possession unproven",
+      "limitations": [
+        "The locked report did not name Tesla; mapping is a likely catalyst interpretation corroborated by its same-date media source, not proof of intended reference.",
+        "Company-issued forward-looking/operational assertions are not an independent technical or commercial validation.",
+        "No arbitrary numeric production or delivery assumption was added."
+      ],
+      "observed_completed_at": "2026-10-24T07:14:27Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "retrieved_at_basis": "Actual per-call client retrieval timestamp was not captured; null rather than inventing an exact request/response time. See observed_completed_at.",
+      "source_status": "partially_supported",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "SRC-AI-20261023-10-ROBOT-NEW-PRODUCT",
+      "entity": "宇树科技股份有限公司 / Unitree Robotics",
+      "code": "688836.SH (verified by company official PDF)",
+      "finding": "The likely new-product reference is H2-X introduced on October 21. Media repeatedly map it to the same official X post and YouTube video, but original-post content and exact primary publication timestamp could not be read. Do not upgrade to verified primary evidence or infer commercial mass production from a demonstration.",
+      "official_url": "https://x.com/UnitreeRobotics/status/2112819774573179175",
+      "other_candidate_original": "https://www.youtube.com/watch?v=Y3zb4o47yqA",
+      "published_at": null,
+      "published_at_candidate": "2026-10-21 (media-reported; exact primary timestamp unverified)",
+      "retrieved_at": null,
+      "quote": null,
+      "acquisition_status": "X_403_FORBIDDEN; YOUTUBE_SHELL_ONLY",
+      "cutoff_status": "SECONDARY_PUBLICATION_BEFORE_CUTOFF_ONLY; primary original unavailable",
+      "limitations": [
+        "Exact X post identified through Actualiza2 original-source link and multiple independent link mappings; link mapping is not the same as original-content verification.",
+        "An initial event-calendar candidate X post 2104523214705856582 conflicted with the later exact-source links and is NOT adopted.",
+        "No additional X retries or authentication bypass were attempted after 403.",
+        "No price, sales date, autonomous-operation claim, shipment or order count adopted."
+      ],
+      "discovery_sources": [
+        "https://actualiza2.org/en/unitree-h2-x-presentacion-autonomia",
+        "https://www.sohu.com/a/1091517550_130887",
+        "https://ainativefoundation.org/china-ai-native-industry-insights-20261022-deepseek-unitree-tencent-more/"
+      ],
+      "observed_completed_at": "2026-10-24T07:15:38Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "retrieved_at_basis": "Actual per-call client retrieval timestamp was not captured; null rather than inventing an exact request/response time. See observed_completed_at.",
+      "source_status": "unverified",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "SRC-AI-20261023-11-ROBOT-COMMERCIALIZATION-RISK",
+      "entity": "宇树科技股份有限公司",
+      "code": "688836.SH",
+      "finding": "Official company abnormal-trading notice supports the commercialization/valuation counter-evidence: early-stage industry, uncertainties in technology maturity, demand cultivation and supply-chain capability; ordinary operations unchanged. This is dated Oct21 and cannot certify Oct23 price behavior.",
+      "official_url": "https://www.unitree.com/disclosure/listedinfo/announcement/%E5%AE%87%E6%A0%91%E7%A7%91%E6%8A%80%20%E8%82%A1%E7%A5%A8%E4%BA%A4%E6%98%93%E5%BC%82%E5%B8%B8%E6%B3%A2%E5%8A%A8%E5%85%AC%E5%91%8A.pdf",
+      "document_title": "股票交易异常波动公告",
+      "document_id": "2026-003",
+      "document_locator": "3 pages, risks on pages 1 and 3, signed date page 3",
+      "published_at": "2026-10-21",
+      "published_at_precision": "date; company IR listing and signed PDF agree; no intraday publication time",
+      "publication_basis": [
+        "https://www.unitree.com/investor/"
+      ],
+      "retrieved_at": null,
+      "quote": "人形机器人行业尚处于商业化早期",
+      "acquisition_status": "PRIMARY_FULLTEXT_READ",
+      "cutoff_status": "PUBLISHED_BEFORE_CUTOFF; original-run possession unproven",
+      "limitations": [
+        "The notice concerns October16/19/20 abnormal price changes, not October23.",
+        "It does not establish the H2-X launch or October23 daily return.",
+        "The issuer notes all information is subject to its designated disclosure media including SSE; company-hosted PDF is adopted as company original, not counted separately from an exchange mirror."
+      ],
+      "observed_completed_at": "2026-10-24T07:15:04Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "retrieved_at_basis": "Actual per-call client retrieval timestamp was not captured; null rather than inventing an exact request/response time. See observed_completed_at.",
+      "source_status": "supported",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "SRC-BASIC-20261023-8-10-URBAN-RENEWAL",
+      "entity": "住房城乡建设部办公厅、工业和信息化部办公厅、财政部办公厅、交通运输部办公厅、商务部办公厅、国务院国资委办公厅",
+      "code": null,
+      "finding": "Exact current policy identified: six-department guidance for old neighborhoods/factory districts, dated October20 and official page stamped October23 10:03:58. Official-domain indexed full text supports policy existence and provisions, but direct page fetch failed; price-catalyst causality and broad real-estate earnings transmission are not established.",
+      "official_url": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2026/art_4e701b22880944b38799ca132532dfbd.html",
+      "document_title": "住房城乡建设部办公厅等关于推进老旧街区厂区改造提升的指导意见",
+      "document_id": "建办科〔2026〕33号",
+      "index_id": "000013338/2026-01017",
+      "issued_at": "2026-10-20",
+      "published_at": "2026-10-23T10:03:58+08:00",
+      "published_at_precision": "official indexed page timestamp, timezone interpreted as China standard time",
+      "retrieved_at": null,
+      "quote": "有序实施1500个老旧街区厂区改造提升重大工程项目",
+      "evidence_summary": "Guidance covers factory, commercial, residential and transport-hub districts; sustainable market-based financing, qualifying infrastructure REITs and no large-scale demolition. These are policy tasks and conditional support, not realized investment, company orders or earnings.",
+      "acquisition_status": "INDEXED_OFFICIAL_FULLTEXT_READ; NATIVE_DIRECT_FETCH_TIMEOUT_INITIAL_AND_ONE_RETRY; EXA_ALTERNATE_CRAWL_TIMEOUT",
+      "cutoff_status": "OFFICIAL_INDEXED_TIMESTAMP_BEFORE_CUTOFF; direct original acquisition still incomplete",
+      "limitations": [
+        "Native web search returned the official URL content including all nine provisions and issuer/date, but native open and one retry timed out; a single Exa alternate fetch also timed out.",
+        "Do not label this direct-original fulltext retrieval complete.",
+        "The exact report did not name a document, so this source is a high-relevance same-day policy mapping, not proof of the production report intended reference.",
+        "Before-cutoff media (10:32,11:40,16:06) corroborate circulation but are not additional primary sources."
+      ],
+      "corroboration_urls": [
+        "https://www.mohurd.gov.cn/xinwen/gzdt/art/2026/art_140e3dd19dfe4e5da06e14dd189d1493.html",
+        "https://www.thepaper.cn/newsDetail_forward_34315923",
+        "https://original.ifeng.com/c/8xSV0bn67QY"
+      ],
+      "observed_completed_at": "2026-10-24T07:15:12Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "retrieved_at_basis": "Actual per-call client retrieval timestamp was not captured; null rather than inventing an exact request/response time. See observed_completed_at.",
+      "source_status": "partially_supported",
+      "official_available_at": null,
+      "requested_at": null
+    },
+    {
+      "source_id": "SRC-BASIC-20261023-URBAN-RENEWAL-BACKGROUND",
+      "entity": "国务院 / 国家发展改革委规划司",
+      "code": null,
+      "finding": "The national urban-renewal 15th Five-Year Plan is original policy background, not an October23 newly announced catalyst.",
+      "official_url": "https://www.ndrc.gov.cn/fggz/fzzlgh/gjjzxgh/202609/t20260928_1407863_ext.html",
+      "document_title": "城市更新“十五五”规划",
+      "document_id": "国发〔2026〕12号",
+      "issued_at": "2026-05-22",
+      "published_at": "2026-09-28",
+      "published_at_precision": "date on NDRC page; original State Council first-publication time not established",
+      "retrieved_at": null,
+      "quote": "促进房地产开发企业转型发展、参与城市更新",
+      "acquisition_status": "PRIMARY_OFFICIAL_FULLTEXT_READ",
+      "cutoff_status": "PUBLISHED_BEFORE_CUTOFF_BACKGROUND",
+      "limitations": [
+        "Historical planning evidence only. Do not portray as newly announced on Oct23.",
+        "No proof of property-sector stock-price effect or new orders."
+      ],
+      "scope_label": "SUPPORTED_BACKGROUND_ONLY",
+      "observed_completed_at": "2026-10-24T07:14:27Z",
+      "observed_completed_at_basis": "Approximate completion observation after source retrieval; not a client request timestamp, exact retrieval timestamp, or original-run receipt.",
+      "retrieved_at_basis": "Actual per-call client retrieval timestamp was not captured; null rather than inventing an exact request/response time. See observed_completed_at.",
+      "source_status": "partially_supported",
+      "official_available_at": null,
+      "requested_at": null
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "AI-ANN-01",
+      "report_id": "RPT-AI-20261023-001",
+      "sections": [
+        8,
+        10
+      ],
+      "original_claim": "六家光通信公司午间经营澄清；涉及订单、产能、客户信息回到交易所/公司IR原文",
+      "status": "partially_supported",
+      "verified_component": "六家身份、六份2026-10-23经营公告及其生产/交付/订单/产能表述已由公司官方披露原件验证。",
+      "unverified_component": "官方原PDF只有日期，无可核验时分；午间与19:00前可用性仅由12:56媒体报道辅助，原生产过程实际读取时间未知。",
+      "source_ids": [
+        "CPO-ZJXC-20261023",
+        "CPO-XYS-20261023",
+        "CPO-TFC-20261023",
+        "ANN-002281-20261023-066",
+        "ANN-688498-20261023-057",
+        "ANN-688808-20261023-047",
+        "MEDIA-SIX-20261023-1256"
+      ],
+      "severity": "high",
+      "confidence": "primary_content_verified_timing_partial",
+      "remedy": "后续报告写“六家光通信产业链企业披露经营情况”，并逐条列原件；未知官方时刻保留null。"
+    },
+    {
+      "claim_id": "AI-ANN-02",
+      "report_id": "RPT-AI-20261023-001",
+      "sections": [
+        3,
+        8,
+        10
+      ],
+      "original_claim": "CPO午后修复含公告澄清驱动；经营澄清带来预期修复",
+      "status": "partially_supported",
+      "verified_component": "公告事件存在，内容可形成正向经营信号。",
+      "unverified_component": "公告不能单独识别价格反转因果或贡献；资金、海外变化、回购、同时板块共振等混杂因素未排除。",
+      "source_ids": [
+        "CPO-ZJXC-20261023",
+        "CPO-XYS-20261023",
+        "CPO-TFC-20261023",
+        "CPO-TFC-IR-20261022",
+        "ANN-002281-20261023-066",
+        "ANN-688498-20261023-057",
+        "ANN-688808-20261023-047"
+      ],
+      "severity": "high",
+      "confidence": "event_verified_causal_inference",
+      "remedy": "将“导致/驱动”降为“与修复同期发生，可能缓和担忧”的分析推断；不调整锁定预测。"
+    },
+    {
+      "claim_id": "AI-ANN-03",
+      "report_id": "RPT-AI-20261023-001",
+      "sections": [
+        8,
+        9,
+        10
+      ],
+      "original_claim": "公告并不等于新增订单或盈利确认，正式标的须有公告/三季报/估值/流动性证据",
+      "status": "supported",
+      "verified_component": "原件区分经营陈述、在手订单、需求指引、未来扩产、样品和预告；并无将经营澄清统一等同新增合同/收入确认的依据。",
+      "unverified_component": null,
+      "source_ids": [
+        "CPO-ZJXC-20261023",
+        "CPO-XYS-20261023",
+        "CPO-TFC-20261023",
+        "CPO-TFC-IR-20261022",
+        "ANN-002281-20261023-066",
+        "ANN-688498-20261023-057",
+        "ANN-688808-20261023-047"
+      ],
+      "severity": "medium",
+      "confidence": "source_labels_verified",
+      "remedy": "维持原谨慎限制；不将公司自述升级为独立审计。"
+    },
+    {
+      "claim_id": "AI-ANN-04",
+      "report_id": "RPT-AI-20261023-001",
+      "sections": [
+        10
+      ],
+      "original_claim": "机器人新品与量产叙事构成催化",
+      "status": "partially_supported",
+      "verified_component": "Tesla官方季度材料可用于量产线启动/爬坡叙事，不能外推规模交付。",
+      "unverified_component": "报告未标明具体产品/公司；宇树H2-X官方原内容未成功读取，不能补作已核验新品证据。",
+      "source_ids": [
+        "SRC-AI-20261023-10-ROBOT-MASS-PRODUCTION",
+        "SRC-AI-20261023-10-ROBOT-NEW-PRODUCT",
+        "SRC-AI-20261023-11-ROBOT-COMMERCIALIZATION-RISK"
+      ],
+      "severity": "high",
+      "confidence": "needs_review",
+      "remedy": "拆分产品发布、送样、产线建设、Early Ramp、量产交付和订单盈利，并逐项绑定原件。"
+    },
+    {
+      "claim_id": "BASIC-ANN-01",
+      "report_id": "RPT-BASIC-20261023-001",
+      "sections": [
+        8,
+        10
+      ],
+      "original_claim": "城市更新政策提供局部催化，但未形成地产链共振",
+      "status": "partially_supported",
+      "verified_component": "住建部六部门老旧街区厂区改造指导意见的官方索引记录日期/正文可读；原件标识建办科〔2026〕33号，官网发布时间10月23 10:03:58。",
+      "unverified_component": "原网页直接正文抓取超时，未取得文件二进制；对板块行情的因果/共振判断不由政策原文证明。",
+      "source_ids": [
+        "SRC-BASIC-20261023-8-10-URBAN-RENEWAL",
+        "SRC-BASIC-20261023-URBAN-RENEWAL-BACKGROUND"
+      ],
+      "severity": "medium",
+      "confidence": "official_index_read_direct_fetch_incomplete",
+      "remedy": "政策存在/内容与股价解释分开；暂不把官方索引检索读通记为原网页直接抓取成功。"
+    },
+    {
+      "claim_id": "AI-ANN-04A",
+      "report_id": "RPT-AI-20261023-001",
+      "sections": [
+        10
+      ],
+      "original_claim": "机器人新品（具体对象未在原报告注明；H2-X为可能映射）",
+      "status": "unverified",
+      "verified_component": "仅找到了候选官方原帖链接。",
+      "unverified_component": "原帖403、视频仅壳页，产品发布内容与原始时点均未核验；不把可能映射当作原报告指定对象。",
+      "source_ids": [
+        "SRC-AI-20261023-10-ROBOT-NEW-PRODUCT"
+      ],
+      "severity": "medium",
+      "confidence": "original_content_unavailable",
+      "remedy": "保持未核验，不绕过403，不将发布演示等同销量/量产。"
+    },
+    {
+      "claim_id": "AI-ANN-05",
+      "report_id": "RPT-AI-20261023-001",
+      "sections": [
+        7,
+        8,
+        9,
+        11
+      ],
+      "original_claim": "机器人需警惕远期叙事、交易拥挤和基本面兑现错配",
+      "status": "partially_supported",
+      "verified_component": "宇树10/21官方公告说明人形机器人处于商业化早期、技术/需求/供应链有不确定性；支持商业化风险提示。",
+      "unverified_component": "该公告不能证明10/23收益、板块拥挤程度或全部机器人公司的状态。",
+      "source_ids": [
+        "SRC-AI-20261023-11-ROBOT-COMMERCIALIZATION-RISK"
+      ],
+      "severity": "medium",
+      "confidence": "commercialization_risk_supported; crowding_and_sector_generalization_unverified",
+      "remedy": "风险按公司范围引用；不拿该公告冒充10/23行情证据。"
+    }
+  ],
+  "link_diagnostics": [
+    {
+      "report_id": "RPT-AI-20261023-001",
+      "section": 1,
+      "broken_urls": [
+        "https://app.bigdata.com/documents/24CFA430D9D20A5C51A2530D9B6E15BA?cnum=1%EF%BC%9Bevidence_timestamp=2026-10-23T07:46:04%EF%BC%9Bdigest=41e437049ce4f617cb46f10a8bbc28cb65280ff84b95c3eb6449dc94537052aa%EF%BC%9B%E7%BB%8F%E7%8B%AC%E7%AB%8B%E6%94%B6%E7%9B%98%E6%BA%90%E4%BD%90%E8%AF%81%E5%90%8E%E7%94%A8%E4%BA%8E%E7%AC%AC2/8%E6%AE%B5"
+      ],
+      "candidate_extracted_from_display_text": "https://app.bigdata.com/documents/24CFA430D9D20A5C51A2530D9B6E15BA?cnum=1",
+      "candidate_document_id": "24CFA430D9D20A5C51A2530D9B6E15BA",
+      "syntax_status": "MALFORMED_QUERY_CONTAINS_TIMESTAMP_AND_OR_PROSE",
+      "mapping_status": "DOCUMENT_CONTENT_UNVERIFIED",
+      "verification_attempt": "native web open returned URL not accessible; no new Bigdata job invoked",
+      "repair_applied": false,
+      "replacement_verified_uri": null,
+      "action": "不猜地址、不追认摘要或digest；公告事实改在本补证中绑定已读官方原件。行情事实沿用既有独立来源，不宣称本公告审计重新核验全部行情。"
+    },
+    {
+      "report_id": "RPT-BASIC-20261023-001",
+      "section": 1,
+      "broken_urls": [
+        "https://app.bigdata.com/documents/24CFA430D9D20A5C51A2530D9B6E15BA?cnum=1%EF%BC%8Cevidence_timestamp="
+      ],
+      "candidate_extracted_from_display_text": "https://app.bigdata.com/documents/24CFA430D9D20A5C51A2530D9B6E15BA?cnum=1",
+      "candidate_document_id": "24CFA430D9D20A5C51A2530D9B6E15BA",
+      "syntax_status": "MALFORMED_QUERY_CONTAINS_TIMESTAMP_AND_OR_PROSE",
+      "mapping_status": "DOCUMENT_CONTENT_UNVERIFIED",
+      "verification_attempt": "native web open returned URL not accessible; no new Bigdata job invoked",
+      "repair_applied": false,
+      "replacement_verified_uri": null,
+      "action": "不猜地址、不追认摘要或digest；公告事实改在本补证中绑定已读官方原件。行情事实沿用既有独立来源，不宣称本公告审计重新核验全部行情。"
+    },
+    {
+      "report_id": "RPT-AI-20261023-001",
+      "section": 1,
+      "broken_urls": [
+        "http://20261020.md"
+      ],
+      "syntax_status": "WRONG_TARGET_FOR_POLICY_FILENAME",
+      "mapping_status": "VERIFIED_AGAINST_GOVERNANCE_POLICY_SOURCE_PATH_AND_BLOB",
+      "replacement_verified_uri": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/55c36825f7449e0dc82e053cdaa60df9f9a70c46/docs/governance/PLUGIN_EXECUTION_POLICY_20261020.md",
+      "policy_blob_sha": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f",
+      "repair_applied": false,
+      "action": "仅提供补证中的正确政策映射；原FINAL链接不回写。"
+    }
+  ],
+  "caveats": [
+    "Retrieved Oct24 evidence is a retrospective audit, not proof the original producer had read it before cutoff.",
+    "Same-day dates cannot by themselves prove before 19:00 availability; exact official time unknown remains null. Media timestamps are explicitly weaker corroboration.",
+    "Company disclosures are primary evidence of what management said, not independent verification of business outcome.",
+    "Exa and native web returning one PDF count as one source, not independent confirmations.",
+    "No old FINAL, canonical JSON keys, model, probabilities or hashes were changed. Data Quality remains WARNING.",
+    "Conditionals on future quarters/capex, watchlists and null/absent formal stock picks are not presented as already-realized facts.",
+    "BASIC named shares’ day returns and all quantitative market/ETF claims are not newly validated by this announcement-only supplement."
+  ],
+  "workflow_controls": {
+    "firecrawl": "NOT_INVOKED_QUOTA_LOCKED",
+    "paid_bigdata_jobs": "NOT_INVOKED",
+    "new_trading_actions": false,
+    "new_model_vote": false,
+    "historical_prediction_rewrite": false
+  },
+  "related_source_attribution_risks": [
+    {
+      "claim_id": "EVIDENCE-TFC-DATE-ATTRIBUTION",
+      "report_sections": [
+        8,
+        10
+      ],
+      "claim": "CPO/NPO unchanged ramp and export-policy clarification belong to Oct23 operating announcement.",
+      "status": "contradicted",
+      "supported_part": "Not a verbatim locked-report claim, but a detected source-attribution risk in media. Exact assertions occur in Oct22 IR, not Oct23 operating announcement.",
+      "source_ids": [
+        "CPO-TFC-20261023",
+        "CPO-TFC-IR-20261022"
+      ]
+    }
+  ],
+  "robot_policy_evidence": {
+    "supplement_type": "append_only_primary_evidence_audit",
+    "audit_id": "ANNOUNCEMENT-ROBOT-POLICY-20261024",
+    "as_of_cutoff": "2026-10-23T19:00:00+08:00",
+    "audit_completed_at": "2026-10-24T07:17:53.931484+00:00",
+    "entity_scope_note": "BASIC section9 names 宁德时代、长鑫科技、宇树科技 as risk-appetite probes. Unitree 688836 verified from original company PDF. CATL 300750 and CXMT 688825 daily prices were not re-audited in this announcement subtask; no price-return conclusion is promoted. Secondary quoted codes are not converted into primary verification.",
+    "blocking_items": [
+      {
+        "action": "Read exact official Unitree H2-X post",
+        "target": "https://x.com/UnitreeRobotics/status/2112819774573179175",
+        "result": "403 Forbidden",
+        "status": "denied_at_fetch",
+        "completed": "Exact URL mapping through source links, company IR risk notice fulltext read",
+        "not_completed": "Original post body/time and video verification"
+      },
+      {
+        "action": "Read exact ministry guidance directly",
+        "target": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2026/art_4e701b22880944b38799ca132532dfbd.html",
+        "result": "Native timeout initial and one retry; single Exa alternate fetch CRAWL_TIMEOUT",
+        "status": "uncertain_source_access",
+        "completed": "Official indexed text and publication metadata read; exact document identified",
+        "not_completed": "Live original-page direct retrieval"
+      }
+    ],
+    "evidence_records": "See the canonical source records and claim mappings below; no duplicate quotations are asserted as independent evidence.",
+    "source_ids": [
+      "SRC-AI-20261023-10-ROBOT-MASS-PRODUCTION",
+      "SRC-AI-20261023-10-ROBOT-NEW-PRODUCT",
+      "SRC-AI-20261023-11-ROBOT-COMMERCIALIZATION-RISK",
+      "SRC-BASIC-20261023-8-10-URBAN-RENEWAL",
+      "SRC-BASIC-20261023-URBAN-RENEWAL-BACKGROUND"
+    ],
+    "claim_ids": [
+      "AI-ANN-04",
+      "AI-ANN-04A",
+      "AI-ANN-05",
+      "BASIC-ANN-01"
+    ]
+  },
+  "claim_status_counts": {
+    "partially_supported": 5,
+    "supported": 1,
+    "unverified": 1,
+    "contradicted": 0
+  },
+  "verification_summary": {
+    "six_oct23_issuer_announcements_originals_read": true,
+    "six_announcements_official_exact_intraday_timestamps_verified": false,
+    "cutoff_time_use": "No post-cutoff newly published material used as predictive input; current retrieval is retrospective only.",
+    "historical_original_producer_receipts_verified": false,
+    "whole_report_readiness": "WARNING retained; no upgrade to PASS",
+    "review_posture": "SHARE_WITH_CAVEATS_IN_CHECKED_ANNOUNCEMENT_SCOPE"
+  },
+  "source_locked_blob_records": [
+    {
+      "name": "2026-10-23_RPT-AI-20261023-001.canonical.json",
+      "path": "production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json",
+      "sha": "0ead3f38eec507e61697d024243baea9bb1e88ac",
+      "size": 4116,
+      "url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json?ref=main",
+      "html_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json",
+      "git_url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/0ead3f38eec507e61697d024243baea9bb1e88ac",
+      "download_url": "https://raw.githubusercontent.com/yjsnpi6324/Quantitative-Investment-Research-Lab/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json?ref=main",
+        "git": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/0ead3f38eec507e61697d024243baea9bb1e88ac",
+        "html": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.canonical.json"
+      }
+    },
+    {
+      "name": "2026-10-23_RPT-AI-20261023-001.governance.v2.json",
+      "path": "production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json",
+      "sha": "9ba6294f969e082090b6d275f38c9c2161d402f7",
+      "size": 6698,
+      "url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json?ref=main",
+      "html_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json",
+      "git_url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/9ba6294f969e082090b6d275f38c9c2161d402f7",
+      "download_url": "https://raw.githubusercontent.com/yjsnpi6324/Quantitative-Investment-Research-Lab/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json?ref=main",
+        "git": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/9ba6294f969e082090b6d275f38c9c2161d402f7",
+        "html": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.governance.v2.json"
+      }
+    },
+    {
+      "name": "2026-10-23_RPT-AI-20261023-001.md",
+      "path": "production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md",
+      "sha": "90e16858cae03332c335c925f3025e115d189031",
+      "size": 13107,
+      "url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md?ref=main",
+      "html_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md",
+      "git_url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/90e16858cae03332c335c925f3025e115d189031",
+      "download_url": "https://raw.githubusercontent.com/yjsnpi6324/Quantitative-Investment-Research-Lab/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md?ref=main",
+        "git": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/90e16858cae03332c335c925f3025e115d189031",
+        "html": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-AI-20261023-001.md"
+      }
+    },
+    {
+      "name": "2026-10-23_RPT-BASIC-20261023-001.canonical.json",
+      "path": "production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json",
+      "sha": "cde5d304d1452cb3df2f5b57069bece859890767",
+      "size": 4343,
+      "url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json?ref=main",
+      "html_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json",
+      "git_url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/cde5d304d1452cb3df2f5b57069bece859890767",
+      "download_url": "https://raw.githubusercontent.com/yjsnpi6324/Quantitative-Investment-Research-Lab/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json?ref=main",
+        "git": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/cde5d304d1452cb3df2f5b57069bece859890767",
+        "html": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.canonical.json"
+      }
+    },
+    {
+      "name": "2026-10-23_RPT-BASIC-20261023-001.governance.v2.json",
+      "path": "production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json",
+      "sha": "01bc573f95dc94528f2fdd32326f609ba72b4d71",
+      "size": 7044,
+      "url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json?ref=main",
+      "html_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json",
+      "git_url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/01bc573f95dc94528f2fdd32326f609ba72b4d71",
+      "download_url": "https://raw.githubusercontent.com/yjsnpi6324/Quantitative-Investment-Research-Lab/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json?ref=main",
+        "git": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/01bc573f95dc94528f2fdd32326f609ba72b4d71",
+        "html": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.governance.v2.json"
+      }
+    },
+    {
+      "name": "2026-10-23_RPT-BASIC-20261023-001.md",
+      "path": "production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md",
+      "sha": "a4ab586db071a4f40c35ca144b381c98e98e3eb3",
+      "size": 13664,
+      "url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md?ref=main",
+      "html_url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md",
+      "git_url": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/a4ab586db071a4f40c35ca144b381c98e98e3eb3",
+      "download_url": "https://raw.githubusercontent.com/yjsnpi6324/Quantitative-Investment-Research-Lab/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md",
+      "type": "file",
+      "_links": {
+        "self": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/contents/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md?ref=main",
+        "git": "https://api.github.com/repos/yjsnpi6324/Quantitative-Investment-Research-Lab/git/blobs/a4ab586db071a4f40c35ca144b381c98e98e3eb3",
+        "html": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/main/production-ledger/2026/10/23/2026-10-23_RPT-BASIC-20261023-001.md"
+      }
+    }
+  ],
+  "publication_scope_note": "This is an append-only governance evidence supplement. remote_writes_performed describes evidence collection before publication, not this later draft-PR publication. No production task, schedule, locked report or forecast was modified."
+}
