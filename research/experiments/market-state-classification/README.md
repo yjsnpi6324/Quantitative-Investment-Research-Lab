@@ -84,3 +84,12 @@ No performance claim is made until the dataset, label definition, baseline, and 
 ## Decision rule
 
 Promote only if the classifier demonstrates robust out-of-sample incremental value across materially different market phases. Otherwise keep testing or retire the candidate.
+
+## Experiment 001A preparation
+
+See [001A draft configuration, evidence manifest and offline preflight](experiment_001a/README.md).
+001A narrows the candidate states to Bull / Neutral / Bear with an independent high-vol flag;
+T+5 is primary and T+1/T+3 secondary. Parameters remain DRAFT and execution is BLOCKED.
+The delivered Library protocol could not be downloaded in this environment; no claim is made
+that its full text or QA was read. The research gate and synthetic fixtures do not run models
+or change the shared production calendar or evaluation pipeline.
