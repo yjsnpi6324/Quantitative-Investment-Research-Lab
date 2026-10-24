@@ -1,0 +1,48 @@
+{
+  "status": "PASS_PUBLICATION_STRUCTURAL_AND_HASH_CHECKS_WITH_SOURCE_CAVEATS",
+  "checked_at": "2026-10-24T07:23:30Z",
+  "expected_base_commit": "cf78dc438c5895b3ffd170440f1415dc3802ba21",
+  "scope": "Docs/evidence only; append-only draft PR. No task activation or production acceptance.",
+  "source_count": 14,
+  "issuer_announcement_count": 6,
+  "claim_status_counts": {
+    "partially_supported": 5,
+    "supported": 1,
+    "unverified": 1,
+    "contradicted": 0
+  },
+  "locked_hashes_verified": true,
+  "locked_source_blobs_bytewise_verified": true,
+  "all_claim_source_ids_resolve": true,
+  "unknown_source_times_not_imputed": true,
+  "locked_files_changed": false,
+  "real_prediction_tasks_updated": false,
+  "production_configuration_changed": false,
+  "independent_review": "PASS_WITH_SOURCE_CAVEATS",
+  "original_data_quality": "WARNING_RETAINED",
+  "checks_not_run": [
+    "Runtime execution and scheduled-task activation not attempted; verified scheduler targets/current prompts unavailable.",
+    "Full repository test suite not run for this documentation-only change."
+  ],
+  "outputs": [
+    {
+      "path": "docs/governance/2026/10/24/ANNOUNCEMENT_EVIDENCE_SUPPLEMENT_20261024.json",
+      "bytes": 53370,
+      "sha256": "a961dbbe14ea1ef07ddf16bbed529e66fad319ce72caf821158a0fef173e33e8",
+      "git_blob_sha": "b56dce916a5f573ae946d0f0f794b0211e1375d5"
+    },
+    {
+      "path": "docs/governance/2026/10/24/ANNOUNCEMENT_EVIDENCE_SUPPLEMENT_20261024.md",
+      "bytes": 8670,
+      "sha256": "5e9c49a5eda360e41d0e4d181e309f90f9da149c205d2e413e72ad27f9fa823a",
+      "git_blob_sha": "a0b09dbff46706e32b491ccfe4671fde85667bc1"
+    },
+    {
+      "path": "docs/governance/PREDICTION_TASK_PLUGIN_DELTA_20261024_DRAFT.md",
+      "bytes": 6898,
+      "sha256": "283eec46136257958e7fd0396ed323e33f6d99509cc275ca90347838c69a85f9",
+      "git_blob_sha": "721a26a113ac7934c0b667793dbe251d9b9f8a10"
+    }
+  ],
+  "reviewed_at": "2026-10-24T07:24:07Z"
+}
