@@ -6,16 +6,27 @@
   "label_inputs": "as_of_only",
   "primary_horizon": 5,
   "secondary_horizons": [1, 3],
-  "data_start": "2016-01-01",
-  "data_end": "2026-09-30",
-  "calendar_end": "2026-10-30",
-  "features": ["trend", "realized_volatility", "breadth", "dispersion"],
+  "data_start": null,
+  "data_end": null,
+  "calendar_end": null,
+  "information_cutoff_proposed": {"timezone": "Asia/Shanghai", "local_time": "20:00:00"},
+  "features": ["z20", "z60", "sigma20", "drawdown60", "breadth60", "dispersion1"],
   "models": {
-    "B0": {"draft": "regime-agnostic fixed weights; exact formula pending protocol"},
-    "B1": {"draft": "transparent trend/volatility/breadth rules; thresholds pending protocol"},
-    "C": {"draft": "state-conditioned comparison; exact candidate pending protocol"}
+    "B0": {"draft": "per-horizon training-window positive frequency, Laplace (n_up+1)/(n+2)"},
+    "B1": {"draft": "per-horizon pooled L2 logistic on the fixed six features; training-window scaler; no state input"},
+    "C": {"draft": "same X/scaler/targets/hyperparameters as B1; state-specific logistic; p_C=w_s*p_s+(1-w_s)*p_B1, w_s=n_s/(n_s+252); n_s<126 or either class<20 => w_s=0"}
+  },
+  "split_design_proposed": {
+    "train_sessions": 756,
+    "validation_sessions": 126,
+    "development_test_sessions": 126,
+    "step_sessions": 126,
+    "minimum_development_folds": 4,
+    "max_horizon": 5,
+    "pre_evaluation_embargo_sessions": 5,
+    "final_oos_sessions": 252
   },
   "walk_forward": [],
   "oos": [],
-  "notes": "Illustrative research defaults only. No approved/frozen parameters or results. Reconcile the unavailable delivered protocol before approval."
+  "notes": "Unapproved protocol summary only; full specification is ../experiment-001a-protocol.md. No execution implementation, frozen dates, approvals or results. Proposed design fields are NOT validated by this evidence-only scaffold; it always prohibits execution."
 }

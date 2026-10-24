@@ -48,7 +48,7 @@ class PreflightTests(unittest.TestCase):
              'artifact': self.write(f'{exchange}-{year}', {'notice': 'SYNTHETIC official-source stub'})}
             for year in (2025, 2026) for exchange, url in
             [('SSE', 'https://www.sse.com.cn/fixture'), ('SZSE', 'https://www.szse.cn/fixture')]]
-        self.m['calendar_review'] = self.review('calendar_review', {'calendar': self.m['calendar']['sha256'], 'sources': [s['artifact']['sha256'] for s in self.m['calendar_sources']]})
+        self.m['calendar_review'] = self.review('calendar_review', {'calendar': self.m['calendar']['sha256'], 'sources': gate.calendar_source_bindings(self.m['calendar_sources'])})
         self.m['snapshot'] = self.write('snapshot', [
             {'date': d.isoformat(), 'as_of': f'{d}T16:00:00+08:00',
              'available_at': f'{d}T15:00:00+08:00', 'features': dict.fromkeys(self.c['features'], 1.0)}
@@ -64,11 +64,28 @@ class PreflightTests(unittest.TestCase):
             access_control=self.write('acl', {'notice': 'SYNTHETIC custody ACL'}),
             audit_log=self.write('audit', {'notice': 'SYNTHETIC access log'}),
             sealed_at='2025-01-01T00:00:00+00:00', first_model_selection_at='2025-02-01T00:00:00+00:00')
+        self.rebind_mock_freeze()
+
+    def rebind_mock_freeze(self):
         self.m['freeze_review'] = self.review('freeze_review', {
             'config': gate.digest(self.config_path), **{k: self.m[k]['sha256'] for k in
             ('protocol', 'source_receipt', 'protocol_qa', 'protocol_review', 'calendar', 'snapshot',
              'snapshot_receipt', 'pit_review', 'calendar_review', 'parameter_approval', 'oos_isolation')},
-            'provider_authorization': self.m['provider']['authorization']['sha256']})
+            'provider_authorization': self.m['provider']['authorization']['sha256'],
+            'calendar_sources': gate.calendar_source_bindings(self.m['calendar_sources'])})
+
+    def rebind_mock_reviews(self):
+        """Adversarial fixtures only: rehash mock claims, never real approvals."""
+        self.config_path.write_text(json.dumps(self.c))
+        self.mutate_rows('snapshot_receipt', lambda r: r.update(
+            kind=self.m['snapshot_kind'], snapshot_sha256=self.m['snapshot']['sha256']))
+        self.m['parameter_approval'] = self.review('parameter_approval', {
+            'config': gate.digest(self.config_path), 'protocol': self.m['protocol']['sha256']})
+        binding = {'config': gate.digest(self.config_path), 'snapshot': self.m['snapshot']['sha256']}
+        self.mutate_rows('pit_review', lambda r: r.update(bindings={
+            **binding, 'receipt': self.m['snapshot_receipt']['sha256']}))
+        self.mutate_rows('oos_isolation', lambda r: r.update(bindings=binding))
+        self.rebind_mock_freeze()
 
     def write(self, name, data):
         path = self.root / (name + '.json')
@@ -90,9 +107,75 @@ class PreflightTests(unittest.TestCase):
         self.assertFalse(result['execution_allowed'])
         self.assertTrue(any(b.startswith(prefix + ':') for b in result['blockers']), result)
 
-    def test_synthetic_ready_never_allows_execution(self):
+    def test_synthetic_evidence_checks_never_claim_readiness(self):
         result = self.run_gate()
-        self.assertEqual(result, {'status': 'ready', 'scope': 'fixture', 'execution_allowed': False, 'blockers': []})
+        self.assertEqual(result, {
+            'status': 'evidence_checks_passed', 'scope': 'fixture',
+            'readiness': 'evidence_checks_only', 'evidence_checks_passed': True,
+            'execution_allowed': False, 'blockers': [],
+            'execution_blockers': list(gate.EXECUTION_BLOCKERS)})
+
+    def assert_research_blocked(self, code):
+        result = self.run_gate(fixture=False)
+        self.assertEqual(result['status'], 'blocked')
+        self.assertEqual(result['readiness'], 'evidence_checks_only')
+        self.assertFalse(result['execution_allowed'])
+        self.assertTrue(any(b.startswith(code + ':') for b in result['blockers']), result)
+        return result
+
+    def test_relabelled_synthetic_real_never_authorizes_execution(self):
+        self.m['snapshot_kind'] = 'real'
+        self.rebind_mock_reviews()
+        result = self.assert_research_blocked('EVIDENCE_AUTHENTICITY')
+        # Internally consistent bytes are not evidence that these claims are true.
+        self.assertTrue(result['evidence_checks_passed'])
+        cmd = [sys.executable, str(AREA / 'preflight.py'), str(self.config_path), str(self.manifest_path)]
+        self.assertEqual(subprocess.run(cmd, capture_output=True).returncode, 2)
+
+    def test_empty_features_rejected_after_mock_reapproval(self):
+        self.c['features'] = []
+        self.mutate_rows('snapshot', lambda rows: [r.update(features={}) for r in rows])
+        self.rebind_mock_reviews()
+        self.blocked('PARAMETERS')
+
+    def test_future_feature_name_rejected_after_mock_reapproval(self):
+        self.c['features'] = ['forward_return']
+        self.mutate_rows('snapshot', lambda rows: [r.update(features={'forward_return': 1.0}) for r in rows])
+        self.rebind_mock_reviews()
+        self.blocked('PARAMETERS')
+
+    def test_duplicate_features_rejected_after_mock_reapproval(self):
+        self.c['features'].append('z20')
+        self.rebind_mock_reviews()
+        self.blocked('PARAMETERS')
+
+    def test_placeholder_models_cannot_authorize_execution(self):
+        self.c['models'] = {name: {'draft': 'not a model implementation'} for name in ('B0', 'B1', 'C')}
+        self.m['snapshot_kind'] = 'real'
+        self.rebind_mock_reviews()
+        self.assertTrue(self.assert_research_blocked('MODEL_IMPLEMENTATION')['evidence_checks_passed'])
+
+    def test_one_day_windows_without_embargo_or_dev_test_cannot_authorize(self):
+        self.c.update(walk_forward=[{'train': ['2025-11-01', '2025-11-01'],
+                                    'validation': ['2025-11-07', '2025-11-07']}],
+                      oos=['2026-01-10', '2026-01-10'])
+        self.m['snapshot_kind'] = 'real'
+        self.rebind_mock_reviews()
+        self.assertTrue(self.assert_research_blocked('SPLIT_IMPLEMENTATION')['evidence_checks_passed'])
+
+    def test_official_url_change_invalidates_calendar_and_freeze(self):
+        self.m['calendar_sources'][0]['url'] = 'https://www.sse.com.cn/unrelated-page'
+        self.blocked('CALENDAR')
+        self.blocked('FREEZE')
+
+    def test_calendar_metadata_is_bound_even_when_artifact_bytes_unchanged(self):
+        for field, value in [('year', 2024), ('exchange', 'SZSE')]:
+            original = copy.deepcopy(self.m['calendar_sources'])
+            with self.subTest(field=field):
+                self.m['calendar_sources'][0][field] = value
+                self.blocked('CALENDAR')
+                self.blocked('FREEZE')
+            self.m['calendar_sources'] = original
 
     def test_synthetic_rejected_in_real_mode(self):
         self.assertEqual(self.run_gate(fixture=False)['status'], 'blocked')
@@ -202,7 +285,20 @@ class PreflightTests(unittest.TestCase):
     def test_template_blocked(self):
         result = gate.preflight(AREA / 'config.draft.json', AREA / 'manifest.template.json')
         self.assertEqual(result['status'], 'blocked')
-        self.assertEqual(len(result['blockers']), 7)
+        self.assertEqual(len(result['blockers']), 7 + len(gate.EXECUTION_BLOCKERS))
+        self.assertEqual(result['readiness'], 'evidence_checks_only')
+
+    def test_delivered_protocol_preserved_without_approval(self):
+        self.assertEqual(gate.digest(AREA.parent / 'experiment-001a-protocol.md'),
+                         '4de2ed434adb4108127cd23e88661095c8fedd1f1e48735a9e3d46c92529532c')
+        self.assertEqual(gate.digest(AREA / 'protocol_evidence/experiment_001a_source_receipt.json'),
+                         '88e02ac9845a0ab1b3598f4f25e118abb780281de146901be93d820faaa0c804')
+        self.assertEqual(gate.digest(AREA / 'protocol_evidence/experiment_001a_protocol_qa.md'),
+                         '869502a0fe0bba311833b8564a0f8263740542fdfdcf4e03cf006da056ad0d0c')
+        self.assertEqual(json.loads((AREA / 'config.draft.json').read_text())['status'], 'DRAFT')
+        manifest = json.loads((AREA / 'manifest.template.json').read_text())
+        for key in ('protocol_review', 'parameter_approval', 'freeze_review'):
+            self.assertIsNone(manifest[key])
 
     def test_cli_exit_codes(self):
         self.run_gate()

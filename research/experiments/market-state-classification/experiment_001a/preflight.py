@@ -1,4 +1,4 @@
-"""Offline research evidence gate; never fetch data, train, or touch production."""
+"""Offline evidence checks only; never authorizes research or production execution."""
 from __future__ import annotations
 
 import argparse
@@ -10,6 +10,37 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 from pathlib import Path
 import re
+
+
+FEATURES = ["z20", "z60", "sigma20", "drawdown60", "breadth60", "dispersion1"]
+# These gates are not implemented here. No input, approval string or fixture flag
+# may turn this partial scaffold into an experiment execution authorization.
+EXECUTION_BLOCKERS = (
+    "PROTOCOL_IMPLEMENTATION: draft protocol D1-D7, labels, 20:00 cutoff and raw-to-feature PIT replay are not validated",
+    "SPLIT_IMPLEMENTATION: 756/126/126 windows, >=4 development tests, H5+E5 embargo, 252-session OOS and outcome availability are not validated",
+    "MODEL_IMPLEMENTATION: B0/B1/C, training-only scaling, fallback, convergence and future-sentinel tests are not implemented",
+    "EVIDENCE_AUTHENTICITY: local hashes and review strings do not establish real data, provider rights, reviewer identity or untouched OOS",
+    "RUN_IMPLEMENTATION: dependency lock, reproducible execution and protocol G0-G5 evaluation are not implemented",
+)
+
+
+def report(errors, fixture):
+    """Separate contract-test success from scientific/execution readiness."""
+    return {
+        "status": "evidence_checks_passed" if fixture and not errors else "blocked",
+        "scope": "fixture" if fixture else "research",
+        "readiness": "evidence_checks_only",
+        "evidence_checks_passed": not errors,
+        "execution_allowed": False,
+        "blockers": list(errors) + ([] if fixture else list(EXECUTION_BLOCKERS)),
+        "execution_blockers": list(EXECUTION_BLOCKERS),
+    }
+
+
+def calendar_source_bindings(sources):
+    """Bind source meaning as well as bytes; preserve manifest source order."""
+    return [{"year": s["year"], "exchange": s["exchange"], "url": s["url"],
+             "artifact": s["artifact"]} for s in sources]
 
 
 def digest(path):
@@ -24,15 +55,14 @@ def timestamp(value):
 
 def preflight(config_path, manifest_path, *, fixture=False):
     if not __debug__:
-        return {"status": "blocked", "execution_allowed": False, "blockers": ["Optimized Python disables validation; use normal Python"]}
+        return report(["INPUT: Optimized Python disables validation; use normal Python"], fixture)
     errors = []
     try:
         config = json.loads(Path(config_path).read_text())
         manifest = json.loads(Path(manifest_path).read_text())
         assert isinstance(config, dict) and isinstance(manifest, dict)
     except (OSError, ValueError, AssertionError) as exc:
-        return {"status": "blocked", "execution_allowed": False,
-                "scope": "fixture" if fixture else "research", "blockers": [f"INPUT: {exc}"]}
+        return report([f"INPUT: {exc}"], fixture)
     root = Path(manifest_path).resolve().parent
 
     def evidence(ref, *, parse=True):
@@ -72,6 +102,7 @@ def preflight(config_path, manifest_path, *, fixture=False):
         assert config["high_vol_independent"] is True
         assert config["primary_horizon"] == 5 and config["secondary_horizons"] == [1, 3]
         assert config["label_inputs"] == "as_of_only"
+        assert config["features"] == FEATURES, "protocol requires the fixed six ordered features"
         assert set(config["models"]) == {"B0", "B1", "C"}
         assert all(config["models"].values()), "missing baseline/candidate definitions"
         assert config["walk_forward"] and config["oos"], "missing split definitions"
@@ -111,7 +142,7 @@ def preflight(config_path, manifest_path, *, fixture=False):
                     assert host == domain or host.endswith("." + domain), "non-official calendar source"
                     evidence(source["artifact"], parse=False)
         review("calendar_review", {"calendar": manifest["calendar"]["sha256"],
-                                   "sources": [s["artifact"]["sha256"] for s in sources]})
+                                   "sources": calendar_source_bindings(sources)})
 
     def snapshots():
         assert manifest["snapshot_kind"] == ("synthetic" if fixture else "real"), "real snapshot required"
@@ -175,13 +206,13 @@ def preflight(config_path, manifest_path, *, fixture=False):
             key: manifest[key]["sha256"] for key in
             ("protocol", "source_receipt", "protocol_qa", "protocol_review", "calendar",
              "snapshot", "snapshot_receipt", "pit_review", "calendar_review", "parameter_approval", "oos_isolation")},
-            "provider_authorization": manifest["provider"]["authorization"]["sha256"]})
+            "provider_authorization": manifest["provider"]["authorization"]["sha256"],
+            "calendar_sources": calendar_source_bindings(manifest["calendar_sources"])})
 
     for code, fn in (("PROTOCOL", protocol), ("PARAMETERS", parameters), ("PROVIDER", provider),
                      ("CALENDAR", calendars), ("SNAPSHOT_PIT", snapshots), ("OOS", splits), ("FREEZE", freeze)):
         check(code, fn)
-    return {"status": "blocked" if errors else "ready", "scope": "fixture" if fixture else "research",
-            "execution_allowed": not errors and not fixture, "blockers": errors}
+    return report(errors, fixture)
 
 
 if __name__ == "__main__":
@@ -192,4 +223,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
     result = preflight(args.config, args.manifest, fixture=args.fixture)
     print(json.dumps(result, indent=2, ensure_ascii=False))
-    raise SystemExit(0 if result["status"] == "ready" else 2)
+    raise SystemExit(0 if result["status"] == "evidence_checks_passed" else 2)

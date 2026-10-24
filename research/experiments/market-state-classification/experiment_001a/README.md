@@ -1,34 +1,50 @@
-# Experiment 001A：开跑前预检（DRAFT / BLOCKED）
+# Experiment 001A：证据检查脚手架（DRAFT / BLOCKED）
 
-此目录只做研究证据完整性检查，不训练、回测、调度或接入生产。当前不具备真实开跑条件；任何合成测试通过都不代表数据、审批或策略表现真实可用。
+**本工具不是开跑批准器。任何输入、审批字符串或 fixture 模式都不能得到 `execution_allowed=true`。** 它只检查部分文件完整性和字段关系，不训练、回测、调度、改 registry 或接入生产。证据检查通过不等于科学有效或可以运行。
 
-## 已知协议与原件阻塞
+## 已交付协议与本次修补
 
-已读取 [issue #3](https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/issues/3)（无评论）及上级 README。001A 使用 Bull / Neutral / Bear，加独立 high-vol 标记；当日状态仅使用当时已知信息。T+5 主检验，T+1/T+3 次要。B0/B1/C、阈值、walk-forward 和最终 OOS 均未批准或冻结。这些约束来自 issue 与本任务指令，不冒充已交付协议全文。
+完整[待冻结协议](../experiment-001a-protocol.md)已按建议研究路径原样纳入，原始[来源回执](protocol_evidence/experiment_001a_source_receipt.json)与[交付 QA](protocol_evidence/experiment_001a_protocol_qa.md)一并保留。文件来自本任务已有的本地交付原件；先前执行环境的 Library 下载失败并未被改写为成功。原件中的“本次只读”“未合入”等是原交付时点的范围记录，不是本 PR 当前状态。
 
-用户指定的 `Experiment_001A_Protocol_2026-10-24.zip`，Library ID `libfile_6b86c7eebd3c81918bd440d8d1ce7ab5`，预期含 `experiment_001a_execution_protocol_zh.md`、source receipt、QA。2026-10-24 在本执行环境使用当前 Library skill 的 resolved-reference materialization 流程：prepare 成功，官方 helper 下载失败；重新 prepare 后有界重试一次，同样失败。两次错误均为 `library file transfer failed: download failed`，工具没有给出更细原因。没有取得可读 ZIP，没有验证其内部文件、source receipt 或所谓 27 项 QA，没有计算原件 Hash。未猜测下载地址、改环境或绕过限制。此处没有复制或重建协议原文。
+| 原件 | SHA-256 |
+| --- | --- |
+| 协议（原名 `experiment_001a_execution_protocol_zh.md`） | `4de2ed434adb4108127cd23e88661095c8fedd1f1e48735a9e3d46c92529532c` |
+| source receipt | `88e02ac9845a0ab1b3598f4f25e118abb780281de146901be93d820faaa0c804` |
+| protocol QA | `869502a0fe0bba311833b8564a0f8263740542fdfdcf4e03cf006da056ad0d0c` |
 
-后续必须取得原件、核对身份及 Hash、阅读正文和 QA，再将协议及回执放入研究证据目录并完成差异审查。当前 `protocol` / `source_receipt` / `protocol_qa` 保持 null。该附件获取是失败，不是待审批或成功但结果不确定。
+前两项与原始 QA 记录的 Hash 一致。QA 仅针对协议静态一致性及小型合成示例，不是数据、模型或 OOS 验证。所有参数仍是建议，D1–D7 未批准，真实日期保持 null；模板不伪造审批、freeze 或数据引用。构建独立 Manifest 证据包时须把三个原件复制到该 Manifest 目录内并按实际字节引用，不能以 `../` 绕过路径隔离。
 
-## 数据入口与日历盘点
+旧脚手架把合成回执改标 real 后可能返回研究 ready；空/任意特征、一天窗口和占位模型也可能通过。此次固定六列 schema，并令**所有真实模式始终 BLOCKED**，把未实现科学门禁单列；补齐 JSON 或重算 Hash 不能解除。日历来源 URL/year/exchange/artifact 引用现在同时绑定日历审核与 freeze，不再只绑定原文字节 Hash。
 
-核查基线：`eba9c47`，2026-10-24。仓库与父目录未找到 `AGENTS.md`；`.agents/skills` 没有可读技能文件。遵循 `CONTRIBUTING.md`、研究数据治理与用户隔离约束。
+## 协议对齐与未实现门禁
 
-| 已有入口/证据 | 实际能确认的范围 | 仍缺条件 |
-| --- | --- | --- |
-| `src/adapters/market_data.py` | `provider.snapshot`、`actual_for_prediction` 接口边界 | 无具体 provider 实现、授权回执、真实历史训练快照 |
-| `research/DATA_SOURCE_GOVERNANCE.md` | 官方来源优先、许可/PIT/修订/生存偏差要求 | 来源类别或供应商举例不是账户数据授权 |
-| `docs/governance/PLUGIN_EXECUTION_POLICY_20261020.md` | 历史管理会话中 Bigdata/FMP 单次报价与 Exa/Firecrawl 官方公告读取记录 | 非当前实测；不证明 A 股完整历史、成分股 vintage 或可批量训练权利 |
-| `docs/SYSTEM_OF_RECORDS.md`、`docs/DROPBOX_ASSET_INDEX_CONTRACT.md` | Dropbox 是大文件/PIT 快照资产归属，GitHub 是研究代码与协议归属 | 无本实验可回读、已验 Hash 的资产索引与完整数据集 |
-| `src/evaluation/a_share_calendar.py` | 静态休市表仅 2026；引用 SSE/SZSE 官方入口 | 未包含 2016–2025 官方原文与逐日快照，2026 也缺本实验可验 Hash 的原文归档 |
+`config.draft.json` 只是协议摘要，不是已验证的可执行规格；完整公式以协议为准。`*_proposed` 字段不是已实现的检查。
 
-已有日历引用仅作为研究来源线索保留：[SSE 休市安排](https://www.sse.com.cn/disclosure/dealinstruc/closed/)、[SZSE 日历](https://www.szse.cn/English/services/trading/calendar/)。本任务没有把目录页当成逐年历史证据，也没有用工作日补造交易日。未调用生产数据库、registry 或调度器验证数据入口。
+| 协议要求（未批准建议） | 实际范围 / 尚缺 |
+| --- | --- |
+| 六列 `z20,z60,sigma20,drawdown60,breadth60,dispersion1`；Bull/Neutral/Bear；独立 high-vol | 校验固定列名/顺序、有限数、部分时间关系；未实现原始数据→特征/状态公式、20:00 上海 cutoff、逐输入 lineage、未来哨兵与 PIT 回放 |
+| B0：每 horizon 训练窗正收益频率，Laplace `(n_up+1)/(n+2)` | 无模型实现 |
+| B1：同六列 X 的 pooled L2 logistic，训练窗 scaler、无 state 输入 | 无 scaler、拟合、收敛与复现检查 |
+| C：状态 logistic，`w_s=n_s/(n_s+252)` 向 B1 收缩；稀疏状态回退 | 无模型、状态支持数、回退与失败检查 |
+| 训练756/验证126/开发测试126；≥4不重叠开发测试窗；H5+E5；最终252日 OOS | 仅旧 train/validation 输入的基本 T+5 排序检查；**未验证开发测试角色、窗口长度、5日附加 embargo、标签成熟或最终882槽位拟合**。一天窗口可通过部分证据检查，但不代表协议通过 |
+| D1–D7、合法真实数据、PIT 成分/vintage、历史日历、独立 OOS 保管 | 文件/Hash/review 字符串不能验证身份、来源真伪、许可证或 untouched；需要真实凭证和既有治理复核 |
+| 依赖锁、可复现执行、G0–G5、失败记录和一次解封 | 未实现/未运行，无表现成绩、不晋级、不生产 |
 
-草案示例数据区间为 2016-01-01 至 2026-09-30，日历至 2026-10-30；这是可替换 DRAFT，不是协议已批准范围。对该示例范围，2016–2025 所有年份均缺完整历史官方证据；2016–2026 的研究快照、授权和 PIT 证据均未交付。warm-up、窗口、阈值、成本口径与最终 OOS 日期待协议核对，不默认已满足。若未来需要共享适配器扩展，应另开依赖任务；本 PR 不改 `src/evaluation` 或共享日历。
+上述缺口在每份报告的 `execution_blockers` 中列出；解除需要后续单独实现和复核，没有配置开关可绕过。
 
-## 运行
+## 数据入口与真实缺口
 
-在仓库根目录使用普通 Python 3.10+（不使用 `-O`）：
+核查基线 `eba9c47`，修补基于 `d3a96b9`。完整仓库树未发现 AGENTS.md 或 .agents/skills；遵循 CONTRIBUTING.md 与研究数据治理。
+
+- `src/adapters/market_data.py` 只是 provider 边界；本实验授权、真实 raw/PIT 快照和可回读资产索引未交付。
+- 共享 A-share 日历静态休市表仅2026。多年份官方原文、逐日研究日历及 Hash 仍缺；实际范围未冻结，不以工作日伪造交易日。
+- [SSE 休市安排](https://www.sse.com.cn/disclosure/dealinstruc/closed/)和[SZSE 日历](https://www.szse.cn/English/services/trading/calendar/)只是线索，目录页不是逐年完整证据。
+- GitHub 保存协议/代码；受限大型原始数据遵循现有 Dropbox 资产契约。供应商类别、历史报价或文档提及不证明已有完整训练许可。
+- 本 PR 不改 src/evaluation、共享日历、生产 writer、数据库、调度器或 Method Registry。
+
+## 运行与返回语义
+
+仓库根目录使用普通 Python 3.10+（不使用 `-O`）：
 
 ```sh
 python3 research/experiments/market-state-classification/experiment_001a/preflight.py \
@@ -37,28 +53,32 @@ python3 research/experiments/market-state-classification/experiment_001a/preflig
 python3 -m unittest discover -s tests -v
 ```
 
-预检 JSON 输出 `ready` / `blocked`、逐项 blockers、scope、execution_allowed。blocked 返回码 2；ready 返回码 0。当前模板预期 7 类 blocker：PROTOCOL、PARAMETERS、PROVIDER、CALENDAR、SNAPSHOT_PIT、OOS、FREEZE。`--fixture` 只接受 synthetic 快照且始终 `execution_allowed=false`；默认只接受 real。该工具不执行实验；研究 ready 也不是生产准入或方法晋升。
+- 始终返回 `readiness=evidence_checks_only`、`execution_allowed=false` 和 `execution_blockers`，不再返回 ready。
+- 默认研究模式始终 `status=blocked`、退出码2，即使 `evidence_checks_passed=true`。blockers 包括证据错误及未实现门禁。
+- `--fixture` 只接受 synthetic；部分合同检查成功则 `status=evidence_checks_passed`、退出码0，失败则 blocked/2。退出码0只给合成测试使用，不授予执行资格。
+- 未填模板有7类证据错误（PROTOCOL/PARAMETERS/PROVIDER/CALENDAR/SNAPSHOT_PIT/OOS/FREEZE）加5类执行 blocker。优化 Python 和坏 JSON 也拒绝执行。
 
-## 最小 Manifest 契约
+## 最小证据合同（不是完整科学验收）
 
-将 template 复制到独立研究证据目录，引用其下真实文件；不要提交有许可限制的原始大数据。每个证据引用是 `{"path":"relative/file.json","sha256":"<64 lowercase hex>"}`。预检读取实际非空字节重算 SHA-256，拒绝不存在、Hash 不符、绝对路径或越界 symlink。JSON 不允许用注释或占位 Hash 冒充证据。
+引用格式为 `{"path":"relative/file.json","sha256":"<64 lowercase hex>"}`，文件必须在 Manifest 目录内。重算非空文件字节 Hash，拒绝缺失、Hash 不符、绝对路径和越界 symlink。不要提交受许可限制的大数据或占位 Hash。
 
-- `protocol`、`source_receipt`、`protocol_qa`：原件文本/文件；`protocol_review` 绑定三者 Hash，证明人工完成阅读与一致性核对。
-- `provider.name` 与 `provider.authorization`：授权 JSON 包含 provider、research_use_allowed=true、source_uri、license_scope、带时区 verified_at。保留已有合法授权，不生成凭据。
-- `calendar`：JSON 数组，每个自然日一条 `{date, is_open}`，完整覆盖 data_start 到 calendar_end；包含休市日，拒绝重复/缺失日期，不自行推导工作日。
-- `calendar_sources`：每年每所 SSE/SZSE 的 `{year, exchange, url, artifact}`，artifact 引用官方原文归档；`calendar_review` 绑定逐日表及所有原文 Hash。审核者须核实公告覆盖、临时停市和日期转换；域名验证不等于公告真实性验证。
-- `snapshot`：按交易日一条宽表 JSON `{date, as_of, available_at, features}`，features 必须匹配配置、值为有限数；as_of 和 available_at 必须带时区，available_at 不晚于 as_of，as_of 对应上海当日。预检拒绝额外未来收益/标签字段、缺失交易日和重复日期。该宽表是最小研究输入契约，不是原始成分股数据库。
-- `snapshot_kind` 为 real；`snapshot_receipt` 包含 kind、provider、snapshot_sha256、source_uri、retrieved_at 和 raw_artifact 引用。原始数据、来源回执和派生快照需要同审，不允许仅改 synthetic 字符串当真实数据。
-- `pit_review` 绑定 snapshot、config、receipt 的 Hash，并记录非空 vintages、revisions、survivorship、constituents、corporate_actions、feature_lineage 审核说明。available_at 是整行所有输入的最晚可用时点；聚合/财务数据修订、历史成分和回溯复权风险由 lineage 审核负责。列名检查不能自行证明公式没有使用未来数据。
-- `parameter_approval` 绑定当前配置**文件字节**和协议 Hash。配置必须 APPROVED，且保留固定状态/horizon 约束；改变任何字节会使旧批准失效。B0/B1/C 的精确公式和阈值必须在批准前人工核对，不能只改 status。
-- `walk_forward` 为 `{train:[start,end], validation:[start,end]}` 数组，`oos` 为 `[start,end]`，日期均为实际开市日；每折训练末端与验证之间、验证末端与 OOS 之间留足严格 T+5 标签 purge，验证窗口有序且不重叠，OOS 末端另需五个真实交易日。B0/B1/C 共用这些窗口和目标，拟合/标准化仅限训练折；此处没有训练实现。
-- `oos_isolation` 绑定配置和快照 Hash；记录 untouched=true、sealed_at、first_model_selection_at，以及 access_control、audit_log 两个实际文件引用。封存须早于首次模型选择；审核者核对权限/访问日志，预检不读取 OOS 结果，也不替代访问控制系统。
-- `freeze_review` 最后绑定配置、协议/回执/QA/复核、日历/复核、快照/来源回执/PIT、参数批准、OOS 证明和 provider 授权 Hash。修改上游文件必须重新审查；不存在凭证时保持 null。
+- protocol/source_receipt/protocol_qa 为原件；protocol_review 精确绑定三者 Hash。复制原件不产生审批。
+- provider 授权核对名称、research_use_allowed、source_uri、license_scope、verified_at 等基本字段。
+- calendar 每自然日一条 `{date,is_open}`，完整覆盖 data_start 至 calendar_end；每年 SSE/SZSE 原文由 calendar_sources 引用。官方域名只是语法检查。
+- `calendar_review.bindings` 为 `{calendar:<sha>,sources:[{year,exchange,url,artifact:{path,sha256}},...]}`，顺序与 Manifest 一致；`freeze_review.bindings.calendar_sources` 绑定同一完整列表。修改元数据同样令旧审核失效。
+- snapshot 宽表为 `{date,as_of,available_at,features}`：固定六列有限数、时区、上海同日、available_at≤as_of、无重复/缺失 session。**列名不能证明没有未来收益，整行 available_at 不能替代逐输入 PIT。**
+- snapshot_receipt 记录 kind/provider/snapshot_sha256/source_uri/retrieved_at/raw_artifact；pit_review 绑定 snapshot/config/receipt Hash 与各项 PIT 审核说明。synthetic 改成 real 也不获准执行。
+- parameter_approval 绑定 config 文件字节及协议 Hash；APPROVED 字符串与非空 B0/B1/C 描述不是模型验证。没有真实批准时保持 DRAFT/null。
+- walk_forward 旧输入仅 `{train:[start,end],validation:[start,end]}`，oos 为 `[start,end]`；只做基本 T+5 purge/排序/尾部日历检查，不具备完整协议 split schema。
+- oos_isolation 绑定 config/snapshot Hash，检查封存时间、untouched、access_control/audit_log 文件，不替代权限控制或污染审计。
+- freeze_review 绑定 config、protocol/source_receipt/protocol_qa/protocol_review、calendar/calendar_review、snapshot/snapshot_receipt/pit_review、parameter_approval/oos_isolation、provider authorization Hash，以及完整 calendar_sources 列表。
 
-所有 review JSON 均需 `decision=approved`、reviewer、带时区 reviewed_at、精确 bindings（实现及合成 fixture 给出完整示例）。Hash 提供完整性，不是数字签名或授权认证；审核身份、来源真伪及证据实质需要已有治理流程核实。本工具防缺失/不一致，不声称能识别刻意伪造的整套证据。合成测试中的审核者、原文、ACL 和授权均醒目标记 SYNTHETIC，临时生成后删除，不作为真实冻结凭证提交。
+所有 review 需要 decision/reviewer/带时区 reviewed_at/精确 bindings。**Hash 是完整性，不是签名或身份认证。** 一整套自洽合成/伪造文件可能通过部分检查，但仍拒绝执行。测试回执均标 SYNTHETIC，临时生成后删除，不作为真实审批提交。
 
-## 验收与后续
+## 验证与后续
 
-本次 27 个新增测试 + 8 个原有检查共 35 个通过，含缺 provider/授权、历史官方日历、真实快照/原始字节、非法/不符 Hash、PIT、未批准参数、OOS 审计/封存/purge、未来字段及 CLI 退出码。当前草案仍 blocked，无实际训练、回测成绩或 frozen 状态。
+本分支全部44个本地单测通过（研究36 + 原有8），包括合成改标 real、空/任意/重复特征、占位模型、一天窗口、官方 URL/年份/交易所变更和 CLI 退出码；原始协议/receipt/QA 字节 Hash 也锁定测试。测试证明脚手架行为，不证明模型/研究设计通过。
 
-继续条件：恢复原件读取并对齐协议；确定合法 provider 与完整历史 raw/PIT 快照；补全覆盖期每年 SSE/SZSE 原始官方证据；批准精确参数/窗口与隔离措施；取得真实可审计冻结凭证。之后重跑预检，再独立安排研究运行。不得把本预检 PR 当成方法晋升、合并或部署授权。
+另将本次研究改动与已更新 main `e2d1457` 的精确 source/test/ledger 字节在独立本地目录组合，58项测试全部通过（研究36 + 评估22）；未将 main 合入本分支，也未改生产代码。
+
+下一步仍是 D1–D7、合法数据/历史日历/PIT/OOS 保管证据，以及完整特征、模型、split、评估门禁的独立实现和验收；不能只填满 Manifest 就开跑。研究仍 Planned / NOT_RUN、指标 null，无 frozen 状态；本 PR 不授权合并、部署或晋升。
