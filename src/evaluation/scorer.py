@@ -11,10 +11,11 @@ RESULT_SCORE = {
 
 
 def score_result(result: str) -> float:
-    return RESULT_SCORE.get(result, 0.0)
+    return RESULT_SCORE[result]
 
 
 def score_horizon(records):
+    records = [r for r in records if isinstance(r.get("Result"), str) and r["Result"] in RESULT_SCORE and not r.get("status")]
     if not records:
         return 0.0
     return sum(score_result(r.get("Result")) for r in records) / len(records)
