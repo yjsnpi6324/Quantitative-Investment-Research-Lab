@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import date
 from collections import Counter
+from collections.abc import Mapping
 
 from src.evaluation.a_share_calendar import AShareTradingCalendar
 from src.evaluation.auto_scoring import evaluate_due
@@ -134,6 +135,8 @@ def _outcome(record, status, **details):
 
 
 def _prepare_prediction(prediction, calendar):
+    if not isinstance(prediction, Mapping):
+        return [], _outcome({}, "INVALID_PREDICTION", error_type="NonMappingRecord")
     # Missing-source markers are observations, never fabricated predictions.
     if prediction.get("status") == "SOURCE_FINAL_NOT_FOUND":
         return [], _outcome(prediction, "SOURCE_FINAL_NOT_FOUND")
@@ -143,7 +146,7 @@ def _prepare_prediction(prediction, calendar):
         if not verify_prediction(prediction):
             return [], _outcome(prediction, "INVALID_HASH")
         candidates = expand_prediction_horizons(prediction, calendar)
-    except (ValueError, TypeError, KeyError, AttributeError) as exc:
+    except (ValueError, TypeError, KeyError, AttributeError, OverflowError) as exc:
         return [], _outcome(prediction, "INVALID_PREDICTION", error_type=type(exc).__name__)
     return candidates, None if candidates else _outcome(prediction, "NO_HORIZON_FORECASTS")
 

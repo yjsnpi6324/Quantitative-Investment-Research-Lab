@@ -9,6 +9,7 @@ from src.evaluation.runner import run_due_evaluations, summarize_evaluations
 from src.evaluation.backlog import scan_evaluation_backlog
 from src.evaluation.metrics import rolling_metrics, is_scored_evaluation
 from src.evaluation.self_audit_runner import run_self_audit
+from src.evaluation.health_pipeline import run_health_pipeline
 from src.evaluation.scorer import score_horizon, score_result
 
 
@@ -31,6 +32,21 @@ class SkipTests(unittest.TestCase):
         self.assertEqual(len(registry.appended), 3)
         backlog = scan_evaluation_backlog('2026-09-28', registry)
         self.assertEqual(len(backlog), 2)
+
+    def test_non_mapping_and_overflow_records_do_not_stop_batch(self):
+        overflow = locked_prediction()
+        overflow['trading_date'] = '9999-12-31'
+        for bad in (None, [], 'bad row', overflow):
+            with self.subTest(bad=bad):
+                registry, result = self.run_rows([bad, locked_prediction()])
+                self.assertEqual(result[0]['status'], 'INVALID_PREDICTION')
+                self.assertEqual(len(registry.appended), 3)
+                if bad is not overflow:
+                    self.assertIsNone(result[0]['prediction_id'])
+                registry.existing.clear()
+                backlog = scan_evaluation_backlog('2026-09-28', registry)
+                self.assertEqual(backlog[0]['status'], 'INVALID_PREDICTION')
+                self.assertEqual(sum(r['status'] == 'DUE_UNCLOSED' for r in backlog), 3)
 
     def test_unavailable_unscored_and_good_horizons(self):
         market = Mock()
@@ -129,6 +145,17 @@ class PersistedClosureTests(unittest.TestCase):
         self.assertEqual(summary['results'], {'PARTIAL': 1})
         self.assertEqual(rolling_metrics(self.rows)['sample_size'], len(self.rows))
         self.assertEqual(run_self_audit([], self.rows)['evaluation_count'], len(self.rows))
+
+    def test_real_ledger_reaches_health_pipeline_by_production(self):
+        for production_id in {row['production_id'] for row in self.rows}:
+            rows = [row for row in self.rows if row['production_id'] == production_id]
+            health = run_health_pipeline(production_id, [], rows)
+            self.assertEqual(health['metrics']['sample_size'], len(rows))
+            self.assertEqual(health['audit']['evaluation_count'], len(rows))
+            self.assertEqual(health['metrics']['accuracy'],
+                             sum(row['score'] for row in rows) / len(rows))
+            self.assertGreater(health['health_score'], 0)
+            self.assertEqual(summarize_evaluations(rows)[production_id]['evaluated'], len(rows))
 
     def test_workflow_states_are_not_inferred_from_score(self):
         states = ['pending', 'partial', 'invalid', 'PENDING', 'NOT_DUE',
