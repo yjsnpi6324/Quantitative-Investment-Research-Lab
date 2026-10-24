@@ -1,11 +1,14 @@
 import copy
+import json
+from pathlib import Path
 import unittest
 from unittest.mock import Mock
 
 from test_evaluation_closure import FakeRegistry, FakeMarket, locked_prediction
 from src.evaluation.runner import run_due_evaluations, summarize_evaluations
 from src.evaluation.backlog import scan_evaluation_backlog
-from src.evaluation.metrics import rolling_metrics
+from src.evaluation.metrics import rolling_metrics, is_scored_evaluation
+from src.evaluation.self_audit_runner import run_self_audit
 from src.evaluation.scorer import score_horizon, score_result
 
 
@@ -105,3 +108,48 @@ class SkipTests(unittest.TestCase):
         self.assertEqual(score_horizon([{'Result': 'HIT'}, {'Result': None}]), 1)
         with self.assertRaises(KeyError):
             score_result('UNKNOWN')
+
+
+class PersistedClosureTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        root = Path(__file__).resolve().parents[1]
+        cls.rows = [json.loads(path.read_text()) for path in
+                    sorted((root / "evaluation-ledger").rglob("*.json"))]
+        cls.ai = next(row for row in cls.rows
+                      if row["evaluation_id"] == "EVAL-AI-20260930-T1")
+
+    def test_real_closed_ledger_is_counted_by_all_consumers(self):
+        self.assertEqual(self.ai['status'], 'FORMAL_CLOSED')
+        self.assertTrue(is_scored_evaluation(self.ai))
+        self.assertEqual(rolling_metrics([self.ai])['accuracy'], 0.5)
+        self.assertEqual(run_self_audit([], [self.ai])['evaluation_count'], 1)
+        summary = summarize_evaluations([self.ai])[self.ai['production_id']]
+        self.assertEqual(summary['evaluated'], 1)
+        self.assertEqual(summary['results'], {'PARTIAL': 1})
+        self.assertEqual(rolling_metrics(self.rows)['sample_size'], len(self.rows))
+        self.assertEqual(run_self_audit([], self.rows)['evaluation_count'], len(self.rows))
+
+    def test_workflow_states_are_not_inferred_from_score(self):
+        states = ['pending', 'partial', 'invalid', 'PENDING', 'NOT_DUE',
+                  'SOURCE_FINAL_NOT_FOUND', 'ACTUAL_UNSCORED', 'ACTUAL_UNAVAILABLE',
+                  'ALREADY_EVALUATED', 'APPEND_OUTCOME_UNKNOWN', 'UNKNOWN', [], False]
+        for state in states:
+            with self.subTest(status=state):
+                row = dict(self.ai, status=state)
+                self.assertFalse(is_scored_evaluation(row))
+                self.assertEqual(rolling_metrics([row])['sample_size'], 0)
+                self.assertEqual(run_self_audit([], [row])['evaluation_count'], 0)
+                if isinstance(state, str):
+                    self.assertEqual(summarize_evaluations([row])[row['production_id']]['evaluated'], 0)
+                self.assertEqual(score_horizon([{'Result': 'HIT', 'status': state}]), 0)
+
+    def test_verified_schema_and_legacy_require_valid_result_and_score(self):
+        for status in ('FORMAL_CLOSED', 'verified', None, ''):
+            with self.subTest(status=status):
+                row = dict(self.ai, status=status)
+                self.assertTrue(is_scored_evaluation(row))
+                self.assertEqual(score_horizon([{'Result': 'PARTIAL', 'status': status}]), 0.5)
+                for changes in ({'result': None}, {'result': 'pending'},
+                                {'score': None}, {'score': 1}, {'evaluation_id': ''}):
+                    self.assertFalse(is_scored_evaluation(dict(row, **changes)))

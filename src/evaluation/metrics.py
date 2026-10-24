@@ -2,9 +2,21 @@
 from src.evaluation.auto_scoring import SCORES
 
 
+# Persisted ledger closure and evaluation_record.schema.json verification state.
+# "partial" is a workflow state, not the scored Result "PARTIAL".
+CLOSED_STATUSES = frozenset({"FORMAL_CLOSED", "verified"})
+
+
+def has_closed_status(row):
+    status = row.get("status")
+    # The legacy Python evaluator emits no status field.
+    return status is None or (isinstance(status, str) and
+                              (status == "" or status in CLOSED_STATUSES))
+
+
 def is_scored_evaluation(row):
     result = row.get("result")
-    return (not row.get("status") and bool(row.get("evaluation_id"))
+    return (has_closed_status(row) and bool(row.get("evaluation_id"))
             and isinstance(result, str) and result in SCORES
             and row.get("score") == SCORES[result])
 

@@ -65,7 +65,12 @@ caller’s existing append-only run receipt, not in the Evaluation Registry.
 `summarize_evaluations` groups by production ID and separately counts evaluated
 windows, results, window diagnostics, and record diagnostics. Do not use the
 length of runner output as a completion count. `rolling_metrics` and self-audit
-counts exclude diagnostics and incomplete/invalid score records. The legacy
+counts exclude diagnostics and incomplete/invalid score records. Scored records
+must have an evaluation ID, a legal Result and its matching score, plus an explicit
+closed state (`FORMAL_CLOSED` in persisted ledger records or `verified` in the
+evaluation schema), or the legacy Python evaluator's absent/empty status. The
+schema workflow state `partial` is not a closed Result `PARTIAL`; pending, invalid,
+unknown and skip states remain excluded even if stale result/score fields exist. The legacy
 `score_horizon` ignores rows without a legal Result instead of treating them as
 zero-score misses. Missing production identity stays in an unknown group; do not
 infer AI/BASIC identity from the delivery chat name.

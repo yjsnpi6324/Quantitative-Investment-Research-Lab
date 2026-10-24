@@ -3,6 +3,9 @@
 Converts Evaluation Registry records into normalized scores.
 """
 
+from src.evaluation.metrics import has_closed_status
+
+
 RESULT_SCORE = {
     "HIT": 1.0,
     "PARTIAL": 0.5,
@@ -15,7 +18,7 @@ def score_result(result: str) -> float:
 
 
 def score_horizon(records):
-    records = [r for r in records if isinstance(r.get("Result"), str) and r["Result"] in RESULT_SCORE and not r.get("status")]
+    records = [r for r in records if isinstance(r.get("Result"), str) and r["Result"] in RESULT_SCORE and has_closed_status(r)]
     if not records:
         return 0.0
     return sum(score_result(r.get("Result")) for r in records) / len(records)
