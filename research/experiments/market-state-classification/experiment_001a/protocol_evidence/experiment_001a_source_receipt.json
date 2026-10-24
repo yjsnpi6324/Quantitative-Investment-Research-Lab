@@ -1,0 +1,134 @@
+{
+  "checked_date": "2026-10-24",
+  "read_only": true,
+  "repository": "yjsnpi6324/Quantitative-Investment-Research-Lab",
+  "commit": "eba9c474314511b2abb4c001095ecc5151585ed8",
+  "issue": {
+    "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/issues/3",
+    "state": "open",
+    "updated_at": "2026-08-20T17:27:21Z",
+    "comments": 0
+  },
+  "files": [
+    {
+      "path": "research/experiments/market-state-classification/README.md",
+      "blob_sha": "fea2fb5bbc52ed2e05cfc4e702d681a4116826e5",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/research/experiments/market-state-classification/README.md"
+    },
+    {
+      "path": "research/DATA_SOURCE_GOVERNANCE.md",
+      "blob_sha": "1e44e11d7074d813d1788294991a552ecb18ac2e",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/research/DATA_SOURCE_GOVERNANCE.md"
+    },
+    {
+      "path": "research/RESEARCH_INTAKE_CONTRACT.md",
+      "blob_sha": "e1f7f0c7b97e241c108d9cca8fa3d7c886b392f7",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/research/RESEARCH_INTAKE_CONTRACT.md"
+    },
+    {
+      "path": "research/method-registry.md",
+      "blob_sha": "a8f5eab264b709787846d9da450c8635c2ebc4b1",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/research/method-registry.md"
+    },
+    {
+      "path": "config/data_quality_policy.yaml",
+      "blob_sha": "06598e2ade25a3a3591a0cbbc34533c3228a869c",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/config/data_quality_policy.yaml"
+    },
+    {
+      "path": "docs/REGISTRY_GOVERNANCE.md",
+      "blob_sha": "32cb17c7ad3f9d361637673535ff38de9944e148",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/docs/REGISTRY_GOVERNANCE.md"
+    },
+    {
+      "path": "docs/SYSTEM_OF_RECORDS.md",
+      "blob_sha": "4332300d05712f1b6d92c50011e0997a8a89aa33",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/docs/SYSTEM_OF_RECORDS.md"
+    },
+    {
+      "path": "evaluation/README.md",
+      "blob_sha": "3062eb44073d0538bfc5f8c9347874bd06debbaa",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/evaluation/README.md"
+    },
+    {
+      "path": "evaluation/SYSTEM_DESIGN.md",
+      "blob_sha": "39091954c315d5813735a88e011819a8219a9945",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/evaluation/SYSTEM_DESIGN.md"
+    },
+    {
+      "path": "evaluation/SELF_VALIDATION.md",
+      "blob_sha": "dfb186f080f38d4e1651120a2d085bec2f9bde2b",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/evaluation/SELF_VALIDATION.md"
+    },
+    {
+      "path": "src/adapters/market_data.py",
+      "blob_sha": "9f4a720f27bbd017e12b1add39b3f0ba5407267e",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/src/adapters/market_data.py"
+    },
+    {
+      "path": "src/evaluation/a_share_calendar.py",
+      "blob_sha": "436c81445cec9fdaa7a6bcc114d1e6789bc33749",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/src/evaluation/a_share_calendar.py"
+    },
+    {
+      "path": "src/evaluation/trading_calendar.py",
+      "blob_sha": "0b71cb777d820cfb298a3aa96e8e2d2c4e43bbc3",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/src/evaluation/trading_calendar.py"
+    },
+    {
+      "path": "src/evaluation/metrics.py",
+      "blob_sha": "8fd792801779023136dacbca0719f966fb68634e",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/src/evaluation/metrics.py"
+    },
+    {
+      "path": "src/data_quality/gate.py",
+      "blob_sha": "e2c25b7ab7f6920dab33845599346db1cd529bca",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/src/data_quality/gate.py"
+    },
+    {
+      "path": "docs/governance/PLUGIN_EXECUTION_POLICY_20261020.md",
+      "blob_sha": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/docs/governance/PLUGIN_EXECUTION_POLICY_20261020.md"
+    },
+    {
+      "path": "docs/DROPBOX_ASSET_INDEX_CONTRACT.md",
+      "blob_sha": "823033da4ee1ee5133d13c056a1f4b38d4ade5ec",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/docs/DROPBOX_ASSET_INDEX_CONTRACT.md"
+    },
+    {
+      "path": "templates/experiment.md",
+      "blob_sha": "9f53cba4b67f1739508dc0ec946c95fcd14ce94f",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/templates/experiment.md"
+    },
+    {
+      "path": "templates/evaluation.md",
+      "blob_sha": "e1f878cdb6bf647cb83cc405d2a20124a12e9d2b",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/templates/evaluation.md"
+    },
+    {
+      "path": "templates/MODEL_REGISTRY_TEMPLATE.md",
+      "blob_sha": "d45cd140ad7e077363a608db720b79add1454630",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/templates/MODEL_REGISTRY_TEMPLATE.md"
+    },
+    {
+      "path": "evaluation/schemas/evaluation_record.schema.json",
+      "blob_sha": "78edad8e3cd0c546f265f95028e650a6232aad4a",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/evaluation/schemas/evaluation_record.schema.json"
+    },
+    {
+      "path": "evaluation/schemas/prediction_ledger.schema.json",
+      "blob_sha": "fe242928dc8e19af95d010de4f5e2b992a11a31a",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/evaluation/schemas/prediction_ledger.schema.json"
+    },
+    {
+      "path": "evaluation/RECOVERY_BASELINE_2026-08-26.md",
+      "blob_sha": "f198d461851b1ef13346a481ea3d1d1a3def62c4",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/evaluation/RECOVERY_BASELINE_2026-08-26.md"
+    },
+    {
+      "path": "config/production_tasks.yaml",
+      "blob_sha": "9b70dc5f0a90bbda53d119483aef0672264a0a57",
+      "url": "https://github.com/yjsnpi6324/Quantitative-Investment-Research-Lab/blob/eba9c474314511b2abb4c001095ecc5151585ed8/config/production_tasks.yaml"
+    }
+  ]
+}

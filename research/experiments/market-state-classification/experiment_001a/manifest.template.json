@@ -1,0 +1,18 @@
+{
+  "experiment": "001A",
+  "snapshot_kind": null,
+  "provider": {"name": null, "authorization": null},
+  "protocol": null,
+  "source_receipt": null,
+  "protocol_qa": null,
+  "protocol_review": null,
+  "parameter_approval": null,
+  "calendar": null,
+  "calendar_sources": [],
+  "calendar_review": null,
+  "snapshot": null,
+  "snapshot_receipt": null,
+  "pit_review": null,
+  "oos_isolation": null,
+  "freeze_review": null
+}

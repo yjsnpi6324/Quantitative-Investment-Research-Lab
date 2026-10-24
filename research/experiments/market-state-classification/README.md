@@ -84,3 +84,13 @@ No performance claim is made until the dataset, label definition, baseline, and 
 ## Decision rule
 
 Promote only if the classifier demonstrates robust out-of-sample incremental value across materially different market phases. Otherwise keep testing or retire the candidate.
+
+## Experiment 001A preparation
+
+See [001A draft configuration, evidence manifest and offline preflight](experiment_001a/README.md).
+001A narrows the candidate states to Bull / Neutral / Bear with an independent high-vol flag;
+T+5 is primary and T+1/T+3 secondary. Parameters remain DRAFT and execution is BLOCKED.
+The [delivered draft protocol](experiment-001a-protocol.md) and its original source receipt/QA
+are now preserved verbatim. They are not approvals or execution results. The partial scaffold
+reports `evidence_checks_only` and always sets `execution_allowed=false`, including when
+all hash/receipt checks pass. Synthetic fixtures do not run models or change production.
