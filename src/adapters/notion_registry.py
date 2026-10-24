@@ -28,7 +28,7 @@ class NotionRegistryAdapter:
                 prediction_id, horizon, self.config
             )
         if not hasattr(self.client, "list_evaluations"):
-            return False
+            raise RuntimeError("registry cannot check evaluation identity")
         return any(
             row.get("prediction_id") == prediction_id
             and str(row.get("horizon", "")).upper() == str(horizon).upper()

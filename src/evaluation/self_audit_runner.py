@@ -1,6 +1,8 @@
 """Deterministic production self-audit."""
 from src.evaluation.immutable_ledger import verify_prediction
+from src.evaluation.metrics import is_scored_evaluation
 def run_self_audit(predictions,evaluations):
+    evaluations = [e for e in evaluations if is_scored_evaluation(e)]
     findings=[]
     ids=set()
     for p in predictions:

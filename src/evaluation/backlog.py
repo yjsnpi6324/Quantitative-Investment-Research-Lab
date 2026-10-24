@@ -4,8 +4,7 @@ from __future__ import annotations
 from datetime import date
 
 from src.evaluation.a_share_calendar import AShareTradingCalendar
-from src.evaluation.immutable_ledger import verify_prediction
-from src.evaluation.runner import expand_prediction_horizons, _evaluation_exists, _candidate_predictions
+from src.evaluation.runner import _prepare_prediction, _evaluation_exists, _candidate_predictions, _outcome
 
 
 def scan_evaluation_backlog(as_of, registry, calendar=None):
@@ -15,19 +14,19 @@ def scan_evaluation_backlog(as_of, registry, calendar=None):
     rows = []
 
     for prediction in _candidate_predictions(registry, as_of):
-        if not verify_prediction(prediction):
-            rows.append(
-                {
-                    "prediction_id": prediction.get("prediction_id"),
-                    "status": "BLOCKED_INVALID_HASH",
-                }
-            )
-            continue
-
-        for candidate in expand_prediction_horizons(prediction, calendar):
+        candidates, blocker = _prepare_prediction(prediction, calendar)
+        if blocker:
+            if blocker["status"] == "INVALID_HASH":
+                blocker["status"] = "BLOCKED_INVALID_HASH"
+            rows.append(blocker)
+        for candidate in candidates:
             if today < date.fromisoformat(candidate["target_date"]):
                 continue
-            if _evaluation_exists(registry, candidate):
+            try:
+                if _evaluation_exists(registry, candidate):
+                    continue
+            except Exception as exc:
+                rows.append(_outcome(candidate, "EVALUATION_LOOKUP_FAILED", error_type=type(exc).__name__))
                 continue
             rows.append(
                 {

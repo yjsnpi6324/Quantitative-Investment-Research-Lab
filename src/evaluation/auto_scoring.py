@@ -28,6 +28,7 @@ def evaluate_due(prediction: dict, actual: dict, result: str, error_cause: str =
         "evaluation_id": f"EVAL-{prediction['prediction_id']}-{suffix}",
         "prediction_id": prediction["prediction_id"],
         "production_id": prediction["production_id"],
+        "task_id": prediction.get("task_id"),
         "model_version": prediction["model_version"],
         "data_snapshot_id": prediction["data_snapshot_id"],
         "horizon": label,

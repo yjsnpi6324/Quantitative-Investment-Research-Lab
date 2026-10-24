@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from datetime import date
+from collections import Counter
+from collections.abc import Mapping
 
 from src.evaluation.a_share_calendar import AShareTradingCalendar
 from src.evaluation.auto_scoring import evaluate_due
@@ -77,7 +79,18 @@ def expand_prediction_horizons(prediction: dict, calendar) -> list[dict]:
         forecast = _forecast_for_horizon(prediction, label)
         if forecast in (None, ""):
             continue
-        target = add_trading_days(base_date, label, calendar.is_trading_day)
+        targets = prediction.get("target_dates", {})
+        short = label.lower().replace("+", "")
+        saved = [targets[k] for k in (label, short) if k in targets]
+        saved += [prediction[k] for k in (f"{short}_target_date", f"{label} Target Date") if k in prediction]
+        if prediction.get("horizon") in (label, HORIZON_STEPS[label], str(HORIZON_STEPS[label])) and "target_date" in prediction:
+            saved.append(prediction["target_date"])
+        if saved:
+            if len(set(saved)) != 1:
+                raise ValueError("conflicting persisted target dates")
+            target = date.fromisoformat(saved[0])
+        else:
+            target = add_trading_days(base_date, label, calendar.is_trading_day)
         candidate = dict(prediction)
         candidate.update(
             {
@@ -106,7 +119,7 @@ def _evaluation_exists(registry, candidate: dict) -> bool:
             and str(item.get("horizon", "")).upper() == candidate["horizon"]
             for item in evaluations
         )
-    return False
+    raise RuntimeError("registry cannot check evaluation identity")
 
 
 def _candidate_predictions(registry, as_of):
@@ -115,79 +128,86 @@ def _candidate_predictions(registry, as_of):
     return registry.list_due_predictions(as_of)
 
 
+def _outcome(record, status, **details):
+    return {**{key: record.get(key) for key in
+               ("prediction_id", "report_id", "task_id", "production_id", "horizon", "target_date")},
+            "status": status, **details}
+
+
+def _prepare_prediction(prediction, calendar):
+    if not isinstance(prediction, Mapping):
+        return [], _outcome({}, "INVALID_PREDICTION", error_type="NonMappingRecord")
+    # Missing-source markers are observations, never fabricated predictions.
+    if prediction.get("status") == "SOURCE_FINAL_NOT_FOUND":
+        return [], _outcome(prediction, "SOURCE_FINAL_NOT_FOUND")
+    if prediction.get("hash_schema_version"):
+        return [], _outcome(prediction, "UNSUPPORTED_HASH_SCHEMA")
+    try:
+        if not verify_prediction(prediction):
+            return [], _outcome(prediction, "INVALID_HASH")
+        candidates = expand_prediction_horizons(prediction, calendar)
+    except (ValueError, TypeError, KeyError, AttributeError, OverflowError) as exc:
+        return [], _outcome(prediction, "INVALID_PREDICTION", error_type=type(exc).__name__)
+    return candidates, None if candidates else _outcome(prediction, "NO_HORIZON_FORECASTS")
+
+
 def run_due_evaluations(as_of, registry, market, calendar=None):
-    """Close every matured horizon idempotently and append-only."""
+    """Return closed evaluations and separate skip diagnostics; append only closures."""
     calendar = calendar or getattr(market, "calendar", None) or AShareTradingCalendar()
     today = date.fromisoformat(as_of) if isinstance(as_of, str) else as_of
     out = []
-
+    seen = {}
     for prediction in _candidate_predictions(registry, as_of):
-        if not verify_prediction(prediction):
-            out.append(
-                {
-                    "prediction_id": prediction.get("prediction_id"),
-                    "status": "INVALID_HASH",
-                }
-            )
-            continue
-
-        candidates = expand_prediction_horizons(prediction, calendar)
-        if not candidates:
-            out.append(
-                {
-                    "prediction_id": prediction.get("prediction_id"),
-                    "status": "NO_HORIZON_FORECASTS",
-                }
-            )
-            continue
-
+        candidates, blocker = _prepare_prediction(prediction, calendar)
+        if blocker:
+            out.append(blocker)
         for candidate in candidates:
             if today < date.fromisoformat(candidate["target_date"]):
+                out.append(_outcome(candidate, "NOT_DUE"))
                 continue
-
-            if _evaluation_exists(registry, candidate):
-                out.append(
-                    {
-                        "prediction_id": candidate["prediction_id"],
-                        "horizon": candidate["horizon"],
-                        "status": "ALREADY_EVALUATED",
-                    }
-                )
-                continue
-
-            actual = market.get_actual(candidate)
-            if not actual or actual.get("status") in {"MISSING", "UNVERIFIED"}:
-                out.append(
-                    {
-                        "prediction_id": candidate["prediction_id"],
-                        "horizon": candidate["horizon"],
-                        "target_date": candidate["target_date"],
-                        "status": "ACTUAL_UNAVAILABLE",
-                    }
-                )
-                continue
-
-            if actual.get("result") not in {"HIT", "PARTIAL", "MISS"}:
-                out.append(
-                    {
-                        "prediction_id": candidate["prediction_id"],
-                        "horizon": candidate["horizon"],
-                        "target_date": candidate["target_date"],
-                        "status": "ACTUAL_UNSCORED",
-                    }
-                )
-                continue
-
-            ev = evaluate_due(
-                candidate,
-                actual,
-                actual["result"],
-                actual.get("error_cause", ""),
-            )
-            registry.append_evaluation(ev)
-            out.append(ev)
-
+            key = (candidate["prediction_id"], candidate["horizon"])
+            stage = "EVALUATION_LOOKUP_FAILED"
+            try:
+                if key in seen or _evaluation_exists(registry, candidate):
+                    out.append(_outcome(candidate, seen.get(key, "ALREADY_EVALUATED")))
+                    continue
+                stage = "ACTUAL_LOOKUP_FAILED"
+                actual = market.get_actual(candidate)
+                if not actual or actual.get("status") in {"MISSING", "UNVERIFIED"}:
+                    out.append(_outcome(candidate, "ACTUAL_UNAVAILABLE"))
+                    continue
+                if not isinstance(actual.get("result"), str) or actual["result"] not in {"HIT", "PARTIAL", "MISS"}:
+                    out.append(_outcome(candidate, "ACTUAL_UNSCORED"))
+                    continue
+                stage = "EVALUATION_FAILED"
+                ev = evaluate_due(candidate, actual, actual["result"], actual.get("error_cause", ""))
+                stage = "APPEND_OUTCOME_UNKNOWN"
+                # Do not retry a write whose outcome may be uncertain in this run.
+                seen[key] = "APPEND_OUTCOME_UNKNOWN"
+                registry.append_evaluation(ev)
+                seen[key] = "ALREADY_EVALUATED"
+                out.append(ev)
+            except Exception as exc:
+                out.append(_outcome(candidate, stage, error_type=type(exc).__name__))
     return out
+
+
+def summarize_evaluations(outcomes):
+    """Keep production lines and record/window diagnostics out of scored counts."""
+    from src.evaluation.metrics import is_scored_evaluation
+    groups = {}
+    for row in outcomes:
+        group = groups.setdefault(row.get("production_id"), {
+            "evaluated": 0, "results": Counter(), "window_statuses": Counter(),
+            "record_statuses": Counter(),
+        })
+        if is_scored_evaluation(row):
+            group["evaluated"] += 1
+            group["results"][row["result"]] += 1
+        else:
+            scope = "window_statuses" if row.get("horizon") else "record_statuses"
+            group[scope][row.get("status", "UNCLASSIFIED")] += 1
+    return groups
 
 
 def run_model_self_check(production_id, registry, challenger_pass=False):
