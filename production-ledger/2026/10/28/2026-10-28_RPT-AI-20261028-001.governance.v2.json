@@ -1,0 +1,79 @@
+{
+  "schema_version": "governance-receipt-v2.7",
+  "policy_revision": "PLUGIN-POLICY-20261020-R2",
+  "report_id": "RPT-AI-20261028-001",
+  "source_page_url": "https://app.notion.com/p/40714471bc1b81678fc1f05ad516f48f",
+  "handoff_completeness": "COMPLETE",
+  "content_hash": {
+    "algorithm": "SHA-256",
+    "value": "9946506640e7d45dcb4c4b0156454d3d91eab94f1b74faf10ff7d0b4f42e36fa",
+    "status": "VERIFIED",
+    "scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_no_terminal_newline"
+  },
+  "prediction_hash": {
+    "canonical_json": "{\"champion_model_id\":\"AI-PLATE-MSM\",\"data_snapshot_id\":\"AI-SNAPSHOT-20261028-CLOSE-185810\",\"forecasts\":{\"t1\":{\"assumptions\":\"全市场成交额不低于1.45万亿元，科创50单日跌幅不超过2.5%，机器人、半导体、CPO和AI软件至少两个方向保持正收益宽度，2026-10-28反弹不被完全回吐，海外科技风险无新增系统性冲击\",\"direction\":\"高波动震荡偏强但冲高分化，半导体、CPO与机器人相对占优，AI软件跟随修复\",\"interval\":null,\"invalidation\":\"若全市场成交额低于1.30万亿元、科创50下跌超过3%且机器人、AI软件、半导体与CPO同步放量回落，则基准情景切换为反弹失败；若科创50上涨超过3%、全市场成交额高于1.85万亿元且四条AI链同步放量走强，则冲高分化判断失效并切换为趋势性修复\",\"probability\":\"58%-63%\"},\"t3\":{\"assumptions\":\"全市场成交额不连续两个交易日低于1.40万亿元，科创50不连续收于2026-10-28低点下方，AI产业链至少两个环节保持正收益宽度，三季报未引发核心公司盈利预期普遍下修\",\"direction\":\"修复延续与内部轮动并存，半导体、CPO和具身智能相对占优，软件等待季报确认\",\"interval\":null,\"invalidation\":\"若科创50连续两个交易日收于2026-10-28低点下方且机器人、AI软件、半导体与CPO同步跑输沪深300，则修复判断失效；若AI四条链连续两个交易日放量普涨，则内部轮动与分化判断失效\",\"probability\":\"56%-61%\"},\"t5\":{\"assumptions\":\"国内流动性与政策预期稳定，海外AI资本开支未进一步下修，AI产业链三季报正向与负向信号未形成系统性恶化，科创50未出现连续放量破位\",\"direction\":\"中性偏强，高波动业绩验证与海外AI资本开支映射\",\"interval\":null,\"invalidation\":\"若AI核心公司三季报引发盈利预期系统性下修，或海外科技风险与国内流动性同时恶化并使科创50连续两个交易日收于2026-10-28低点下方，则中性偏强判断失效；若AI硬件、软件与机器人连续三个交易日放量普涨，则高波动分化判断失效\",\"probability\":\"53%-58%\"}},\"generated_at\":\"2026-10-28T18:58:10+08:00\",\"hash_schema_version\":\"prediction-hash-schema-v1\",\"model_version\":\"v2026-08-26\",\"prediction_id\":\"PRED-AI-20261028-001\",\"production_id\":\"AI-PROD-20260825-A\",\"prompt_version\":\"PROD-PROMPT-V3.6\",\"report_id\":\"RPT-AI-20261028-001\",\"t1_target_date\":\"2026-10-29\",\"t3_target_date\":\"2026-11-02\",\"t5_target_date\":\"2026-11-04\",\"task_id\":\"TASK-AI-DAILY\",\"trading_date\":\"2026-10-28\"}",
+    "hash": "8b2a5e121ee9acaf42c0dbd44deffb1fbdbef62f4d1f0c2f0719d111719a9b76",
+    "algorithm": "SHA-256",
+    "schema_version": "prediction-hash-schema-v1",
+    "origin": "NATIVE",
+    "status": "NATIVE_HASH_VERIFIED",
+    "target_dates": {
+      "t1": "2026-10-29",
+      "t3": "2026-11-02",
+      "t5": "2026-11-04"
+    },
+    "body_alignment": "VERIFIED"
+  },
+  "nodes": {
+    "supabase": {
+      "status": "VERIFIED",
+      "project_id": "maxbwlhkgxnniclontig",
+      "task_run_id": "949a3805-5ed9-4931-8f3f-4fb426bee396",
+      "task_result_id": "910136dd-f8a8-401c-bec6-c3efa06ee708"
+    },
+    "notion_registry": {
+      "status": "VERIFIED",
+      "url": "https://app.notion.com/p/40814471bc1b815db519df0e2c669d8e"
+    },
+    "github_main": {
+      "status": "PENDING_PR_APPROVAL",
+      "artifact_commit": "d2a601a6417435850d02c08e491e032be7b64c2b",
+      "artifact_pr": 78,
+      "artifact_branch": "fix/oct28-governance-backfill",
+      "main_updated": false
+    },
+    "dropbox": {
+      "status": "ARTIFACTS_VERIFIED_RECEIPT_PUBLICATION_PENDING",
+      "files": [
+        {
+          "file_id": "id:Kez2cKZha9IAAAAAAAAA4w",
+          "path": "/03_Reports/Daily/AI_Sector/2026-10-28_RPT-AI-20261028-001.md",
+          "modified_time": "2026-10-29T22:33:29Z",
+          "readback": "VERIFIED"
+        },
+        {
+          "file_id": "id:Kez2cKZha9IAAAAAAAAA5A",
+          "path": "/03_Reports/Daily/AI_Sector/2026-10-28_RPT-AI-20261028-001.canonical.json",
+          "modified_time": "2026-10-29T22:33:31Z",
+          "readback": "VERIFIED"
+        }
+      ]
+    }
+  },
+  "evaluations_closed": [],
+  "evaluation_note": "No Actual/Result/Score created in this bounded persistence backfill; production-side observations are not formal evaluations.",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "repair_action": [
+    "Verified immutable source FINAL and native Prediction Hash",
+    "Backfilled Notion Registry and Supabase with actual repair timestamps",
+    "Staged original archive and canonical manifest in draft PR #78"
+  ],
+  "retry_needed": [
+    "Specific approval and merge of PR #78, then main readback"
+  ],
+  "unresolved": [
+    "Scheduler execution logs unavailable; precise reason for governance execution gap remains unverified"
+  ],
+  "repaired_at": "2026-10-29T22:33:50Z",
+  "source_final_unchanged": true
+}
