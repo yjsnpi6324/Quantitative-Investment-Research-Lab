@@ -22,9 +22,9 @@
     "repair_reason": "Initial deterministic fanout from complete immutable REVIEW FINAL",
     "repaired_at": "2026-11-14T20:54:52.051+08:00"
   },
-  "content_hash": "6bdcd78d8b3b9d1005f2042fa0651b4f892245430580088c1f98cc753d5595e8",
+  "content_hash": "d9a7de4604d4e956bc45da7642ef054dc683b80d30d21965ff9fc80f4257af4c",
   "content_hash_algorithm": "SHA-256",
-  "content_hash_scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_single_terminal_newline",
+  "content_hash_scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_no_terminal_newline",
   "handoff_completeness": "COMPLETE",
   "prediction_canonical_json": null,
   "prediction_hash": null,
@@ -38,12 +38,12 @@
     "t5": null
   },
   "body_alignment": "NOT_APPLICABLE_REVIEW",
-  "governance_status": "PERSISTENCE_PENDING",
+  "governance_status": "PERSISTENCE_PARTIAL",
   "node_status": {
-    "supabase": "PENDING",
-    "notion_registry": "PENDING",
-    "github_main": "PENDING",
-    "dropbox": "PENDING"
+    "supabase": "REPAIR_PENDING",
+    "notion_registry": "REPAIR_PENDING",
+    "github_main": "REPAIR_PENDING",
+    "dropbox": "REPAIR_PENDING"
   },
   "source_final_unchanged": true,
   "source_page_url": "https://app.notion.com/p/41814471bc1b8168b66aefc5870ec930?pvs=204"
