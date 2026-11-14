@@ -1,0 +1,118 @@
+{
+  "governance_receipt_version": "V2.7-PLUGIN-POLICY-20261020-R2",
+  "report_id": "RPT-BASIC-20261114-001",
+  "prediction_id": null,
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "report_date": "2026-11-14",
+  "trading_date": null,
+  "report_type": "REVIEW",
+  "report_status": "FINAL",
+  "run_mode": "NON_TRADING_REVIEW",
+  "handoff_status": "HANDOFF_COMPLETE",
+  "content_hash": "d9a7de4604d4e956bc45da7642ef054dc683b80d30d21965ff9fc80f4257af4c",
+  "content_hash_algorithm": "SHA-256",
+  "content_hash_scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_no_terminal_newline",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "prediction_canonical_json": null,
+  "prediction_hash": null,
+  "hash_algorithm": null,
+  "hash_schema_version": null,
+  "hash_origin": null,
+  "target_dates": {
+    "t1": null,
+    "t3": null,
+    "t5": null
+  },
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "source_page_url": "https://app.notion.com/p/41814471bc1b8168b66aefc5870ec930?pvs=204",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "supabase_run_id": "81fa1829-a514-4c4e-a3c6-865d2317b2b2",
+  "notion_registry_url": "https://app.notion.com/p/41814471bc1b81db8983e057434c8372?pvs=204",
+  "github": {
+    "archive_pr": 82,
+    "archive_merge_sha": "7fc835da0f84a1da0783e49edc8aa86237ddd433",
+    "hash_repair_pr": 83,
+    "hash_repair_merge_sha": "9c0cd3cf1a8294e6ba0576474c455ada1fbeacc0",
+    "policy_main_read_commit": "664231f20b6566fef1c7ada11ba839a911e2e869",
+    "policy_blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f"
+  },
+  "dropbox": {
+    "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAA5w",
+    "canonical_v2_file_id": "id:Kez2cKZha9IAAAAAAAAA6Q",
+    "markdown_url": "https://www.dropbox.com/scl/fi/4qylx4etxpx1yo17bnhe9",
+    "canonical_v2_url": "https://www.dropbox.com/scl/fi/snjut91xfel6glclvf8uj",
+    "normalized_markdown_readback_equal": true
+  },
+  "evaluation": {
+    "current_report": "NOT_APPLICABLE_REVIEW",
+    "formal_backlog_scan": "STATE_UNPERSISTED",
+    "action": "NO_EVALUATION_APPENDED",
+    "reason": "Notion Query Data Source allowance reached; exact search is approximate and cannot safely join Prediction IDs to Horizon Evaluations."
+  },
+  "plugin_observations": {
+    "GitHub": "CONNECTIVITY_VERIFIED",
+    "Notion": "CONNECTIVITY_VERIFIED_WRITE_READBACK",
+    "Dropbox": "CONNECTIVITY_VERIFIED_WRITE_READBACK",
+    "Supabase": "CONNECTIVITY_VERIFIED_WRITE_READBACK",
+    "Vercel": "CONNECTIVITY_VERIFIED_PR_CHECK_ONLY_RUNTIME_UNVERIFIED",
+    "Context7": "NOT_INVOKED",
+    "Firecrawl": "NOT_INVOKED_LAST_KNOWN_DEGRADED_QUOTA_LOCKED",
+    "Bigdata": "NOT_INVOKED",
+    "Exa": "NOT_INVOKED",
+    "Scite": "NOT_INVOKED_LAST_KNOWN_DEGRADED_PLAN_LOCKED",
+    "Flourish": "NOT_INVOKED",
+    "Wolfram": "NOT_INVOKED",
+    "HuggingFace": "NOT_INVOKED_LAST_KNOWN_DEGRADED_TOOL_UNAVAILABLE"
+  },
+  "lineage_observations": [
+    {
+      "task_id": "TASK-AI-DAILY",
+      "production_id": "AI-PROD-20260825-A",
+      "report_id": "RPT-AI-20261114-001",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE",
+      "checked": [
+        "AI formal directory",
+        "Notion workspace exact report search",
+        "GitHub main",
+        "Dropbox"
+      ],
+      "cross_line_substitution": false
+    },
+    {
+      "task_id": "TASK-AI-DAILY",
+      "production_id": "AI-PROD-20260825-A",
+      "report_id": "RPT-AI-20261019-001",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE",
+      "checked": [
+        "Notion scoped history",
+        "GitHub governance references",
+        "Dropbox"
+      ],
+      "cross_line_substitution": false
+    }
+  ],
+  "governance_status": "PERSISTENCE_READY",
+  "repair_actions": [
+    "deterministic canonical packaging",
+    "four-core write and readback",
+    "content-hash carrier normalization repair without changing source FINAL"
+  ],
+  "retry_needed": [
+    "RPT-AI-20261114-001 scoped source identity recheck",
+    "RPT-AI-20261019-001 scoped source identity recheck",
+    "Evaluation backlog aggregate retry after Notion Query Data Source allowance reset"
+  ],
+  "unresolved": [
+    "AI 2026-11-14 source identity not verified; absence is not asserted",
+    "AI 2026-10-19 original FINAL remains unavailable in checked scope",
+    "Hosted runtime not independently verified; Vercel success is PR build context only"
+  ],
+  "verified_at": "2026-11-14T21:01:50.987+08:00",
+  "source_final_unchanged": true
+}
