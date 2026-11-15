@@ -1,0 +1,136 @@
+{
+  "governance_receipt_version": "V2.7-PLUGIN-POLICY-20261020-R2",
+  "report_id": "RPT-BASIC-20261115-001",
+  "prediction_id": null,
+  "task_id": "TASK-ASTOCK-DAILY",
+  "production_id": "BASIC-PROD-20260825-A",
+  "report_date": "2026-11-15",
+  "trading_date": null,
+  "report_type": "REVIEW",
+  "report_status": "FINAL",
+  "run_mode": "NON_TRADING_REVIEW",
+  "handoff_status": "HANDOFF_COMPLETE",
+  "content_hash": "ecb1ccb4d99470a34cd87c3c2c40c4597c06fbf66124ec10c8c59bdebf5ce9ce",
+  "content_hash_algorithm": "SHA-256",
+  "content_hash_scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_no_terminal_newline",
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "prediction_canonical_json": null,
+  "prediction_hash": null,
+  "hash_algorithm": null,
+  "hash_schema_version": null,
+  "hash_origin": null,
+  "target_dates": {
+    "t1": null,
+    "t3": null,
+    "t5": null
+  },
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "source_page_url": "https://app.notion.com/p/41914471bc1b817c9c4ac17ef84fe573",
+  "nodes": {
+    "supabase": "VERIFIED",
+    "notion_registry": "VERIFIED",
+    "github_main": "VERIFIED",
+    "dropbox": "VERIFIED"
+  },
+  "supabase_run_id": "636271ca-98be-4991-9c9b-48f4d4f4580b",
+  "notion_registry_url": "https://app.notion.com/p/41914471bc1b8120a8f6ca2ab9fe1aa6",
+  "github": {
+    "archive_pr": 85,
+    "archive_merge_sha": "036e88ae436fc62d173b0da43404846efcd1d0e7",
+    "policy_main_read_commit": "01339710d5edcbe4309fa0dcd917248ad0789406",
+    "policy_blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f"
+  },
+  "dropbox": {
+    "markdown_file_id": "id:Kez2cKZha9IAAAAAAAAA7A",
+    "canonical_file_id": "id:Kez2cKZha9IAAAAAAAAA6w",
+    "markdown_url": "https://www.dropbox.com/scl/fi/pa5ym47nagjt2g8ozyi2o",
+    "canonical_url": "https://www.dropbox.com/scl/fi/uk2q32dgz53i71plsj1am",
+    "normalized_markdown_readback_equal": true
+  },
+  "evaluation": {
+    "current_report": "NOT_APPLICABLE_REVIEW",
+    "registry_scan": {
+      "prediction_rows": 78,
+      "evaluation_rows": 34,
+      "has_more": false
+    },
+    "due_missing_evaluation_pairs": 47,
+    "classification": "ACTUAL_UNAVAILABLE",
+    "action": "NO_EVALUATION_APPENDED",
+    "reason": "Actual values were not independently cross-verified for the 47 due Prediction ID + Horizon pairs; missing Actual is never scored as MISS."
+  },
+  "plugin_observations": {
+    "GitHub": "CONNECTIVITY_VERIFIED",
+    "Notion": "CONNECTIVITY_VERIFIED",
+    "Supabase": "CONNECTIVITY_VERIFIED",
+    "Dropbox": "CONNECTIVITY_VERIFIED",
+    "Vercel": "OBSERVABILITY_CANDIDATE_STATUS_SUCCESS_ON_PR_ONLY",
+    "Context7": "NOT_INVOKED",
+    "Firecrawl": "NOT_INVOKED_LAST_KNOWN_DEGRADED_QUOTA_LOCKED",
+    "Bigdata": "NOT_INVOKED_LAST_KNOWN_DEGRADED_QUOTA_LOCKED",
+    "Exa": "NOT_INVOKED",
+    "Scite": "NOT_INVOKED_LAST_KNOWN_DEGRADED_PLAN_LOCKED",
+    "Flourish": "NOT_INVOKED",
+    "Wolfram": "NOT_INVOKED",
+    "HuggingFace": "NOT_INVOKED_LAST_KNOWN_DEGRADED_TOOL_UNAVAILABLE"
+  },
+  "lineage_observations": [
+    {
+      "task_id": "TASK-AI-DAILY",
+      "production_id": "AI-PROD-20260825-A",
+      "report_id": "RPT-AI-20261115-001",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE",
+      "checked": [
+        "AI formal directory",
+        "Notion exact and scoped search",
+        "GitHub main",
+        "Dropbox"
+      ],
+      "cross_line_substitution": false
+    },
+    {
+      "task_id": "TASK-AI-DAILY",
+      "production_id": "AI-PROD-20260825-A",
+      "report_id": "RPT-AI-20261114-001",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE",
+      "checked": [
+        "AI formal directory",
+        "Notion scoped history",
+        "GitHub main",
+        "Dropbox"
+      ],
+      "cross_line_substitution": false
+    },
+    {
+      "task_id": "TASK-AI-DAILY",
+      "production_id": "AI-PROD-20260825-A",
+      "report_id": "RPT-AI-20261019-001",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE",
+      "checked": [
+        "AI formal directory",
+        "Notion scoped history",
+        "GitHub main",
+        "Dropbox"
+      ],
+      "cross_line_substitution": false
+    }
+  ],
+  "governance_status": "PERSISTENCE_READY",
+  "repair_actions": [
+    "deterministic canonical packaging",
+    "four-core write and readback",
+    "append-only governance receipt"
+  ],
+  "retry_needed": [
+    "RPT-AI-20261115-001 scoped source identity recheck",
+    "RPT-AI-20261114-001 scoped source identity recheck",
+    "RPT-AI-20261019-001 scoped source identity recheck",
+    "47 ACTUAL_UNAVAILABLE Evaluation pairs require independently verified Actual before append-only closure"
+  ],
+  "unresolved": [
+    "AI source identity remains unverified in checked scope; absence is not asserted",
+    "Vercel success is PR build context only; hosted runtime not independently verified"
+  ],
+  "verified_at": "2026-11-15T21:19:32.247+08:00",
+  "source_final_unchanged": true
+}
