@@ -1,0 +1,50 @@
+{
+  "canonical_manifest": {
+    "task_id": "TASK-ASTOCK-DAILY",
+    "production_id": "BASIC-PROD-20260825-A",
+    "report_date": "2026-11-15",
+    "trading_date": null,
+    "prediction_id": null,
+    "report_id": "RPT-BASIC-20261115-001",
+    "report_type": "REVIEW",
+    "report_status": "FINAL",
+    "run_mode": "NON_TRADING_REVIEW",
+    "generated_at": "2026-11-15T19:05:18+08:00",
+    "data_snapshot_id": "BASIC-REVIEW-SNAPSHOT-20261115T190518+0800",
+    "champion_model_id": "BASIC-MSM",
+    "prompt_version": "PROD-PROMPT-V3.6",
+    "model_version": "v2026-08-26",
+    "data_quality": "WARNING",
+    "source": "Notion Handoff Mailbox",
+    "source_page_url": "https://app.notion.com/p/41914471bc1b817c9c4ac17ef84fe573",
+    "record_type": "CANONICAL_REPORT_ARTIFACT",
+    "governance_mode": "V2.7_CONTROLLED_PRODUCTION",
+    "repair_reason": "Initial deterministic fanout from complete immutable REVIEW FINAL",
+    "repaired_at": "2026-11-15T21:16:16.792+08:00"
+  },
+  "content_hash": "ecb1ccb4d99470a34cd87c3c2c40c4597c06fbf66124ec10c8c59bdebf5ce9ce",
+  "content_hash_algorithm": "SHA-256",
+  "content_hash_scope": "normalized_complete_final_markdown_nfc_lf_no_trailing_spaces_no_terminal_newline",
+  "handoff_completeness": "COMPLETE",
+  "prediction_canonical_json": null,
+  "prediction_hash": null,
+  "hash_algorithm": null,
+  "hash_schema_version": null,
+  "hash_origin": null,
+  "hash_status": "NOT_APPLICABLE_REVIEW",
+  "target_dates": {
+    "t1": null,
+    "t3": null,
+    "t5": null
+  },
+  "body_alignment": "NOT_APPLICABLE_REVIEW",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "node_status": {
+    "supabase": "REPAIR_PENDING",
+    "notion_registry": "REPAIR_PENDING",
+    "github_main": "REPAIR_PENDING",
+    "dropbox": "REPAIR_PENDING"
+  },
+  "source_final_unchanged": true,
+  "source_page_url": "https://app.notion.com/p/41914471bc1b817c9c4ac17ef84fe573"
+}
