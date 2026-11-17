@@ -1,0 +1,173 @@
+{
+  "governance_receipt_version": "V2.7-FULL-NODE-20261117",
+  "incident_id": "INCIDENT-REPORT-BODY-20261117",
+  "observed_at": "2026-11-17T20:55:11+08:00",
+  "policy_revision": "PLUGIN-POLICY-20261020-R2",
+  "policy_main_commit": "649e1e05611b94c279b8f05c5860d066a57f5f3f",
+  "policy_blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f",
+  "scope": {
+    "task_ids": [
+      "TASK-ASTOCK-DAILY",
+      "TASK-AI-DAILY"
+    ],
+    "production_ids": [
+      "BASIC-PROD-20260825-A",
+      "AI-PROD-20260825-A"
+    ],
+    "expected_report_ids": [
+      "RPT-BASIC-20261117-001",
+      "RPT-AI-20261117-001"
+    ]
+  },
+  "source_outcome": {
+    "status": "SOURCE_IDENTITY_UNVERIFIED",
+    "handoff_status": "HANDOFF_INCOMPLETE",
+    "complete_final_found": false,
+    "content_hash": null,
+    "prediction_canonical_json": null,
+    "prediction_hash": null,
+    "target_dates": null,
+    "body_alignment": "UNVERIFIED",
+    "action": "NO_MANIFEST_NO_FANOUT_NO_EVALUATION_FOR_EXPECTED_REPORTS"
+  },
+  "runtime_evidence": {
+    "basic": {
+      "automation_id": "6a8c466271588191973520db801004d1",
+      "run_id": "b6de419a-4940-832b-aeec-db9f1992a481",
+      "recorded_status": "completed",
+      "business_status": "BLOCKED",
+      "defect": "saved result text repeats AI run identity and cites AI run id"
+    },
+    "ai": {
+      "automation_id": "6a8c4a730b8c81919525e7833bc85865",
+      "run_id": "1cfffe1e-3c74-8321-ae5b-c1b55db33f1c",
+      "recorded_status": "completed",
+      "business_status": "BLOCKED",
+      "defect": "saved result text repeats BASIC-expected identity-mismatch response"
+    },
+    "identity_gate": "BLOCKED_PRE_WRITE",
+    "delivery_status": "DELIVERY_FAILED"
+  },
+  "node_snapshot": [
+    {
+      "node": "Notion BASIC Human FINAL directory",
+      "classification": "AUTHORITATIVE_SOURCE",
+      "critical": true,
+      "status": "DEGRADED",
+      "readback": "RPT-BASIC-20261117-001 NOT_FOUND_IN_CHECKED_SCOPE"
+    },
+    {
+      "node": "Notion AI Human FINAL directory",
+      "classification": "AUTHORITATIVE_SOURCE",
+      "critical": true,
+      "status": "DEGRADED",
+      "readback": "RPT-AI-20261117-001 NOT_FOUND_IN_CHECKED_SCOPE"
+    },
+    {
+      "node": "Prediction Registry",
+      "classification": "REGISTRY_OR_EVALUATION",
+      "critical": true,
+      "status": "VERIFIED",
+      "readback": "79 active-view rows; has_more=false"
+    },
+    {
+      "node": "Evaluation Registry",
+      "classification": "REGISTRY_OR_EVALUATION",
+      "critical": true,
+      "status": "VERIFIED",
+      "readback": "34 active-view rows; has_more=false"
+    },
+    {
+      "node": "Supabase Core",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "CONNECTIVITY_VERIFIED",
+      "readback": "schema and existing tasks/runs/nodes readable; no 2026-11-17 report fanout"
+    },
+    {
+      "node": "GitHub main",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "VERIFIED",
+      "readback": "main 649e1e05611b94c279b8f05c5860d066a57f5f3f; no open PR before this receipt"
+    },
+    {
+      "node": "Dropbox",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "CONNECTIVITY_VERIFIED",
+      "readback": "exact expected report IDs returned zero files"
+    },
+    {
+      "node": "Notion canonical Registry",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "CONNECTIVITY_VERIFIED",
+      "readback": "registry view readable; no expected report identities"
+    },
+    {
+      "node": "Production automations",
+      "classification": "RUNTIME_OR_ORCHESTRATION",
+      "critical": true,
+      "status": "DEGRADED",
+      "readback": "two runs completed but duplicated/cross-line result text"
+    },
+    {
+      "node": "Vercel",
+      "classification": "OPTIONAL_SHADOW",
+      "critical": false,
+      "status": "NOT_INVOKED",
+      "readback": "no deployment-specific trigger in this incident"
+    },
+    {
+      "node": "Context7",
+      "classification": "OPTIONAL_SHADOW",
+      "critical": false,
+      "status": "NOT_INVOKED",
+      "readback": "no SDK compatibility issue"
+    },
+    {
+      "node": "Bigdata/Exa/Firecrawl",
+      "classification": "EVIDENCE_PROVIDER",
+      "critical": false,
+      "status": "NOT_INVOKED",
+      "readback": "source failure is orchestration/identity, not market-evidence retrieval"
+    },
+    {
+      "node": "Google Drive",
+      "classification": "CANDIDATE",
+      "critical": false,
+      "status": "UNVERIFIED",
+      "readback": "no trusted evidence of use for these reports"
+    }
+  ],
+  "four_core_status": "NOT_READY_SOURCE_BLOCKED",
+  "end_to_end_dependency_status": "DEGRADED",
+  "critical_path_checked": 9,
+  "critical_path_total": 9,
+  "evaluation_backlog": {
+    "prediction_registry_rows": 79,
+    "evaluation_registry_rows": 34,
+    "due_missing_pairs": 47,
+    "due_missing_by_line": {
+      "TASK-ASTOCK-DAILY": 22,
+      "TASK-AI-DAILY": 25
+    },
+    "classification": "ACTUAL_UNAVAILABLE",
+    "action": "NO_EVALUATION_APPENDED"
+  },
+  "repair_action": "preserve evidence; keep identity gate; append governance receipt only",
+  "retry_needed": "recover authoritative per-run instruction/output binding and full Human FINAL; then rerun source/hash/fanout gates",
+  "unresolved": [
+    "true per-run execution context origin",
+    "output-to-automation binding defect",
+    "whether any complete FINAL exists outside checked scope"
+  ],
+  "notion_incident_url": "https://app.notion.com/p/41b14471bc1b813aaf2cdf28be05daf8",
+  "invariants": [
+    "NO_REPREDICTION",
+    "NO_LOCKED_FINAL_MUTATION",
+    "NO_CROSS_LINE_SUBSTITUTION",
+    "NO_NATIVE_HASH_BACKFILL"
+  ]
+}
