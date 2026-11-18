@@ -1,0 +1,224 @@
+{
+  "governance_receipt_version": "V2.7-IDENTITY-GATE-R2-20261118",
+  "incident_id": "INCIDENT-REPORT-BODY-20261118",
+  "observed_at": "2026-11-18T20:47:03+08:00",
+  "policy_revision": "PLUGIN-POLICY-20261020-R2",
+  "identity_gate_revision": "IDENTITY-GATE-20261115-R2",
+  "policy_main_commit_at_check": "d78648f6c7616da1f5b101ffefb82eb2251c0bcf",
+  "policy_blob": "0fc3c7ef26ff3511cbfa372545803f4e687acd7f",
+  "scope": {
+    "task_ids": [
+      "TASK-ASTOCK-DAILY",
+      "TASK-AI-DAILY"
+    ],
+    "production_ids": [
+      "BASIC-PROD-20260825-A",
+      "AI-PROD-20260825-A"
+    ],
+    "expected_report_ids": [
+      "RPT-BASIC-20261118-001",
+      "RPT-AI-20261118-001"
+    ]
+  },
+  "r2_validation": {
+    "configuration_status": "CONFIG_VERIFIED",
+    "scheduled_run_validation": "PENDING_SCHEDULED_RUN_VALIDATION",
+    "reason": "Both 2026-11-18 production runs completed before the R2 prompts were saved; they cannot validate R2.",
+    "next_existing_production_schedule": "2026-11-19T19:00:00+08:00",
+    "no_manual_rerun": true
+  },
+  "runtime_evidence": {
+    "basic": {
+      "automation_id": "6a8c466271588191973520db801004d1",
+      "configured_chat_ref": "6a9bf771-e7d4-83ea-9e04-0bbeabd876d9",
+      "run_id": "468c4861-4f78-8331-96c3-d033800bf853",
+      "scheduled_for": "2026-11-18T11:00:00Z",
+      "started_at": "2026-11-18T10:56:28.278927Z",
+      "completed_at": "2026-11-18T11:01:56.425773Z",
+      "latest_result_created_at": "2026-11-18T11:01:56.272676Z",
+      "latest_result_run_id": "468c4861-4f78-8331-96c3-d033800bf853",
+      "result_chat_ref": "6a9bf771-e7d4-83ea-9e04-0bbeabd876d9",
+      "recorded_status": "completed",
+      "delivery_status": "unknown",
+      "content_truncated": false,
+      "result_length_chars": 960,
+      "runtime_identity": "VERIFIED",
+      "route_identity": "VERIFIED",
+      "result_linkage": "VERIFIED",
+      "content_identity": "CONFLICT",
+      "content_integrity": "INCOMPLETE",
+      "defect": "Result expects AI identity but self-reports BASIC Automation/Task/Production/chat/run."
+    },
+    "ai": {
+      "automation_id": "6a8c4a730b8c81919525e7833bc85865",
+      "configured_chat_ref": "6ac6277a-123c-83e8-9c4f-69382429a578",
+      "run_id": "4f6cf3ac-7bc0-8327-9d1c-da659ed69af3",
+      "scheduled_for": "2026-11-18T11:00:00Z",
+      "started_at": "2026-11-18T11:00:27.268524Z",
+      "completed_at": "2026-11-18T11:01:56.341490Z",
+      "latest_result_created_at": "2026-11-18T11:01:56.170359Z",
+      "latest_result_run_id": "4f6cf3ac-7bc0-8327-9d1c-da659ed69af3",
+      "result_chat_ref": "6ac6277a-123c-83e8-9c4f-69382429a578",
+      "recorded_status": "completed",
+      "delivery_status": "unknown",
+      "content_truncated": false,
+      "result_length_chars": 960,
+      "runtime_identity": "VERIFIED",
+      "route_identity": "VERIFIED",
+      "result_linkage": "VERIFIED",
+      "content_identity": "CONFLICT",
+      "content_integrity": "INCOMPLETE",
+      "defect": "Result text self-reports the BASIC run instead of the structurally linked AI run."
+    },
+    "cross_line_result_comparison": "CROSS_LINE_DUPLICATE_RESULT",
+    "exact_text_equal": true,
+    "root_cause": "UNDETERMINED"
+  },
+  "source_outcome": {
+    "basic": {
+      "expected_parent_uri": "https://app.notion.com/p/3c814471bc1b81029e2bc8cb4d517d28",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE"
+    },
+    "ai": {
+      "expected_parent_uri": "https://app.notion.com/p/3c814471bc1b81ab85eac1845e43f1fd",
+      "status": "NOT_FOUND_IN_CHECKED_SCOPE"
+    },
+    "checked_scope": "exact Report ID search, lineage-specific parent scope, direct parent child-page readback, and created_date=2026-11-18",
+    "final_body_status": "NOT_EVALUABLE_SOURCE_NOT_FOUND",
+    "handoff_status": "NOT_EVALUABLE_SOURCE_NOT_FOUND",
+    "content_hash": null,
+    "prediction_canonical_json": null,
+    "prediction_hash": null,
+    "target_dates": null,
+    "body_alignment": "UNVERIFIED",
+    "action": "NO_MANIFEST_NO_REPORT_FANOUT_NO_EVALUATION"
+  },
+  "node_snapshot": [
+    {
+      "node": "Production automations",
+      "classification": "RUNTIME_OR_ORCHESTRATION",
+      "critical": true,
+      "status": "DEGRADED",
+      "readback": "Structured run/result/chat linkage is valid, but both result bodies are identical and content identity conflicts."
+    },
+    {
+      "node": "Notion BASIC Human FINAL directory",
+      "classification": "AUTHORITATIVE_SOURCE",
+      "critical": true,
+      "status": "DEGRADED",
+      "readback": "RPT-BASIC-20261118-001 NOT_FOUND_IN_CHECKED_SCOPE"
+    },
+    {
+      "node": "Notion AI Human FINAL directory",
+      "classification": "AUTHORITATIVE_SOURCE",
+      "critical": true,
+      "status": "DEGRADED",
+      "readback": "RPT-AI-20261118-001 NOT_FOUND_IN_CHECKED_SCOPE"
+    },
+    {
+      "node": "Prediction Registry",
+      "classification": "REGISTRY_OR_EVALUATION",
+      "critical": true,
+      "status": "VERIFIED",
+      "readback": "79 active, 0 archived; complete view pagination; no 20261118 identity"
+    },
+    {
+      "node": "Evaluation Registry",
+      "classification": "REGISTRY_OR_EVALUATION",
+      "critical": true,
+      "status": "VERIFIED",
+      "readback": "34 active, 0 archived; complete view pagination; no 20261118 identity"
+    },
+    {
+      "node": "Supabase Core",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "CONNECTIVITY_VERIFIED",
+      "readback": "Schema and prior records readable; no 20261118 governance/report record at pre-write check"
+    },
+    {
+      "node": "Notion canonical Registry",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "CONNECTIVITY_VERIFIED",
+      "readback": "Registry view readable; no 20261118 report identity"
+    },
+    {
+      "node": "GitHub main",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "VERIFIED",
+      "readback": "main d78648f6c7616da1f5b101ffefb82eb2251c0bcf; open PR count 0 at pre-write check"
+    },
+    {
+      "node": "Dropbox",
+      "classification": "CORE_PERSISTENCE",
+      "critical": true,
+      "status": "CONNECTIVITY_VERIFIED",
+      "readback": "Exact 20261118 Report/Prediction/date searches returned zero; last known governance artifact readback succeeded"
+    },
+    {
+      "node": "Vercel",
+      "classification": "OPTIONAL_SHADOW",
+      "critical": false,
+      "status": "NOT_INVOKED",
+      "readback": "No deployment-specific incident; only GitHub PR check will be inspected if a receipt PR is opened"
+    },
+    {
+      "node": "Context7",
+      "classification": "OPTIONAL_SHADOW",
+      "critical": false,
+      "status": "NOT_INVOKED",
+      "readback": "No engineering compatibility issue"
+    },
+    {
+      "node": "Bigdata/Exa/Firecrawl",
+      "classification": "EVIDENCE_PROVIDER",
+      "critical": false,
+      "status": "NOT_INVOKED",
+      "readback": "Market evidence is not the blocking dependency"
+    },
+    {
+      "node": "Google Drive",
+      "classification": "CANDIDATE",
+      "critical": false,
+      "status": "UNVERIFIED",
+      "readback": "No trusted evidence of use for these reports"
+    }
+  ],
+  "four_core_status": "NOT_READY_SOURCE_BLOCKED",
+  "governance_status": "PERSISTENCE_PARTIAL",
+  "end_to_end_dependency_status": "DEGRADED",
+  "critical_path_checked": 9,
+  "critical_path_total": 9,
+  "evaluation_backlog": {
+    "prediction_registry_rows_active": 79,
+    "prediction_registry_rows_archived": 0,
+    "evaluation_registry_rows_active": 34,
+    "evaluation_registry_rows_archived": 0,
+    "due_missing_pairs": 47,
+    "due_missing_by_line": {
+      "TASK-ASTOCK-DAILY": 22,
+      "TASK-AI-DAILY": 25
+    },
+    "classification": "ACTUAL_UNAVAILABLE",
+    "state_change_since_2026_11_17": false,
+    "action": "NO_EVALUATION_APPENDED"
+  },
+  "repair_action": "Append governance evidence only; preserve identity gate; do not rerun or synthesize reports.",
+  "retry_needed": "Validate each lineage independently after the next existing R2-saved scheduled production run, then resume source/hash/fanout gates.",
+  "unresolved": [
+    "root cause of duplicated cross-line result content",
+    "whether complete 2026-11-18 FINALs exist outside the checked scope",
+    "independent delivery acknowledgement",
+    "R2 post-save scheduled-run validation"
+  ],
+  "notion_incident_url": "https://app.notion.com/p/41b14471bc1b813aaf2cdf28be05daf8",
+  "invariants": [
+    "NO_REPREDICTION",
+    "NO_LOCKED_FINAL_MUTATION",
+    "NO_CROSS_LINE_SUBSTITUTION",
+    "NO_NATIVE_HASH_BACKFILL",
+    "NO_MANUAL_RERUN"
+  ]
+}
